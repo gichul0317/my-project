@@ -3,35 +3,41 @@ html {
   font-family: 'Lato', sans-serif;
 }
 .wrapper {
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  margin: 10% auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  position: relative;
 }
 .wrapper h1 {
-  margin-top: 30%;
-  font-size: 3rem;
+  font-size: 2.5rem;
+}
+.wrapper p {
+  margin-top: 10%;
 }
 .text {
-  position: relative;
   display: inline-block;
   margin: 0 20px;
   animation: shake 0.5s infinite alternate;
 }
-.text::before {
+.wrapper h2::before {
   position: absolute;
-  top: -15px;
-  left: -10px;
+  top: 43%;
+  left: 32%;
   content: '[ ';
   font-size: 2.5rem;
   color: #1ac8ce;
   margin-left: -10px;
   animation: opacity 1.5s infinite;
 }
-.text::after {
+.wrapper h2::after {
   position: absolute;
-  top: -15px;
-  right: -10px;
+  top: 43%;
+  right: 16%;
   content: ' ]';
   font-size: 2.5rem;
   color: #1ac8ce;
@@ -68,5 +74,22 @@ html {
   }
   100% {
     transform: skewX(0deg);
+  }
+}
+
+@media (max-width: 599px) {
+  .wrapper {
+    max-width: 320px;
+    margin: 35% auto;
+  }
+  .wrapper h1 {
+    line-height: 4rem;
+  }
+  h2::before,
+  h2::after {
+    display: none;
+  }
+  .text {
+    margin-top: 20px;
   }
 }
