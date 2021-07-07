@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>gichul-j.com</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Montserrat:wght@900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -19,67 +20,118 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <header id="home">
-      <div class="menu hidden">
-        <div class="menu-container">
-          <ul class="menu-nav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <ul class="social-list">
-            <li>
-              <a href="https://www.linkedin.com/in/gichuljaun/" target="_blank">
-                <i class="fab fa-linkedin">
-                  <span class="sr-only">LinkedIn</span>
-                </i>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/gichul0317" target="_blank">
-                <i class="fab fa-github-square">
-                  <span class="sr-only">GitHub</span>
-                </i>
-              </a>
-            </li>
-          </ul>
-          <div class="contact">
-            <a href="tel:+1 204 230 4667" rel="external">+1 204-230-4667</a>
-            <a href="mailto:gichul0317@gmail.com" rel="external"
-              >gichul0317@gmail.com</a
-            >
+    <div class="container">
+      <header id="home">
+        <div class="menu hidden">
+          <div class="menu-container">
+            <ul class="menu-nav">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <ul class="social-list">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/gichuljaun/"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin">
+                    <span class="sr-only">LinkedIn</span>
+                  </i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/gichul0317" target="_blank">
+                  <i class="fab fa-github-square">
+                    <span class="sr-only">GitHub</span>
+                  </i>
+                </a>
+              </li>
+            </ul>
+            <div class="contact">
+              <a href="tel:+1 204 230 4667" rel="external">+1 204-230-4667</a>
+              <a href="mailto:gichul0317@gmail.com" rel="external"
+                >gichul0317@gmail.com</a
+              >
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="wrapper">
-        <i class="nav-btn fas fa-bars"></i>
-        <div class="text-content">
-          <h1>hi there</h1>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section class="" id="about">
         <div class="wrapper">
-          <p>section for skill sets</p>
+          <div class="nav-btn-container">
+            <i class="nav-btn fas fa-bars"></i>
+          </div>
+          <section class="text-container">
+            <i class="scroll-down fas fa-angle-down"></i>
+            <h1>
+              He<br />
+              llo<span>.</span>
+            </h1>
+            <div class="half-color"></div>
+          </section>
         </div>
-      </section>
+      </header>
 
-      <section id="projects">
+      <main>
+        <section class="about" id="about">
+          <div class="wrapper">
+            <div class="img-container">
+              <img
+                src="./assets/img-1.jpg"
+                alt="Photo by Jannis Brandt on Unsplash"
+              />
+            </div>
+            <div class="text-container">
+              <h2>
+                About<br />
+                Me<span>.</span>
+              </h2>
+              <p>I am Gichul Jaun</p>
+              <p>I am a Front-End Developer</p>
+              <p>
+                I am developing simple, clean and slick websites that provide
+                real value to the end user
+              </p>
+              <p>
+                I am always eager to learn new tools, libraries and concepts in
+                web-development.
+              </p>
+              <p>
+                I am excited to make the leap and continue refining my skills
+                with the right company.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="skills">
+          <div class="wrapper">
+            <p>section for skills</p>
+          </div>
+        </section>
+
+        <section class="project">
+          <div class="wrapper">
+            <p>section for projects</p>
+          </div>
+        </section>
+
+        <section class="contact">
+          <div class="wrapper">
+            <p>section for contacts</p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
         <div class="wrapper">
-          <p>section for projects</p>
+          <p>footer</p>
         </div>
-      </section>
-    </main>
+      </footer>
+    </div>
 
-    <footer id="contact">
-      <div class="wrapper">
-        <p>footer</p>
-      </div>
-    </footer>
+    <script src="./dist/dom-fader.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
