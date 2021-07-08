@@ -279,6 +279,7 @@ template {
 html {
   font-size: 125%;
   font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -316,8 +317,76 @@ a {
   border: 1px solid;
 }
 
+.hidden {
+  display: none;
+}
+
+.menu-nav li {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.menu-nav li:hover,
+.menu-nav li:focus {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+.menu-nav li a {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.menu-nav li a:hover,
+.menu-nav li a:focus {
+  color: #1576b9;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  z-index: 17;
+  background-color: #fff;
+}
+.menu .menu-container {
+  min-height: 100%;
+  padding: 0 40px;
+}
+.menu .menu-container .menu-nav {
+  margin-top: 220px;
+}
+.menu .menu-container .menu-nav li {
+  padding: 10px 0;
+}
+.menu .menu-container .social-list {
+  margin-top: 150px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.menu .menu-container .social-list li {
+  padding: 0 10px;
+}
+.menu .menu-container .social-list li a {
+  font-size: 1.5rem;
+}
+.menu .menu-container .contact {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 50px;
+}
+.menu .menu-container .contact a {
+  display: block;
+  margin-bottom: 15px;
+}
+
 header .wrapper {
   position: relative;
+  height: 100vh;
 }
 header .half-color {
   position: absolute;
@@ -342,6 +411,27 @@ header .content-container {
       -ms-flex-align: center;
           align-items: center;
 }
+header .content-container .nav-btn-container {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  width: 50px;
+}
+header .content-container .nav-btn-container .nav-btn {
+  position: fixed;
+  font-size: 1.5rem;
+  z-index: 22;
+  color: #1576b9;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+header .content-container .nav-btn-container .nav-btn:hover, header .content-container .nav-btn-container .nav-btn:focus {
+  cursor: pointer;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
 header .content-container h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
@@ -359,7 +449,7 @@ header .content-container h2 {
   position: absolute;
   top: 62%;
   right: 0;
-  z-index: 22;
+  z-index: 10;
 }
 header .content-container .scroll-down {
   position: absolute;
@@ -383,8 +473,12 @@ header .content-container .scroll-down {
           flex-direction: column;
   padding: 60px 20px;
 }
+.about .content-container .img-container {
+  height: calc(100% / 3);
+}
 .about .content-container .text-container {
-  height: 60%;
+  margin-top: 20px;
+  height: calc(100% / 3);
   width: 100%;
   overflow: auto;
 }
@@ -404,7 +498,8 @@ header .content-container .scroll-down {
   margin-top: 20px;
 }
 .about .content-container .skills-container {
-  height: 40%;
+  margin-top: 30px;
+  height: calc(100% / 3);
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -443,7 +538,8 @@ header .content-container .scroll-down {
 }
 
 .changing-fonts h2 {
-  padding: 60px 20px;
+  margin-top: 20px;
+  padding: 30px 20px;
   font-family: "Montserrat", sans-serif;
   font-size: 2.2rem;
   font-weight: 900;
@@ -463,7 +559,7 @@ header .content-container .scroll-down {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 60px 20px;
+  padding: 10px 20px;
 }
 .changing-fonts .content-container .img-container {
   height: 30%;
@@ -1073,7 +1169,7 @@ footer .content-container .contact-link a:focus {
     position: absolute;
     top: 65%;
     right: 5%;
-    z-index: 22;
+    z-index: 10;
   }
   header .content-container .scroll-down {
     top: 75%;
