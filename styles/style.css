@@ -364,10 +364,6 @@ footer {
   border: 1px solid;
 }
 
-.hidden {
-  display: none;
-}
-
 header .wrapper {
   position: relative;
 }
@@ -429,7 +425,7 @@ header .content-container .scroll-down {
   padding: 60px 20px;
 }
 .about .content-container .text-container {
-  height: 50%;
+  height: 60%;
   width: 100%;
   overflow: auto;
 }
@@ -449,7 +445,7 @@ header .content-container .scroll-down {
   margin-top: 20px;
 }
 .about .content-container .skills-container {
-  height: 50%;
+  height: 40%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -557,6 +553,7 @@ header .content-container .scroll-down {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 5px;
 }
 .changing-fonts .content-container .text-container .made-with .icons {
   width: 200px;
@@ -578,6 +575,18 @@ header .content-container .scroll-down {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.changing-fonts .content-container .text-container .links .link-items a {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.changing-fonts .content-container .text-container .links .link-items a:hover,
+.changing-fonts .content-container .text-container .links .link-items a:focus {
+  color: #1576b9;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
 }
 
 .studio-ghibli .content-container {
@@ -653,6 +662,7 @@ header .content-container .scroll-down {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 5px;
 }
 .studio-ghibli .content-container .text-container .made-with .icons {
   width: 200px;
@@ -674,6 +684,18 @@ header .content-container .scroll-down {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.studio-ghibli .content-container .text-container .links .link-items a {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.studio-ghibli .content-container .text-container .links .link-items a:hover,
+.studio-ghibli .content-container .text-container .links .link-items a:focus {
+  color: #1576b9;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
 }
 
 .vid-monster .content-container {
@@ -749,6 +771,7 @@ header .content-container .scroll-down {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 5px;
 }
 .vid-monster .content-container .text-container .made-with .icons {
   width: 200px;
@@ -770,6 +793,18 @@ header .content-container .scroll-down {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.vid-monster .content-container .text-container .links .link-items a {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.vid-monster .content-container .text-container .links .link-items a:hover,
+.vid-monster .content-container .text-container .links .link-items a:focus {
+  color: #1576b9;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
 }
 
 .shopper-mapper .content-container {
@@ -845,6 +880,7 @@ header .content-container .scroll-down {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 5px;
 }
 .shopper-mapper .content-container .text-container .made-with .icons {
   width: 200px;
@@ -866,6 +902,18 @@ header .content-container .scroll-down {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.shopper-mapper .content-container .text-container .links .link-items a {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.shopper-mapper .content-container .text-container .links .link-items a:hover,
+.shopper-mapper .content-container .text-container .links .link-items a:focus {
+  color: #1576b9;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
 }
 
 footer .content-container {
@@ -925,6 +973,16 @@ footer .content-container .contact-link {
 }
 footer .content-container .contact-link a {
   font-size: 2rem;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+footer .content-container .contact-link a:hover,
+footer .content-container .contact-link a:focus {
+  color: #1576b9;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
 }
 
 @-webkit-keyframes scroll-down {
@@ -1018,5 +1076,191 @@ footer .content-container .contact-link a {
   100% {
     -webkit-transform: translateY(10px);
             transform: translateY(10px);
+  }
+}
+#warning {
+  display: none;
+  width: 100%;
+  height: 250px;
+}
+#warning .content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (orientation: landscape) {
+  .container {
+    display: none;
+  }
+
+  #warning {
+    display: block;
+  }
+}
+@media (min-width: 600px) {
+  .wrapper {
+    max-width: 765px;
+  }
+
+  header .content-container h1 {
+    font-size: 7rem;
+  }
+  header .content-container .scroll-down {
+    left: 38%;
+  }
+
+  .about .content-container {
+    padding: 80px 30px;
+  }
+  .about .content-container .text-container h2 {
+    font-size: 3rem;
+  }
+  .about .content-container .text-container h2 span {
+    font-size: 4rem;
+  }
+  .about .content-container .text-container p {
+    font-size: 1.2rem;
+    margin-top: 25px;
+  }
+
+  .skills li i {
+    font-size: 3rem;
+  }
+
+  .changing-fonts .content-container {
+    padding: 80px 30px;
+  }
+  .changing-fonts .content-container h2 {
+    font-size: 3rem;
+  }
+  .changing-fonts .content-container h2 span {
+    font-size: 4rem;
+  }
+  .changing-fonts .content-container .img-container {
+    height: 50%;
+  }
+  .changing-fonts .content-container .text-container {
+    height: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .changing-fonts .content-container .text-container .description p {
+    font-size: 1.1rem;
+  }
+  .changing-fonts .content-container .text-container .made-with .icons {
+    width: 300px;
+  }
+  .changing-fonts .content-container .text-container .made-with .icons i {
+    font-size: 2.5rem;
+  }
+
+  .studio-ghibli .content-container {
+    padding: 80px 30px;
+  }
+  .studio-ghibli .content-container h2 {
+    font-size: 3rem;
+  }
+  .studio-ghibli .content-container h2 span {
+    font-size: 4rem;
+  }
+  .studio-ghibli .content-container .img-container {
+    height: 50%;
+  }
+  .studio-ghibli .content-container .text-container {
+    height: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .studio-ghibli .content-container .text-container .description p {
+    font-size: 1.1rem;
+  }
+  .studio-ghibli .content-container .text-container .made-with .icons {
+    width: 300px;
+  }
+  .studio-ghibli .content-container .text-container .made-with .icons i {
+    font-size: 2.5rem;
+  }
+
+  .vid-monster .content-container {
+    padding: 80px 30px;
+  }
+  .vid-monster .content-container h2 {
+    font-size: 3rem;
+  }
+  .vid-monster .content-container h2 span {
+    font-size: 4rem;
+  }
+  .vid-monster .content-container .img-container {
+    height: 50%;
+  }
+  .vid-monster .content-container .text-container {
+    height: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .vid-monster .content-container .text-container .description p {
+    font-size: 1.1rem;
+  }
+  .vid-monster .content-container .text-container .made-with .icons {
+    width: 300px;
+  }
+  .vid-monster .content-container .text-container .made-with .icons i {
+    font-size: 2.5rem;
+  }
+
+  .shopper-mapper .content-container {
+    padding: 80px 30px;
+  }
+  .shopper-mapper .content-container h2 {
+    font-size: 3rem;
+  }
+  .shopper-mapper .content-container h2 span {
+    font-size: 4rem;
+  }
+  .shopper-mapper .content-container .img-container {
+    height: 50%;
+  }
+  .shopper-mapper .content-container .text-container {
+    height: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .shopper-mapper .content-container .text-container .description p {
+    font-size: 1.1rem;
+  }
+  .shopper-mapper .content-container .text-container .made-with .icons {
+    width: 300px;
+  }
+  .shopper-mapper .content-container .text-container .made-with .icons i {
+    font-size: 2.5rem;
+  }
+
+  footer .content-container {
+    padding: 80px 30px;
+  }
+  footer .content-container h2 {
+    font-size: 3rem;
+  }
+  footer .content-container h2 span {
+    font-size: 4rem;
+  }
+  footer .content-container .text-container .contact-info p {
+    font-size: 1.1rem;
+  }
+  footer .content-container .contact-link a {
+    font-size: 2.2rem;
   }
 }
