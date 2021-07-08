@@ -90,7 +90,7 @@ footer {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  border: 1px solid;
+  // border: 1px solid;
 }
 
 // .hidden {
@@ -648,12 +648,7 @@ footer {
     }
     .content-container {
       padding: 80px 30px;
-      .img-container {
-        height: 50%;
-      }
       .text-container {
-        height: 50%;
-        justify-content: center;
         .description {
           p {
             font-size: 1.1rem;
@@ -681,12 +676,7 @@ footer {
     }
     .content-container {
       padding: 80px 30px;
-      .img-container {
-        height: 50%;
-      }
       .text-container {
-        height: 50%;
-        justify-content: center;
         .description {
           p {
             font-size: 1.1rem;
@@ -714,12 +704,7 @@ footer {
     }
     .content-container {
       padding: 80px 30px;
-      .img-container {
-        height: 50%;
-      }
       .text-container {
-        height: 50%;
-        justify-content: center;
         .description {
           p {
             font-size: 1.1rem;
@@ -747,12 +732,7 @@ footer {
     }
     .content-container {
       padding: 80px 30px;
-      .img-container {
-        height: 50%;
-      }
       .text-container {
-        height: 50%;
-        justify-content: center;
         .description {
           p {
             font-size: 1.1rem;
@@ -847,12 +827,16 @@ footer {
       padding: 80px 40px;
       flex-direction: row;
       .text-container {
+        padding: 0;
+        height: 100%;
+        justify-content: flex-start;
         .description {
           p {
             font-size: 1.5rem;
           }
         }
         .made-with {
+          margin-bottom: 30px;
           .icons {
             i {
               font-size: 3rem;
@@ -875,12 +859,16 @@ footer {
       padding: 80px 40px;
       flex-direction: row-reverse;
       .text-container {
+        padding: 0;
+        height: 100%;
+        justify-content: flex-start;
         .description {
           p {
             font-size: 1.5rem;
           }
         }
         .made-with {
+          margin-bottom: 30px;
           .icons {
             i {
               font-size: 3rem;
@@ -903,12 +891,16 @@ footer {
       padding: 80px 40px;
       flex-direction: row;
       .text-container {
+        padding: 0;
+        height: 100%;
+        justify-content: flex-start;
         .description {
           p {
             font-size: 1.5rem;
           }
         }
         .made-with {
+          margin-bottom: 30px;
           .icons {
             i {
               font-size: 3rem;
@@ -931,12 +923,16 @@ footer {
       padding: 80px 40px;
       flex-direction: row-reverse;
       .text-container {
+        padding: 0;
+        height: 100%;
+        justify-content: flex-start;
         .description {
           p {
             font-size: 1.5rem;
           }
         }
         .made-with {
+          margin-bottom: 20px;
           .icons {
             i {
               font-size: 3rem;
@@ -959,7 +955,7 @@ footer {
       .text-container {
         .contact-info {
           p {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
           }
         }
       }
