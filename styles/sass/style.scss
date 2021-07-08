@@ -266,8 +266,8 @@ header {
     .text-container {
       height: 70%;
       width: 100%;
-      overflow: auto;
-      padding: 20px;
+      // overflow: auto;
+      padding: 0 10px;
       display: flex;
       flex-flow: column nowrap;
       justify-content: flex-start;
@@ -279,14 +279,14 @@ header {
         }
       }
       .made-with {
+        width: 100%;
         margin-bottom: 40px;
         .title {
           display: flex;
           justify-content: center;
-          margin-bottom: 5px;
+          margin-bottom: 10px;
         }
         .icons {
-          width: 200px;
           display: flex;
           justify-content: space-between;
           i {
@@ -295,10 +295,10 @@ header {
         }
       }
       .links {
+        width: 100%;
         .link-items {
-          width: 160px;
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
           a {
             transition: transform 0.5s ease;
           }
@@ -315,7 +315,8 @@ header {
 
 .studio-ghibli {
   h2 {
-    padding: 60px 20px;
+    margin-top: 20px;
+    padding: 30px 20px;
     font-family: 'Montserrat', sans-serif;
     font-size: 2.2rem;
     font-weight: 900;
@@ -331,7 +332,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 60px 20px;
+    padding: 10px 20px;
     .img-container {
       height: 30%;
       width: 100%;
@@ -342,8 +343,8 @@ header {
     .text-container {
       height: 70%;
       width: 100%;
-      overflow: auto;
-      padding: 20px;
+      // overflow: auto;
+      padding: 0 10px;
       display: flex;
       flex-flow: column nowrap;
       justify-content: flex-start;
@@ -356,13 +357,13 @@ header {
       }
       .made-with {
         margin-bottom: 40px;
+        width: 100%;
         .title {
           display: flex;
           justify-content: center;
-          margin-bottom: 5px;
+          margin-bottom: 10px;
         }
         .icons {
-          width: 200px;
           display: flex;
           justify-content: space-between;
           i {
@@ -371,10 +372,10 @@ header {
         }
       }
       .links {
+        width: 100%;
         .link-items {
-          width: 160px;
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
           a {
             transition: transform 0.5s ease;
           }
@@ -391,7 +392,8 @@ header {
 
 .vid-monster {
   h2 {
-    padding: 60px 20px;
+    margin-top: 20px;
+    padding: 30px 20px;
     font-family: 'Montserrat', sans-serif;
     font-size: 2.2rem;
     font-weight: 900;
@@ -407,7 +409,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 60px 20px;
+    padding: 10px 20px;
     .img-container {
       height: 30%;
       width: 100%;
@@ -418,8 +420,8 @@ header {
     .text-container {
       height: 70%;
       width: 100%;
-      overflow: auto;
-      padding: 20px;
+      // overflow: auto;
+      padding: 0 10px;
       display: flex;
       flex-flow: column nowrap;
       justify-content: flex-start;
@@ -431,14 +433,14 @@ header {
         }
       }
       .made-with {
+        width: 100%;
         margin-bottom: 40px;
         .title {
           display: flex;
           justify-content: center;
-          margin-bottom: 5px;
+          margin-bottom: 10px;
         }
         .icons {
-          width: 200px;
           display: flex;
           justify-content: space-between;
           i {
@@ -447,10 +449,10 @@ header {
         }
       }
       .links {
+        width: 100%;
         .link-items {
-          width: 160px;
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
           a {
             transition: transform 0.5s ease;
           }
@@ -467,7 +469,8 @@ header {
 
 .shopper-mapper {
   h2 {
-    padding: 60px 20px;
+    margin-top: 20px;
+    padding: 30px 20px;
     font-family: 'Montserrat', sans-serif;
     font-size: 2.2rem;
     font-weight: 900;
@@ -483,7 +486,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 60px 20px;
+    padding: 10px 20px;
     .img-container {
       height: 30%;
       width: 100%;
@@ -494,8 +497,8 @@ header {
     .text-container {
       height: 70%;
       width: 100%;
-      overflow: auto;
-      padding: 20px;
+      // overflow: auto;
+      padding: 0 10px;
       display: flex;
       flex-flow: column nowrap;
       justify-content: flex-start;
@@ -507,14 +510,14 @@ header {
         }
       }
       .made-with {
+        width: 100%;
         margin-bottom: 40px;
         .title {
           display: flex;
           justify-content: center;
-          margin-bottom: 5px;
+          margin-bottom: 10px;
         }
         .icons {
-          width: 200px;
           display: flex;
           justify-content: space-between;
           i {
@@ -523,10 +526,10 @@ header {
         }
       }
       .links {
+        width: 100%;
         .link-items {
-          width: 160px;
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
           a {
             transition: transform 0.5s ease;
           }
@@ -547,7 +550,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 60px 20px;
+    padding: 30px 20px;
     h2 {
       font-family: 'Montserrat', sans-serif;
       font-size: 2.2rem;
@@ -560,21 +563,29 @@ footer {
       }
     }
     .text-container {
+      margin-top: 20px;
       height: 80%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       .contact-info {
+        width: 100%;
+        height: 50%;
         p {
           margin-bottom: 20px;
         }
       }
+      .contact-form {
+        width: 100%;
+        height: 50%;
+      }
     }
     .contact-link {
+      margin-top: 30px;
       height: 20%;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       a {
         font-size: 2rem;
@@ -586,6 +597,36 @@ footer {
         transform: scale(1.2, 1.2);
       }
     }
+  }
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  textarea {
+    margin-top: 10px;
+    resize: none;
+  }
+  input {
+    margin-top: 10px;
+  }
+  button {
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    align-self: center;
+    width: 180px;
+    text-transform: uppercase;
+    background-color: $third;
+    color: $white;
+    transition: all 0.3s;
+  }
+  button:hover,
+  button:focus {
+    background-color: $primary;
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
   }
 }
 
@@ -627,18 +668,18 @@ footer {
 }
 
 // special for landscape view
-#warning {
-  display: none;
-  width: 100%;
-  height: 250px;
-  .content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
+// #warning {
+//   display: none;
+//   width: 100%;
+//   height: 250px;
+//   .content {
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+// }
 
 // media queries
 @media (min-width: 600px) {

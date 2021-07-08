@@ -228,7 +228,11 @@
             </div>
           </div>
 
-          <div class="studio-ghibli">
+          <div
+            class="studio-ghibli"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <h2>
               Studio<br />
               Ghibli<span>.</span>
@@ -282,7 +286,11 @@
             </div>
           </div>
 
-          <div class="vid-monster">
+          <div
+            class="vid-monster"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <h2>
               Vid-<br />
               Monster<span>.</span>
@@ -335,7 +343,11 @@
             </div>
           </div>
 
-          <div class="shopper-mapper">
+          <div
+            class="shopper-mapper"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <h2>
               Shopper-<br />
               Mapper<span>.</span>
@@ -351,7 +363,7 @@
                     bars around your please?
                   </p>
                   <p>
-                    This app finds places located within 10kim of your place and
+                    This app finds places located within 10km of your place and
                     provides interactive map and directions. Built with React
                     and MapQuest API.
                   </p>
@@ -400,12 +412,36 @@
             <div class="contact-info">
               <p>
                 If you have any questions about me or my projects, please
-                contact me through my email or LinkedIn
+                contact me through my email or LinkedIn. I am happy to chat with
+                you!!!
               </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-                dolorum, dolorem velit autem nam sequi.
-              </p>
+              <p>Thanks for stopping by 😁✨</p>
+            </div>
+            <div class="contact-form">
+              <form action="submit">
+                <label for="user-name" class="sr-only">user-name</label>
+                <input
+                  type="text"
+                  id="user-name"
+                  required
+                  placeholder="Your Name"
+                />
+                <label for="user-email" class="sr-only">user-email</label>
+                <input
+                  type="email"
+                  id="user-email"
+                  required
+                  placeholder="Your Email"
+                />
+                <label for="comments" class="sr-only">comments</label>
+                <textarea
+                  name="comments"
+                  id="comments"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+                <button type="submit">Get in touch</button>
+              </form>
             </div>
           </div>
           <div class="contact-link">
@@ -438,7 +474,7 @@
     </footer>
 
     <!-- landscape view only -->
-    <div id="warning">
+    <!-- <div id="warning">
       <div class="content">
         <p>
           <i class="far fa-times-circle"></i>
@@ -446,7 +482,7 @@
           <i class="far fa-times-circle"></i>
         </p>
       </div>
-    </div>
+    </div> -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/script.js"></script>
   </body>
