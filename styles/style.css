@@ -401,6 +401,13 @@ header .content-container h1 {
 header .content-container h1 span {
   color: #1576b9;
 }
+header .content-container h2 {
+  font-size: 1rem;
+  position: absolute;
+  top: 62%;
+  right: 0;
+  z-index: 22;
+}
 header .content-container .scroll-down {
   position: absolute;
   top: 70%;
@@ -1108,7 +1115,15 @@ footer .content-container .contact-link a:focus {
   header .content-container h1 {
     font-size: 7rem;
   }
+  header .content-container h2 {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 65%;
+    right: 5%;
+    z-index: 22;
+  }
   header .content-container .scroll-down {
+    top: 75%;
     left: 38%;
   }
 
