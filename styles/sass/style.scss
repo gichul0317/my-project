@@ -43,7 +43,7 @@ a {
   max-width: 320px;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid;
+  // border: 1px solid;
 }
 
 .hidden {
@@ -71,13 +71,13 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 60%;
+  width: 50%;
   height: 100%;
   z-index: 17;
   background-color: $white;
   .menu-container {
     min-height: 100%;
-    padding: 0 40px;
+    padding: 0 50px;
     .menu-nav {
       margin-top: 220px;
       li {
@@ -91,18 +91,31 @@ a {
       li {
         padding: 0 10px;
         a {
-          font-size: 1.5rem;
+          font-size: 2rem;
+        }
+        a:hover,
+        a:focus {
+          color: $primary;
         }
       }
     }
     .contact {
-      align-self: flex-end;
       margin-top: 50px;
       a {
         display: block;
         margin-bottom: 15px;
       }
     }
+  }
+}
+
+.social-list a {
+  i {
+    transition: transform 0.3s;
+  }
+  i:hover,
+  i:focus {
+    transform: scale(1.2, 1.2);
   }
 }
 
@@ -129,12 +142,12 @@ header {
     align-items: center;
     .nav-btn-container {
       position: absolute;
-      right: 0;
-      top: 25px;
-      width: 50px;
+      right: 60px;
+      top: 35px;
+      // width: 50px;
       .nav-btn {
         position: fixed;
-        font-size: 1.5rem;
+        font-size: 2rem;
         z-index: 22;
         color: $primary;
         transition: transform 0.3s ease;
@@ -181,13 +194,13 @@ header {
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 60px 20px;
+    padding: 30px 20px;
     .img-container {
-      height: calc(100% / 3);
+      height: calc(100% / 2);
     }
     .text-container {
       margin-top: 20px;
-      height: calc(100% / 3);
+      height: calc(100% / 2);
       width: 100%;
       overflow: auto;
       h2 {
@@ -206,23 +219,26 @@ header {
         margin-top: 20px;
       }
     }
-    .skills-container {
-      margin-top: 30px;
-      height: calc(100% / 3);
+  }
+  .skills-container {
+    padding: 0 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .skills {
+      height: 100%;
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .skills {
-        height: 100%;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        li {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
       }
     }
   }
@@ -687,8 +703,42 @@ footer {
     max-width: 800px;
   }
 
+  .menu {
+    .menu-container {
+      .menu-nav {
+        li {
+          padding: 15px 0;
+          a {
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .social-list {
+        li {
+          padding: 0 15px;
+          a {
+            font-size: 2.5rem;
+          }
+        }
+      }
+      .contact {
+        a {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
   header {
     .content-container {
+      .nav-btn-container {
+        right: 110px;
+        top: 60px;
+        // width: 50px;
+        .nav-btn {
+          font-size: 3.5rem;
+        }
+      }
       h1 {
         font-size: 7rem;
       }
@@ -708,7 +758,7 @@ footer {
 
   .about {
     .content-container {
-      padding: 80px 30px;
+      // padding: 80px 30px;
       .text-container {
         h2 {
           font-size: 3rem;
@@ -718,7 +768,14 @@ footer {
         }
         p {
           font-size: 1.2rem;
-          margin-top: 25px;
+          margin-top: 30px;
+        }
+      }
+    }
+    .skills-container {
+      .skills {
+        li {
+          padding: 15px;
         }
       }
     }
@@ -730,14 +787,15 @@ footer {
 
   .changing-fonts {
     h2 {
-      padding: 80px 30px;
+      margin-top: 30px;
+      // padding: 40px 20px;
       font-size: 3rem;
       span {
         font-size: 4rem;
       }
     }
     .content-container {
-      padding: 80px 30px;
+      // padding: 20px 20px;
       .text-container {
         .description {
           p {
@@ -745,8 +803,8 @@ footer {
           }
         }
         .made-with {
+          padding: 0 35px;
           .icons {
-            width: 300px;
             i {
               font-size: 2.5rem;
             }
@@ -758,14 +816,15 @@ footer {
 
   .studio-ghibli {
     h2 {
-      padding: 80px 30px;
+      margin-top: 30px;
+      // padding: 80px 30px;
       font-size: 3rem;
       span {
         font-size: 4rem;
       }
     }
     .content-container {
-      padding: 80px 30px;
+      // padding: 80px 30px;
       .text-container {
         .description {
           p {
@@ -773,8 +832,8 @@ footer {
           }
         }
         .made-with {
+          padding: 0 35px;
           .icons {
-            width: 300px;
             i {
               font-size: 2.5rem;
             }
@@ -786,14 +845,15 @@ footer {
 
   .vid-monster {
     h2 {
-      padding: 80px 30px;
+      margin-top: 30px;
+      // padding: 80px 30px;
       font-size: 3rem;
       span {
         font-size: 4rem;
       }
     }
     .content-container {
-      padding: 80px 30px;
+      // padding: 80px 30px;
       .text-container {
         .description {
           p {
@@ -801,8 +861,8 @@ footer {
           }
         }
         .made-with {
+          padding: 0 35px;
           .icons {
-            width: 300px;
             i {
               font-size: 2.5rem;
             }
@@ -814,14 +874,15 @@ footer {
 
   .shopper-mapper {
     h2 {
-      padding: 80px 30px;
+      margin-top: 30px;
+      // padding: 80px 30px;
       font-size: 3rem;
       span {
         font-size: 4rem;
       }
     }
     .content-container {
-      padding: 80px 30px;
+      // padding: 80px 30px;
       .text-container {
         .description {
           p {
@@ -829,8 +890,8 @@ footer {
           }
         }
         .made-with {
+          padding: 0 35px;
           .icons {
-            width: 300px;
             i {
               font-size: 2.5rem;
             }
@@ -842,7 +903,8 @@ footer {
 
   footer {
     .content-container {
-      padding: 80px 30px;
+      margin-top: 20px;
+      // padding: 80px 30px;
       h2 {
         font-size: 3rem;
         span {
@@ -857,10 +919,18 @@ footer {
         }
       }
       .contact-link {
+        margin-top: 40px;
         a {
           font-size: 2.2rem;
         }
       }
+    }
+  }
+
+  .contact-form form {
+    button {
+      width: 190px;
+      height: 40px;
     }
   }
 }
@@ -875,6 +945,9 @@ footer {
       h1 {
         font-size: 9rem;
       }
+      h2 {
+        top: 70%;
+      }
       .scroll-down {
         top: 75%;
         left: 40%;
@@ -885,8 +958,17 @@ footer {
 
   .about {
     .content-container {
-      padding: 80px 40px;
+      flex-direction: row;
+      // justify-content: space-around;
+      .img-container {
+        height: 100%;
+        width: 40%;
+        margin: 0 35px;
+      }
       .text-container {
+        margin-top: 0;
+        height: 100%;
+        width: 60%;
         h2 {
           font-size: 3.5rem;
           span {
@@ -899,37 +981,50 @@ footer {
         }
       }
     }
+    .skills-container {
+      margin-top: 30px;
+    }
   }
 
   .skills li i {
     font-size: 3.7rem;
+    padding: 25px;
   }
 
   .changing-fonts {
     h2 {
-      padding: 80px 30px;
+      padding: 30px 30px;
       font-size: 3.5rem;
       span {
         font-size: 4.5rem;
       }
     }
     .content-container {
-      padding: 80px 40px;
+      padding: 20px 30px;
       flex-direction: row;
+      .img-container {
+        height: 100%;
+      }
       .text-container {
         padding: 0;
         height: 100%;
-        justify-content: flex-start;
+        // justify-content: flex-start;
         .description {
           p {
             font-size: 1.5rem;
           }
         }
         .made-with {
-          margin-bottom: 30px;
           .icons {
             i {
               font-size: 3rem;
+            }
+          }
+        }
+        .links {
+          .link-items {
+            a {
+              font-size: 1.2rem;
             }
           }
         }
@@ -939,29 +1034,38 @@ footer {
 
   .studio-ghibli {
     h2 {
-      padding: 80px 30px;
+      padding: 30px 30px;
       font-size: 3.5rem;
       span {
         font-size: 4.5rem;
       }
     }
     .content-container {
-      padding: 80px 40px;
+      padding: 20px 30px;
       flex-direction: row-reverse;
+      .img-container {
+        height: 100%;
+      }
       .text-container {
         padding: 0;
         height: 100%;
-        justify-content: flex-start;
+        // justify-content: flex-start;
         .description {
           p {
             font-size: 1.5rem;
           }
         }
         .made-with {
-          margin-bottom: 30px;
           .icons {
             i {
               font-size: 3rem;
+            }
+          }
+        }
+        .links {
+          .link-items {
+            a {
+              font-size: 1.2rem;
             }
           }
         }
@@ -971,29 +1075,38 @@ footer {
 
   .vid-monster {
     h2 {
-      padding: 80px 30px;
+      padding: 30px 30px;
       font-size: 3.5rem;
       span {
         font-size: 4.5rem;
       }
     }
     .content-container {
-      padding: 80px 40px;
+      padding: 20px 30px;
       flex-direction: row;
+      .img-container {
+        height: 100%;
+      }
       .text-container {
         padding: 0;
         height: 100%;
-        justify-content: flex-start;
+        // justify-content: flex-start;
         .description {
           p {
             font-size: 1.5rem;
           }
         }
         .made-with {
-          margin-bottom: 30px;
           .icons {
             i {
               font-size: 3rem;
+            }
+          }
+        }
+        .links {
+          .link-items {
+            a {
+              font-size: 1.2rem;
             }
           }
         }
@@ -1003,29 +1116,38 @@ footer {
 
   .shopper-mapper {
     h2 {
-      padding: 80px 30px;
+      padding: 30px 30px;
       font-size: 3.5rem;
       span {
         font-size: 4.5rem;
       }
     }
     .content-container {
-      padding: 80px 40px;
+      padding: 20px 30px;
       flex-direction: row-reverse;
+      .img-container {
+        height: 100%;
+      }
       .text-container {
         padding: 0;
         height: 100%;
-        justify-content: flex-start;
+        // justify-content: flex-start;
         .description {
           p {
             font-size: 1.5rem;
           }
         }
         .made-with {
-          margin-bottom: 20px;
           .icons {
             i {
               font-size: 3rem;
+            }
+          }
+        }
+        .links {
+          .link-items {
+            a {
+              font-size: 1.2rem;
             }
           }
         }
@@ -1035,7 +1157,7 @@ footer {
 
   footer {
     .content-container {
-      padding: 80px 40px;
+      padding: 40px 30px;
       h2 {
         font-size: 3.5rem;
         span {
@@ -1050,10 +1172,18 @@ footer {
         }
       }
       .contact-link {
+        padding: 0 60px;
         a {
           font-size: 2.5rem;
         }
       }
+    }
+  }
+
+  .contact-form form {
+    button {
+      width: 250px;
+      height: 50px;
     }
   }
 }

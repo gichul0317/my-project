@@ -314,7 +314,6 @@ a {
   max-width: 320px;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid;
 }
 
 .hidden {
@@ -345,14 +344,14 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 60%;
+  width: 50%;
   height: 100%;
   z-index: 17;
   background-color: #fff;
 }
 .menu .menu-container {
   min-height: 100%;
-  padding: 0 40px;
+  padding: 0 50px;
 }
 .menu .menu-container .menu-nav {
   margin-top: 220px;
@@ -372,16 +371,30 @@ a {
   padding: 0 10px;
 }
 .menu .menu-container .social-list li a {
-  font-size: 1.5rem;
+  font-size: 2rem;
+}
+.menu .menu-container .social-list li a:hover,
+.menu .menu-container .social-list li a:focus {
+  color: #1576b9;
 }
 .menu .menu-container .contact {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
   margin-top: 50px;
 }
 .menu .menu-container .contact a {
   display: block;
   margin-bottom: 15px;
+}
+
+.social-list a i {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.social-list a i:hover,
+.social-list a i:focus {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
 }
 
 header .wrapper {
@@ -413,13 +426,12 @@ header .content-container {
 }
 header .content-container .nav-btn-container {
   position: absolute;
-  right: 0;
-  top: 25px;
-  width: 50px;
+  right: 60px;
+  top: 35px;
 }
 header .content-container .nav-btn-container .nav-btn {
   position: fixed;
-  font-size: 1.5rem;
+  font-size: 2rem;
   z-index: 22;
   color: #1576b9;
   -webkit-transition: -webkit-transform 0.3s ease;
@@ -471,14 +483,14 @@ header .content-container .scroll-down {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 60px 20px;
+  padding: 30px 20px;
 }
 .about .content-container .img-container {
-  height: calc(100% / 3);
+  height: calc(100% / 2);
 }
 .about .content-container .text-container {
   margin-top: 20px;
-  height: calc(100% / 3);
+  height: calc(100% / 2);
   width: 100%;
   overflow: auto;
 }
@@ -497,9 +509,11 @@ header .content-container .scroll-down {
 .about .content-container .text-container p {
   margin-top: 20px;
 }
-.about .content-container .skills-container {
-  margin-top: 30px;
-  height: calc(100% / 3);
+.about .skills-container {
+  padding: 0 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 100%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -511,13 +525,13 @@ header .content-container .scroll-down {
       -ms-flex-align: center;
           align-items: center;
 }
-.about .content-container .skills-container .skills {
+.about .skills-container .skills {
   height: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.about .content-container .skills-container .skills li {
+.about .skills-container .skills li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -527,6 +541,7 @@ header .content-container .scroll-down {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px;
 }
 
 .skills li i {
@@ -1196,6 +1211,29 @@ footer .content-container .contact-link a:focus {
     max-width: 800px;
   }
 
+  .menu .menu-container .menu-nav li {
+    padding: 15px 0;
+  }
+  .menu .menu-container .menu-nav li a {
+    font-size: 1.5rem;
+  }
+  .menu .menu-container .social-list li {
+    padding: 0 15px;
+  }
+  .menu .menu-container .social-list li a {
+    font-size: 2.5rem;
+  }
+  .menu .menu-container .contact a {
+    font-size: 1.2rem;
+  }
+
+  header .content-container .nav-btn-container {
+    right: 110px;
+    top: 60px;
+  }
+  header .content-container .nav-btn-container .nav-btn {
+    font-size: 3.5rem;
+  }
   header .content-container h1 {
     font-size: 7rem;
   }
@@ -1211,9 +1249,6 @@ footer .content-container .contact-link a:focus {
     left: 38%;
   }
 
-  .about .content-container {
-    padding: 80px 30px;
-  }
   .about .content-container .text-container h2 {
     font-size: 3rem;
   }
@@ -1222,7 +1257,10 @@ footer .content-container .contact-link a:focus {
   }
   .about .content-container .text-container p {
     font-size: 1.2rem;
-    margin-top: 25px;
+    margin-top: 30px;
+  }
+  .about .skills-container .skills li {
+    padding: 15px;
   }
 
   .skills li i {
@@ -1230,87 +1268,75 @@ footer .content-container .contact-link a:focus {
   }
 
   .changing-fonts h2 {
-    padding: 80px 30px;
+    margin-top: 30px;
     font-size: 3rem;
   }
   .changing-fonts h2 span {
     font-size: 4rem;
   }
-  .changing-fonts .content-container {
-    padding: 80px 30px;
-  }
   .changing-fonts .content-container .text-container .description p {
     font-size: 1.1rem;
   }
-  .changing-fonts .content-container .text-container .made-with .icons {
-    width: 300px;
+  .changing-fonts .content-container .text-container .made-with {
+    padding: 0 35px;
   }
   .changing-fonts .content-container .text-container .made-with .icons i {
     font-size: 2.5rem;
   }
 
   .studio-ghibli h2 {
-    padding: 80px 30px;
+    margin-top: 30px;
     font-size: 3rem;
   }
   .studio-ghibli h2 span {
     font-size: 4rem;
   }
-  .studio-ghibli .content-container {
-    padding: 80px 30px;
-  }
   .studio-ghibli .content-container .text-container .description p {
     font-size: 1.1rem;
   }
-  .studio-ghibli .content-container .text-container .made-with .icons {
-    width: 300px;
+  .studio-ghibli .content-container .text-container .made-with {
+    padding: 0 35px;
   }
   .studio-ghibli .content-container .text-container .made-with .icons i {
     font-size: 2.5rem;
   }
 
   .vid-monster h2 {
-    padding: 80px 30px;
+    margin-top: 30px;
     font-size: 3rem;
   }
   .vid-monster h2 span {
     font-size: 4rem;
   }
-  .vid-monster .content-container {
-    padding: 80px 30px;
-  }
   .vid-monster .content-container .text-container .description p {
     font-size: 1.1rem;
   }
-  .vid-monster .content-container .text-container .made-with .icons {
-    width: 300px;
+  .vid-monster .content-container .text-container .made-with {
+    padding: 0 35px;
   }
   .vid-monster .content-container .text-container .made-with .icons i {
     font-size: 2.5rem;
   }
 
   .shopper-mapper h2 {
-    padding: 80px 30px;
+    margin-top: 30px;
     font-size: 3rem;
   }
   .shopper-mapper h2 span {
     font-size: 4rem;
   }
-  .shopper-mapper .content-container {
-    padding: 80px 30px;
-  }
   .shopper-mapper .content-container .text-container .description p {
     font-size: 1.1rem;
   }
-  .shopper-mapper .content-container .text-container .made-with .icons {
-    width: 300px;
+  .shopper-mapper .content-container .text-container .made-with {
+    padding: 0 35px;
   }
   .shopper-mapper .content-container .text-container .made-with .icons i {
     font-size: 2.5rem;
   }
 
   footer .content-container {
-    padding: 80px 30px;
+    margin-top: 20px;
   }
   footer .content-container h2 {
     font-size: 3rem;
@@ -1321,8 +1347,16 @@ footer .content-container .contact-link a:focus {
   footer .content-container .text-container .contact-info p {
     font-size: 1.1rem;
   }
+  footer .content-container .contact-link {
+    margin-top: 40px;
+  }
   footer .content-container .contact-link a {
     font-size: 2.2rem;
+  }
+
+  .contact-form form button {
+    width: 190px;
+    height: 40px;
   }
 }
 @media (min-width: 950px) {
@@ -1333,6 +1367,9 @@ footer .content-container .contact-link a:focus {
   header .content-container h1 {
     font-size: 9rem;
   }
+  header .content-container h2 {
+    top: 70%;
+  }
   header .content-container .scroll-down {
     top: 75%;
     left: 40%;
@@ -1340,7 +1377,20 @@ footer .content-container .contact-link a:focus {
   }
 
   .about .content-container {
-    padding: 80px 40px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .about .content-container .img-container {
+    height: 100%;
+    width: 40%;
+    margin: 0 35px;
+  }
+  .about .content-container .text-container {
+    margin-top: 0;
+    height: 100%;
+    width: 60%;
   }
   .about .content-container .text-container h2 {
     font-size: 3.5rem;
@@ -1352,137 +1402,141 @@ footer .content-container .contact-link a:focus {
     font-size: 1.3rem;
     margin-top: 40px;
   }
+  .about .skills-container {
+    margin-top: 30px;
+  }
 
   .skills li i {
     font-size: 3.7rem;
+    padding: 25px;
   }
 
   .changing-fonts h2 {
-    padding: 80px 30px;
+    padding: 30px 30px;
     font-size: 3.5rem;
   }
   .changing-fonts h2 span {
     font-size: 4.5rem;
   }
   .changing-fonts .content-container {
-    padding: 80px 40px;
+    padding: 20px 30px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .changing-fonts .content-container .img-container {
+    height: 100%;
+  }
   .changing-fonts .content-container .text-container {
     padding: 0;
     height: 100%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
   }
   .changing-fonts .content-container .text-container .description p {
     font-size: 1.5rem;
   }
-  .changing-fonts .content-container .text-container .made-with {
-    margin-bottom: 30px;
-  }
   .changing-fonts .content-container .text-container .made-with .icons i {
     font-size: 3rem;
   }
+  .changing-fonts .content-container .text-container .links .link-items a {
+    font-size: 1.2rem;
+  }
 
   .studio-ghibli h2 {
-    padding: 80px 30px;
+    padding: 30px 30px;
     font-size: 3.5rem;
   }
   .studio-ghibli h2 span {
     font-size: 4.5rem;
   }
   .studio-ghibli .content-container {
-    padding: 80px 40px;
+    padding: 20px 30px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
+  .studio-ghibli .content-container .img-container {
+    height: 100%;
+  }
   .studio-ghibli .content-container .text-container {
     padding: 0;
     height: 100%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
   }
   .studio-ghibli .content-container .text-container .description p {
     font-size: 1.5rem;
   }
-  .studio-ghibli .content-container .text-container .made-with {
-    margin-bottom: 30px;
-  }
   .studio-ghibli .content-container .text-container .made-with .icons i {
     font-size: 3rem;
   }
+  .studio-ghibli .content-container .text-container .links .link-items a {
+    font-size: 1.2rem;
+  }
 
   .vid-monster h2 {
-    padding: 80px 30px;
+    padding: 30px 30px;
     font-size: 3.5rem;
   }
   .vid-monster h2 span {
     font-size: 4.5rem;
   }
   .vid-monster .content-container {
-    padding: 80px 40px;
+    padding: 20px 30px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .vid-monster .content-container .img-container {
+    height: 100%;
+  }
   .vid-monster .content-container .text-container {
     padding: 0;
     height: 100%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
   }
   .vid-monster .content-container .text-container .description p {
     font-size: 1.5rem;
   }
-  .vid-monster .content-container .text-container .made-with {
-    margin-bottom: 30px;
-  }
   .vid-monster .content-container .text-container .made-with .icons i {
     font-size: 3rem;
   }
+  .vid-monster .content-container .text-container .links .link-items a {
+    font-size: 1.2rem;
+  }
 
   .shopper-mapper h2 {
-    padding: 80px 30px;
+    padding: 30px 30px;
     font-size: 3.5rem;
   }
   .shopper-mapper h2 span {
     font-size: 4.5rem;
   }
   .shopper-mapper .content-container {
-    padding: 80px 40px;
+    padding: 20px 30px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
+  .shopper-mapper .content-container .img-container {
+    height: 100%;
+  }
   .shopper-mapper .content-container .text-container {
     padding: 0;
     height: 100%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
   }
   .shopper-mapper .content-container .text-container .description p {
     font-size: 1.5rem;
   }
-  .shopper-mapper .content-container .text-container .made-with {
-    margin-bottom: 20px;
-  }
   .shopper-mapper .content-container .text-container .made-with .icons i {
     font-size: 3rem;
   }
+  .shopper-mapper .content-container .text-container .links .link-items a {
+    font-size: 1.2rem;
+  }
 
   footer .content-container {
-    padding: 80px 40px;
+    padding: 40px 30px;
   }
   footer .content-container h2 {
     font-size: 3.5rem;
@@ -1493,8 +1547,16 @@ footer .content-container .contact-link a:focus {
   footer .content-container .text-container .contact-info p {
     font-size: 1.3rem;
   }
+  footer .content-container .contact-link {
+    padding: 0 60px;
+  }
   footer .content-container .contact-link a {
     font-size: 2.5rem;
+  }
+
+  .contact-form form button {
+    width: 250px;
+    height: 50px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
