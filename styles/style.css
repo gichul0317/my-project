@@ -1114,6 +1114,21 @@ footer .copyright {
           transform: scale(1.2, 1.2);
   cursor: pointer;
 }
+.contact-form form ::-webkit-input-placeholder {
+  text-align: center;
+}
+.contact-form form ::-moz-placeholder {
+  text-align: center;
+}
+.contact-form form :-ms-input-placeholder {
+  text-align: center;
+}
+.contact-form form ::-ms-input-placeholder {
+  text-align: center;
+}
+.contact-form form ::placeholder {
+  text-align: center;
+}
 
 @-webkit-keyframes scroll-down {
   0% {
