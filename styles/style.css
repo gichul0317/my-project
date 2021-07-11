@@ -292,7 +292,10 @@ h2,
 h3,
 h4,
 p,
-ul {
+ul,
+li,
+i,
+span {
   margin: 0;
   padding: 0;
 }
@@ -312,7 +315,7 @@ a {
 }
 
 .wrapper {
-  max-width: 320px;
+  max-width: 360px;
   width: 100%;
   margin: 0 auto;
 }
@@ -351,39 +354,46 @@ a {
   background-color: #fff;
 }
 .menu .menu-container {
-  min-height: 100%;
-  padding: 0 50px;
-}
-.menu .menu-container .menu-nav {
-  margin-top: 220px;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .menu .menu-container .menu-nav li {
   padding: 10px 0;
 }
 .menu .menu-container .social-list {
-  margin-top: 150px;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  width: 100%;
+  margin-bottom: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .menu .menu-container .social-list li {
   padding: 0 10px;
 }
 .menu .menu-container .social-list li a {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 .menu .menu-container .social-list li a:hover,
 .menu .menu-container .social-list li a:focus {
   color: #1576b9;
-}
-.menu .menu-container .contact {
-  margin-top: 50px;
-}
-.menu .menu-container .contact a {
-  display: block;
-  margin-bottom: 15px;
 }
 
 .social-list a i {
@@ -476,8 +486,11 @@ header .content-container .scroll-down {
   z-index: 10;
 }
 
+.about {
+  margin-top: 100px;
+}
 .about .content-container {
-  height: 100%;
+  height: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -512,10 +525,9 @@ header .content-container .scroll-down {
   margin-top: 20px;
 }
 .about .skills-container {
-  padding: 0 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  height: 100%;
+  height: 40%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -530,30 +542,44 @@ header .content-container .scroll-down {
 .about .skills-container .skills {
   height: 100%;
   width: 100%;
+  margin-right: 25px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.about .skills-container .skills li {
+
+.skills li i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
-}
-
-.skills li i {
   font-size: 2.2rem;
+  padding: 10px;
 }
 .skills li i:hover, .skills li i:focus {
   cursor: pointer;
   color: #1576b9;
 }
 
+.skills span {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.changing-fonts {
+  margin-top: 100px;
+}
 .changing-fonts h2 {
   margin-top: 20px;
   padding: 30px 20px;
@@ -661,6 +687,9 @@ header .content-container .scroll-down {
           transform: scale(1.2, 1.2);
 }
 
+.studio-ghibli {
+  margin-top: 100px;
+}
 .studio-ghibli h2 {
   margin-top: 20px;
   padding: 30px 20px;
@@ -771,6 +800,9 @@ header .content-container .scroll-down {
           transform: scale(1.2, 1.2);
 }
 
+.vid-monster {
+  margin-top: 100px;
+}
 .vid-monster h2 {
   margin-top: 20px;
   padding: 30px 20px;
@@ -881,6 +913,9 @@ header .content-container .scroll-down {
           transform: scale(1.2, 1.2);
 }
 
+.shopper-mapper {
+  margin-top: 100px;
+}
 .shopper-mapper h2 {
   margin-top: 20px;
   padding: 30px 20px;
@@ -991,6 +1026,9 @@ header .content-container .scroll-down {
           transform: scale(1.2, 1.2);
 }
 
+footer {
+  margin-top: 100px;
+}
 footer .content-container {
   height: 100%;
   display: -webkit-box;
@@ -1276,11 +1314,9 @@ footer .copyright {
     font-size: 1.2rem;
     margin-top: 30px;
   }
-  .about .skills-container .skills li {
-    padding: 15px;
-  }
 
   .skills li i {
+    padding: 15px;
     font-size: 3rem;
   }
 

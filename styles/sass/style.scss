@@ -21,7 +21,10 @@ h2,
 h3,
 h4,
 p,
-ul {
+ul,
+li,
+i,
+span {
   margin: 0;
   padding: 0;
 }
@@ -41,7 +44,7 @@ a {
 }
 
 .wrapper {
-  max-width: 320px;
+  max-width: 360px;
   width: 100%;
   margin: 0 auto;
 }
@@ -77,34 +80,34 @@ a {
   z-index: 17;
   background-color: $white;
   .menu-container {
-    min-height: 100%;
-    padding: 0 50px;
+    width: 100%;
+    height: 100%;
+    // margin-top: 100px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     .menu-nav {
-      margin-top: 220px;
       li {
         padding: 10px 0;
       }
     }
     .social-list {
-      margin-top: 150px;
-      align-self: flex-start;
+      width: 100%;
+      margin-bottom: 150px;
       display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
       li {
         padding: 0 10px;
         a {
-          font-size: 2rem;
+          font-size: 1.7rem;
         }
         a:hover,
         a:focus {
           color: $primary;
         }
-      }
-    }
-    .contact {
-      margin-top: 50px;
-      a {
-        display: block;
-        margin-bottom: 15px;
       }
     }
   }
@@ -193,8 +196,9 @@ header {
 
 // about section css
 .about {
+  margin-top: 100px;
   .content-container {
-    height: 100%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     padding: 0 20px 30px 20px;
@@ -224,10 +228,9 @@ header {
     }
   }
   .skills-container {
-    padding: 0 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-    height: 100%;
+    height: 40%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -235,20 +238,20 @@ header {
     .skills {
       height: 100%;
       width: 100%;
+      margin-right: 25px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-      }
     }
   }
 }
 
 .skills li i {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-size: 2.2rem;
+  padding: 10px;
   &:hover,
   &:focus {
     cursor: pointer;
@@ -256,8 +259,17 @@ header {
   }
 }
 
+.skills span {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 10px;
+}
+
 // changing-fonts project css
 .changing-fonts {
+  margin-top: 100px;
   h2 {
     margin-top: 20px;
     padding: 30px 20px;
@@ -334,6 +346,7 @@ header {
 
 // studio-ghibli project css
 .studio-ghibli {
+  margin-top: 100px;
   h2 {
     margin-top: 20px;
     padding: 30px 20px;
@@ -411,6 +424,7 @@ header {
 
 // vid-monster project css
 .vid-monster {
+  margin-top: 100px;
   h2 {
     margin-top: 20px;
     padding: 30px 20px;
@@ -488,6 +502,7 @@ header {
 
 // shopper-mapper project css
 .shopper-mapper {
+  margin-top: 100px;
   h2 {
     margin-top: 20px;
     padding: 30px 20px;
@@ -565,6 +580,7 @@ header {
 
 // footer section css
 footer {
+  margin-top: 100px;
   .content-container {
     height: 100%;
     display: flex;
@@ -769,16 +785,10 @@ footer {
         }
       }
     }
-    .skills-container {
-      .skills {
-        li {
-          padding: 15px;
-        }
-      }
-    }
   }
 
   .skills li i {
+    padding: 15px;
     font-size: 3rem;
   }
 
