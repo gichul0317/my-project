@@ -324,6 +324,54 @@ a {
   display: none;
 }
 
+.loader-container {
+  width: 100%;
+  height: 100%;
+}
+.loader-container .wrapper {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader {
+  width: 150px;
+  height: 150px;
+  border: 16px solid #a1a0a0;
+  border-radius: 50%;
+  border-top: 16px solid #1576b9;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 .menu-nav li {
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
@@ -498,7 +546,7 @@ header .content-container .scroll-down {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 20px 30px 20px;
+  padding: 0 30px;
 }
 .about .content-container .img-container {
   height: calc(100% / 2);
@@ -577,12 +625,14 @@ header .content-container .scroll-down {
   margin-top: 10px;
 }
 
+.projects {
+  padding: 0 30px;
+}
+
 .changing-fonts {
   margin-top: 100px;
 }
 .changing-fonts h2 {
-  margin-top: 20px;
-  padding: 30px 20px;
   font-family: "Montserrat", sans-serif;
   font-size: 2.2rem;
   font-weight: 900;
@@ -691,8 +741,6 @@ header .content-container .scroll-down {
   margin-top: 100px;
 }
 .studio-ghibli h2 {
-  margin-top: 20px;
-  padding: 30px 20px;
   font-family: "Montserrat", sans-serif;
   font-size: 2.2rem;
   font-weight: 900;
@@ -804,8 +852,6 @@ header .content-container .scroll-down {
   margin-top: 100px;
 }
 .vid-monster h2 {
-  margin-top: 20px;
-  padding: 30px 20px;
   font-family: "Montserrat", sans-serif;
   font-size: 2.2rem;
   font-weight: 900;
@@ -917,8 +963,6 @@ header .content-container .scroll-down {
   margin-top: 100px;
 }
 .shopper-mapper h2 {
-  margin-top: 20px;
-  padding: 30px 20px;
   font-family: "Montserrat", sans-serif;
   font-size: 2.2rem;
   font-weight: 900;
@@ -1030,7 +1074,7 @@ footer {
   margin-top: 100px;
 }
 footer .content-container {
-  height: 100%;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1041,7 +1085,7 @@ footer .content-container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px 20px;
+  padding: 0 30px;
 }
 footer .content-container h2 {
   font-family: "Montserrat", sans-serif;
@@ -1108,9 +1152,9 @@ footer .content-container .contact-link a:focus {
           transform: scale(1.2, 1.2);
 }
 footer .copyright {
+  height: 10%;
   text-align: center;
-  padding: 0 15px;
-  margin: 50px 0;
+  padding: 50px 15px;
 }
 
 .contact-form form {
@@ -1278,9 +1322,6 @@ footer .copyright {
   .menu .menu-container .social-list li a {
     font-size: 2.5rem;
   }
-  .menu .menu-container .contact a {
-    font-size: 1.2rem;
-  }
 
   header .content-container .nav-btn-container {
     right: 110px;
@@ -1321,7 +1362,6 @@ footer .copyright {
   }
 
   .changing-fonts h2 {
-    margin-top: 30px;
     font-size: 3rem;
   }
   .changing-fonts h2 span {
@@ -1338,7 +1378,6 @@ footer .copyright {
   }
 
   .studio-ghibli h2 {
-    margin-top: 30px;
     font-size: 3rem;
   }
   .studio-ghibli h2 span {
@@ -1355,7 +1394,6 @@ footer .copyright {
   }
 
   .vid-monster h2 {
-    margin-top: 30px;
     font-size: 3rem;
   }
   .vid-monster h2 span {
@@ -1372,7 +1410,6 @@ footer .copyright {
   }
 
   .shopper-mapper h2 {
-    margin-top: 30px;
     font-size: 3rem;
   }
   .shopper-mapper h2 span {
@@ -1388,9 +1425,6 @@ footer .copyright {
     font-size: 2.5rem;
   }
 
-  footer .content-container {
-    margin-top: 20px;
-  }
   footer .content-container h2 {
     font-size: 3rem;
   }
@@ -1443,7 +1477,7 @@ footer .copyright {
   .about .content-container .img-container {
     height: 100%;
     width: 40%;
-    margin: 0 35px;
+    margin-right: 35px;
   }
   .about .content-container .text-container {
     margin-top: 0;
@@ -1462,22 +1496,22 @@ footer .copyright {
   }
   .about .skills-container {
     margin-top: 30px;
+    padding: 0 30px;
   }
 
   .skills li i {
-    font-size: 3.7rem;
+    font-size: 3.5rem;
     padding: 25px;
   }
 
   .changing-fonts h2 {
-    padding: 30px 30px;
     font-size: 3.5rem;
   }
   .changing-fonts h2 span {
     font-size: 4.5rem;
   }
   .changing-fonts .content-container {
-    padding: 20px 30px;
+    margin-top: 40px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1485,13 +1519,19 @@ footer .copyright {
   }
   .changing-fonts .content-container .img-container {
     height: 100%;
+    width: 50%;
   }
   .changing-fonts .content-container .text-container {
     padding: 0;
     height: 100%;
+    width: 50%;
   }
   .changing-fonts .content-container .text-container .description p {
     font-size: 1.5rem;
+  }
+  .changing-fonts .content-container .text-container .made-with .title p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
   }
   .changing-fonts .content-container .text-container .made-with .icons i {
     font-size: 3rem;
@@ -1501,14 +1541,13 @@ footer .copyright {
   }
 
   .studio-ghibli h2 {
-    padding: 30px 30px;
     font-size: 3.5rem;
   }
   .studio-ghibli h2 span {
     font-size: 4.5rem;
   }
   .studio-ghibli .content-container {
-    padding: 20px 30px;
+    margin-top: 40px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -1516,13 +1555,19 @@ footer .copyright {
   }
   .studio-ghibli .content-container .img-container {
     height: 100%;
+    width: 50%;
   }
   .studio-ghibli .content-container .text-container {
     padding: 0;
     height: 100%;
+    width: 50%;
   }
   .studio-ghibli .content-container .text-container .description p {
     font-size: 1.5rem;
+  }
+  .studio-ghibli .content-container .text-container .made-with .title p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
   }
   .studio-ghibli .content-container .text-container .made-with .icons i {
     font-size: 3rem;
@@ -1532,14 +1577,13 @@ footer .copyright {
   }
 
   .vid-monster h2 {
-    padding: 30px 30px;
     font-size: 3.5rem;
   }
   .vid-monster h2 span {
     font-size: 4.5rem;
   }
   .vid-monster .content-container {
-    padding: 20px 30px;
+    margin-top: 40px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1547,13 +1591,19 @@ footer .copyright {
   }
   .vid-monster .content-container .img-container {
     height: 100%;
+    width: 50%;
   }
   .vid-monster .content-container .text-container {
     padding: 0;
     height: 100%;
+    width: 50%;
   }
   .vid-monster .content-container .text-container .description p {
     font-size: 1.5rem;
+  }
+  .vid-monster .content-container .text-container .made-with .title p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
   }
   .vid-monster .content-container .text-container .made-with .icons i {
     font-size: 3rem;
@@ -1563,14 +1613,13 @@ footer .copyright {
   }
 
   .shopper-mapper h2 {
-    padding: 30px 30px;
     font-size: 3.5rem;
   }
   .shopper-mapper h2 span {
     font-size: 4.5rem;
   }
   .shopper-mapper .content-container {
-    padding: 20px 30px;
+    margin-top: 40px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -1578,13 +1627,19 @@ footer .copyright {
   }
   .shopper-mapper .content-container .img-container {
     height: 100%;
+    width: 50%;
   }
   .shopper-mapper .content-container .text-container {
     padding: 0;
     height: 100%;
+    width: 50%;
   }
   .shopper-mapper .content-container .text-container .description p {
     font-size: 1.5rem;
+  }
+  .shopper-mapper .content-container .text-container .made-with .title p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
   }
   .shopper-mapper .content-container .text-container .made-with .icons i {
     font-size: 3rem;
@@ -1593,26 +1648,32 @@ footer .copyright {
     font-size: 1.2rem;
   }
 
-  footer .content-container {
-    padding: 40px 30px;
-  }
   footer .content-container h2 {
     font-size: 3.5rem;
   }
   footer .content-container h2 span {
     font-size: 4.5rem;
   }
+  footer .content-container .text-container {
+    margin-top: 40px;
+    text-align: center;
+  }
   footer .content-container .text-container .contact-info p {
     font-size: 1.3rem;
+    margin-bottom: 40px;
   }
   footer .content-container .contact-link {
-    padding: 0 60px;
+    padding: 0 120px;
   }
   footer .content-container .contact-link a {
     font-size: 2.5rem;
   }
 
+  .contact-form form {
+    padding: 0 200px;
+  }
   .contact-form form button {
+    margin: 40px 0;
     width: 250px;
     height: 50px;
   }
@@ -1645,8 +1706,18 @@ footer .copyright {
   footer .content-container {
     padding: 40px 30px;
   }
-  footer .content-container .contact-link {
+  footer .content-container .text-container .contact-info {
     padding: 0 100px;
+  }
+  footer .content-container .text-container .contact-info p {
+    font-size: 1.5rem;
+  }
+  footer .content-container .contact-link {
+    padding: 0 150px;
+  }
+
+  .contact-form form {
+    padding: 0 300px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
