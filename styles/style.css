@@ -285,6 +285,7 @@ html {
 
 body {
   background-color: #f8f8f8;
+  position: relative;
 }
 
 h1,
@@ -324,54 +325,17 @@ a {
   display: none;
 }
 
-.loader-container {
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-}
-.loader-container .wrapper {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background-color: #1576b9;
+  opacity: 0.85;
+  z-index: 10;
 }
 
-.loader {
-  width: 150px;
-  height: 150px;
-  border: 16px solid #a1a0a0;
-  border-radius: 50%;
-  border-top: 16px solid #1576b9;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
 .menu-nav li {
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
@@ -386,6 +350,7 @@ a {
 .menu-nav li a {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
+  color: #fff;
 }
 .menu-nav li a:hover,
 .menu-nav li a:focus {
@@ -396,10 +361,10 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 60%;
+  width: 30%;
   height: 100%;
   z-index: 17;
-  background-color: #fff;
+  background-color: #5b6972;
 }
 .menu .menu-container {
   width: 100%;
@@ -418,18 +383,29 @@ a {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
+.menu .menu-container .menu-nav {
+  margin-top: 100px;
+}
 .menu .menu-container .menu-nav li {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 .menu .menu-container .social-list {
   width: 100%;
-  margin-bottom: 150px;
+  height: 20%;
+  margin-bottom: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -437,7 +413,8 @@ a {
   padding: 0 10px;
 }
 .menu .menu-container .social-list li a {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
+  color: #fff;
 }
 .menu .menu-container .social-list li a:hover,
 .menu .menu-container .social-list li a:focus {
@@ -468,7 +445,6 @@ header .half-color {
   width: 50%;
   height: 100%;
   background-color: #1576b9;
-  z-index: 1;
 }
 header .content-container {
   height: 100%;
@@ -511,7 +487,6 @@ header .content-container h1 {
   font-size: 5rem;
   letter-spacing: 2px;
   line-height: 1;
-  z-index: 10;
 }
 header .content-container h1 span {
   color: #1576b9;
@@ -521,7 +496,6 @@ header .content-container h2 {
   position: absolute;
   top: 65%;
   right: 0;
-  z-index: 10;
 }
 header .content-container .scroll-down {
   position: absolute;
@@ -531,7 +505,6 @@ header .content-container .scroll-down {
   color: #fff;
   -webkit-animation: scroll-down 5s infinite;
           animation: scroll-down 5s infinite;
-  z-index: 10;
 }
 
 .about {
@@ -1311,16 +1284,16 @@ footer .copyright {
   }
 
   .menu .menu-container .menu-nav li {
-    padding: 15px 0;
+    padding: 25px 0;
   }
   .menu .menu-container .menu-nav li a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .menu .menu-container .social-list li {
     padding: 0 15px;
   }
   .menu .menu-container .social-list li a {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   header .content-container .nav-btn-container {
@@ -1368,7 +1341,7 @@ footer .copyright {
     font-size: 4rem;
   }
   .changing-fonts .content-container .text-container .description p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   .changing-fonts .content-container .text-container .made-with {
     padding: 0 35px;
@@ -1384,7 +1357,7 @@ footer .copyright {
     font-size: 4rem;
   }
   .studio-ghibli .content-container .text-container .description p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   .studio-ghibli .content-container .text-container .made-with {
     padding: 0 35px;
@@ -1400,7 +1373,7 @@ footer .copyright {
     font-size: 4rem;
   }
   .vid-monster .content-container .text-container .description p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   .vid-monster .content-container .text-container .made-with {
     padding: 0 35px;
@@ -1416,7 +1389,7 @@ footer .copyright {
     font-size: 4rem;
   }
   .shopper-mapper .content-container .text-container .description p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   .shopper-mapper .content-container .text-container .made-with {
     padding: 0 35px;
@@ -1432,7 +1405,7 @@ footer .copyright {
     font-size: 4rem;
   }
   footer .content-container .text-container .contact-info p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   footer .content-container .contact-link {
     margin-top: 40px;
@@ -1449,6 +1422,10 @@ footer .copyright {
 @media (min-width: 950px) {
   .wrapper {
     max-width: 1300px;
+  }
+
+  .menu {
+    width: 25%;
   }
 
   header .content-container .nav-btn-container {
@@ -1527,7 +1504,7 @@ footer .copyright {
     width: 50%;
   }
   .changing-fonts .content-container .text-container .description p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .changing-fonts .content-container .text-container .made-with .title p {
     font-size: 1.3rem;
@@ -1563,7 +1540,7 @@ footer .copyright {
     width: 50%;
   }
   .studio-ghibli .content-container .text-container .description p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .studio-ghibli .content-container .text-container .made-with .title p {
     font-size: 1.3rem;
@@ -1599,7 +1576,7 @@ footer .copyright {
     width: 50%;
   }
   .vid-monster .content-container .text-container .description p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .vid-monster .content-container .text-container .made-with .title p {
     font-size: 1.3rem;
@@ -1635,7 +1612,7 @@ footer .copyright {
     width: 50%;
   }
   .shopper-mapper .content-container .text-container .description p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .shopper-mapper .content-container .text-container .made-with .title p {
     font-size: 1.3rem;
@@ -1663,14 +1640,14 @@ footer .copyright {
     margin-bottom: 40px;
   }
   footer .content-container .contact-link {
-    padding: 0 120px;
+    padding: 0 400px;
   }
   footer .content-container .contact-link a {
     font-size: 2.5rem;
   }
 
   .contact-form form {
-    padding: 0 200px;
+    padding: 0 300px;
   }
   .contact-form form button {
     margin: 40px 0;
@@ -1709,15 +1686,12 @@ footer .copyright {
   footer .content-container .text-container .contact-info {
     padding: 0 100px;
   }
-  footer .content-container .text-container .contact-info p {
-    font-size: 1.5rem;
-  }
   footer .content-container .contact-link {
-    padding: 0 150px;
+    padding: 0 600px;
   }
 
   .contact-form form {
-    padding: 0 300px;
+    padding: 0 450px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {

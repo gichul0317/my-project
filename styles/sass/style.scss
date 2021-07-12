@@ -14,6 +14,7 @@ html {
 
 body {
   background-color: $secondary;
+  position: relative;
 }
 
 h1,
@@ -53,40 +54,16 @@ a {
   display: none;
 }
 
-// loader css
-.loader-container {
+// overlay css
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  .wrapper {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.loader {
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  width: 150px;
-  height: 150px;
-  border: 16px solid #a1a0a0;
-  border-radius: 50%;
-  border-top: 16px solid $primary;
-  animation: spin 2s linear infinite;
-  // z-index: 5;
-  // background-color: rgba(150, 7, 7, 0.9);
-  // opacity: 0.2;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  background-color: $primary;
+  opacity: 0.85;
+  z-index: 10;
 }
 
 // menu css
@@ -100,6 +77,7 @@ a {
   }
   li a {
     transition: color 0.3s;
+    color: $white;
   }
   li a:hover,
   li a:focus {
@@ -111,10 +89,10 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 60%;
+  width: 30%;
   height: 100%;
   z-index: 17;
-  background-color: $white;
+  background-color: $third;
   .menu-container {
     width: 100%;
     height: 100%;
@@ -124,20 +102,25 @@ a {
     align-items: center;
     justify-content: space-around;
     .menu-nav {
+      margin-top: 100px;
       li {
-        padding: 10px 0;
+        padding: 20px 0;
       }
     }
     .social-list {
       width: 100%;
-      margin-bottom: 150px;
+      height: 20%;
+      margin-bottom: 300px;
       display: flex;
+      flex-direction: column;
       justify-content: space-evenly;
+      align-items: center;
       flex-wrap: wrap;
       li {
         padding: 0 10px;
         a {
-          font-size: 1.7rem;
+          font-size: 1.3rem;
+          color: $white;
         }
         a:hover,
         a:focus {
@@ -172,7 +155,7 @@ header {
     width: 50%;
     height: 100%;
     background-color: $primary;
-    z-index: 1;
+    // z-index: 5;
   }
   .content-container {
     height: 100%;
@@ -205,7 +188,7 @@ header {
       font-size: 5rem;
       letter-spacing: 2px;
       line-height: 1;
-      z-index: 10;
+      // z-index: 10;
       span {
         color: $primary;
       }
@@ -215,7 +198,7 @@ header {
       position: absolute;
       top: 65%;
       right: 0;
-      z-index: 10;
+      // z-index: 10;
     }
     .scroll-down {
       position: absolute;
@@ -224,7 +207,7 @@ header {
       font-size: 3rem;
       color: $white;
       animation: scroll-down 5s infinite;
-      z-index: 10;
+      // z-index: 10;
     }
   }
 }
@@ -757,9 +740,9 @@ footer {
     .menu-container {
       .menu-nav {
         li {
-          padding: 15px 0;
+          padding: 25px 0;
           a {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
           }
         }
       }
@@ -767,7 +750,7 @@ footer {
         li {
           padding: 0 15px;
           a {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
           }
         }
       }
@@ -833,7 +816,7 @@ footer {
       .text-container {
         .description {
           p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
           }
         }
         .made-with {
@@ -859,7 +842,7 @@ footer {
       .text-container {
         .description {
           p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
           }
         }
         .made-with {
@@ -885,7 +868,7 @@ footer {
       .text-container {
         .description {
           p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
           }
         }
         .made-with {
@@ -911,7 +894,7 @@ footer {
       .text-container {
         .description {
           p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
           }
         }
         .made-with {
@@ -937,7 +920,7 @@ footer {
       .text-container {
         .contact-info {
           p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
           }
         }
       }
@@ -961,6 +944,10 @@ footer {
 @media (min-width: 950px) {
   .wrapper {
     max-width: 1300px;
+  }
+
+  .menu {
+    width: 25%;
   }
 
   header {
@@ -1041,7 +1028,7 @@ footer {
         width: 50%;
         .description {
           p {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
           }
         }
         .made-with {
@@ -1090,7 +1077,7 @@ footer {
         width: 50%;
         .description {
           p {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
           }
         }
         .made-with {
@@ -1139,7 +1126,7 @@ footer {
         width: 50%;
         .description {
           p {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
           }
         }
         .made-with {
@@ -1188,7 +1175,7 @@ footer {
         width: 50%;
         .description {
           p {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
           }
         }
         .made-with {
@@ -1236,7 +1223,7 @@ footer {
         }
       }
       .contact-link {
-        padding: 0 120px;
+        padding: 0 400px;
         a {
           font-size: 2.5rem;
         }
@@ -1245,7 +1232,7 @@ footer {
   }
 
   .contact-form form {
-    padding: 0 200px;
+    padding: 0 300px;
     button {
       margin: 40px 0;
       width: 250px;
@@ -1305,19 +1292,16 @@ footer {
       .text-container {
         .contact-info {
           padding: 0 100px;
-          p {
-            font-size: 1.5rem;
-          }
         }
       }
       .contact-link {
-        padding: 0 150px;
+        padding: 0 600px;
       }
     }
   }
 
   .contact-form form {
-    padding: 0 300px;
+    padding: 0 450px;
   }
 }
 

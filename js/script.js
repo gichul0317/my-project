@@ -2,18 +2,25 @@
 
 const app = {};
 
+// window.onload = app.displayLoader;
+
 app.displayNav = function () {
   const navBtn = document.querySelector('.nav-btn');
   const target = document.querySelector('.menu');
+  const overlay = document.querySelector('.overlay');
   navBtn.addEventListener('click', function () {
     target.classList.toggle('hidden');
+    overlay.classList.toggle('hidden');
   });
 };
 
-app.displayLoader = function () {
-  const body = document.querySelector('body');
-  body.addEventListener('onload', function () {
-    setTimeout(app.displayPage, 2000);
+app.closeByOverlay = function () {
+  const overlay = document.querySelector('.overlay');
+  const target = document.querySelector('.menu');
+  overlay.addEventListener('click', function () {
+    // console.log('clicked');
+    overlay.classList.toggle('hidden');
+    target.classList.toggle('hidden');
   });
 };
 
@@ -27,7 +34,7 @@ app.displayPage = function () {
 app.init = function () {
   AOS.init();
   app.displayNav();
-  app.displayLoader();
+  app.closeByOverlay();
 };
 
 app.init();
