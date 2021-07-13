@@ -84,10 +84,11 @@ a {
   position: fixed;
   top: 25%;
   left: 0;
-  width: 40%;
+  width: 30%;
   height: 50%;
   z-index: 17;
   background-color: $third;
+  border-radius: 0 15px 15px 0;
   .menu-container {
     width: 100%;
     height: 100%;
@@ -96,36 +97,16 @@ a {
     align-items: center;
     justify-content: space-around;
     .menu-nav {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       li {
         padding: 20px 0;
       }
     }
-    .social-list {
-      width: 100%;
-      height: 30%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-      li {
-        a {
-          padding: 0 10px;
-          font-size: 1.3rem;
-          color: $white;
-        }
-      }
-    }
-  }
-}
-
-.social-list a {
-  i {
-    transition: transform 0.3s;
-  }
-  i:hover,
-  i:focus {
-    transform: scale(1.2, 1.2);
   }
 }
 
@@ -208,7 +189,6 @@ header {
       margin-top: 20px;
       height: calc(100% / 2);
       width: 100%;
-      overflow: auto;
       h2 {
         margin-top: 10px;
         font-family: 'Montserrat', sans-serif;
@@ -219,6 +199,23 @@ header {
         text-transform: uppercase;
         span {
           font-size: 3rem;
+        }
+      }
+      .social-list {
+        margin: 30px 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        li {
+          a:nth-of-type(1) {
+            padding: 0 10px 0 0;
+          }
+          a {
+            padding: 0 10px;
+            font-size: 1.3rem;
+          }
         }
       }
       p {
@@ -241,6 +238,17 @@ header {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
     }
+  }
+}
+
+.social-list a {
+  i {
+    transition: all 0.3s;
+  }
+  i:hover,
+  i:focus {
+    transform: scale(1.2, 1.2);
+    color: $primary;
   }
 }
 
@@ -714,27 +722,6 @@ footer {
     max-width: 800px;
   }
 
-  .menu {
-    .menu-container {
-      .menu-nav {
-        li {
-          padding: 25px 0;
-          a {
-            font-size: 1.2rem;
-          }
-        }
-      }
-      .social-list {
-        li {
-          padding: 0 15px;
-          a {
-            font-size: 1.5rem;
-          }
-        }
-      }
-    }
-  }
-
   header {
     .content-container {
       .nav-btn-container {
@@ -761,6 +748,17 @@ footer {
           font-size: 3rem;
           span {
             font-size: 4rem;
+          }
+        }
+        .social-list {
+          li {
+            a:nth-of-type(1) {
+              padding: 0 15px 0 0;
+            }
+            a {
+              padding: 0 15px;
+              font-size: 1.4rem;
+            }
           }
         }
         p {
@@ -918,11 +916,14 @@ footer {
   }
 
   .menu {
-    width: 30%;
     .menu-container {
-      .social-list {
-        flex-direction: row;
-        justify-content: center;
+      .menu-nav {
+        li {
+          padding: 25px 0;
+          a {
+            font-size: 1.2rem;
+          }
+        }
       }
     }
   }
@@ -960,6 +961,17 @@ footer {
           font-size: 3.5rem;
           span {
             font-size: 4.5rem;
+          }
+        }
+        .social-list {
+          li {
+            a:nth-of-type(1) {
+              padding: 0 20px 0 0;
+            }
+            a {
+              padding: 0 20px;
+              font-size: 1.5rem;
+            }
           }
         }
         p {
@@ -1210,22 +1222,7 @@ footer {
   }
 
   .menu {
-    .menu-container {
-      .menu-nav {
-        li {
-          a {
-            font-size: 1.4rem;
-          }
-        }
-      }
-      .social-list {
-        li {
-          a {
-            font-size: 1.7rem;
-          }
-        }
-      }
-    }
+    width: 20%;
   }
 
   .about {
@@ -1293,6 +1290,11 @@ footer {
       height: 1000px;
     }
   }
+
+  .menu {
+    top: 15%;
+    height: 80%;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -1300,5 +1302,10 @@ footer {
     .wrapper {
       height: 1000px;
     }
+  }
+
+  .menu {
+    top: 15%;
+    height: 80%;
   }
 }
