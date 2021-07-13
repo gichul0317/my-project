@@ -353,17 +353,16 @@ a {
 
 .menu {
   position: fixed;
-  top: 0;
+  top: 25%;
   left: 0;
-  width: 30%;
-  height: 100%;
+  width: 40%;
+  height: 50%;
   z-index: 17;
   background-color: #5b6972;
 }
 .menu .menu-container {
   width: 100%;
   height: 100%;
-  padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -377,16 +376,12 @@ a {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-.menu .menu-container .menu-nav {
-  margin-top: 100px;
-}
 .menu .menu-container .menu-nav li {
   padding: 20px 0;
 }
 .menu .menu-container .social-list {
   width: 100%;
-  height: 20%;
-  margin-bottom: 150px;
+  height: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,19 +389,16 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.menu .menu-container .social-list li {
-  padding: 0 10px;
-}
 .menu .menu-container .social-list li a {
+  padding: 0 10px;
   font-size: 1.3rem;
   color: #fff;
 }
@@ -480,12 +472,6 @@ header .content-container h1 {
 }
 header .content-container h1 span {
   color: #1576b9;
-}
-header .content-container h2 {
-  font-size: 1rem;
-  position: absolute;
-  top: 65%;
-  right: 0;
 }
 header .content-container .scroll-down {
   position: absolute;
@@ -1296,12 +1282,6 @@ footer .copyright {
   header .content-container h1 {
     font-size: 7rem;
   }
-  header .content-container h2 {
-    font-size: 1.2rem;
-    position: absolute;
-    top: 68%;
-    right: 0;
-  }
   header .content-container .scroll-down {
     top: 77%;
     left: 38%;
@@ -1413,16 +1393,25 @@ footer .copyright {
     max-width: 1200px;
   }
 
+  .menu {
+    width: 30%;
+  }
+  .menu .menu-container .social-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
   header .content-container .nav-btn-container {
     right: 150px;
     top: 80px;
   }
   header .content-container h1 {
     font-size: 9rem;
-  }
-  header .content-container h2 {
-    top: 70%;
-    right: 10%;
   }
   header .content-container .scroll-down {
     top: 78%;
@@ -1645,9 +1634,6 @@ footer .copyright {
     max-width: 1850px;
   }
 
-  .menu {
-    width: 25%;
-  }
   .menu .menu-container .menu-nav li a {
     font-size: 1.4rem;
   }

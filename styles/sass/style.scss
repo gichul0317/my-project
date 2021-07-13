@@ -82,38 +82,35 @@ a {
 
 .menu {
   position: fixed;
-  top: 0;
+  top: 25%;
   left: 0;
-  width: 30%;
-  height: 100%;
+  width: 40%;
+  height: 50%;
   z-index: 17;
   background-color: $third;
   .menu-container {
     width: 100%;
     height: 100%;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     .menu-nav {
-      margin-top: 100px;
       li {
         padding: 20px 0;
       }
     }
     .social-list {
       width: 100%;
-      height: 20%;
-      margin-bottom: 150px;
+      height: 30%;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: space-around;
       align-items: center;
       flex-wrap: wrap;
       li {
-        padding: 0 10px;
         a {
+          padding: 0 10px;
           font-size: 1.3rem;
           color: $white;
         }
@@ -183,13 +180,6 @@ header {
       span {
         color: $primary;
       }
-    }
-    h2 {
-      font-size: 1rem;
-      position: absolute;
-      top: 65%;
-      right: 0;
-      // z-index: 10;
     }
     .scroll-down {
       position: absolute;
@@ -757,12 +747,6 @@ footer {
       h1 {
         font-size: 7rem;
       }
-      h2 {
-        font-size: 1.2rem;
-        position: absolute;
-        top: 68%;
-        right: 0;
-      }
       .scroll-down {
         top: 77%;
         left: 38%;
@@ -933,6 +917,16 @@ footer {
     max-width: 1200px;
   }
 
+  .menu {
+    width: 30%;
+    .menu-container {
+      .social-list {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  }
+
   header {
     .content-container {
       .nav-btn-container {
@@ -941,10 +935,6 @@ footer {
       }
       h1 {
         font-size: 9rem;
-      }
-      h2 {
-        top: 70%;
-        right: 10%;
       }
       .scroll-down {
         top: 78%;
@@ -1220,7 +1210,6 @@ footer {
   }
 
   .menu {
-    width: 25%;
     .menu-container {
       .menu-nav {
         li {
