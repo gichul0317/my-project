@@ -112,8 +112,8 @@ a {
 
 // header css
 header {
+  position: relative;
   .wrapper {
-    position: relative;
     height: 100vh;
     min-height: -webkit-fill-available;
   }
@@ -931,8 +931,11 @@ footer {
   header {
     .content-container {
       .nav-btn-container {
-        right: 150px;
-        top: 80px;
+        // right: 150px;
+        // top: 80px;
+        .nav-btn {
+          display: none;
+        }
       }
       h1 {
         font-size: 9rem;
@@ -1221,9 +1224,9 @@ footer {
     max-width: 1850px;
   }
 
-  .menu {
-    width: 20%;
-  }
+  // .menu {
+  //   width: 20%;
+  // }
 
   .about {
     .content-container {

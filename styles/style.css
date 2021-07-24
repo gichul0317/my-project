@@ -398,8 +398,10 @@ a {
   padding: 20px 0;
 }
 
-header .wrapper {
+header {
   position: relative;
+}
+header .wrapper {
   height: 100vh;
   min-height: -webkit-fill-available;
 }
@@ -1409,9 +1411,8 @@ footer .copyright {
     font-size: 1.2rem;
   }
 
-  header .content-container .nav-btn-container {
-    right: 150px;
-    top: 80px;
+  header .content-container .nav-btn-container .nav-btn {
+    display: none;
   }
   header .content-container h1 {
     font-size: 9rem;
@@ -1642,10 +1643,6 @@ footer .copyright {
 @media (min-width: 1700px) {
   .wrapper {
     max-width: 1850px;
-  }
-
-  .menu {
-    width: 20%;
   }
 
   .about .content-container .text-container {
