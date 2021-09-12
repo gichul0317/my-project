@@ -31,10 +31,20 @@ app.displayPage = function () {
   loader.classList.add('hidden');
 };
 
+app.scrollPage = function () {
+  const btnScroll = document.querySelector('.scroll-down');
+  const sectionTo = document.querySelector('#about');
+
+  btnScroll.addEventListener('click', function () {
+    sectionTo.scrollIntoView({ behavior: 'smooth' });
+  })
+}
+
 app.init = function () {
   AOS.init();
   app.displayNav();
   app.closeByOverlay();
+  app.scrollPage();
 };
 
 app.init();

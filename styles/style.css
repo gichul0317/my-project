@@ -466,6 +466,11 @@ header .content-container .scroll-down {
   color: #fff;
   -webkit-animation: scroll-down 5s infinite;
           animation: scroll-down 5s infinite;
+  background-color: transparent;
+  border: none;
+}
+header .content-container .scroll-down:hover, header .content-container .scroll-down:focus {
+  cursor: pointer;
 }
 
 .about {
