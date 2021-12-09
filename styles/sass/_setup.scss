@@ -228,3 +228,37 @@ template {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+html {
+  font-size: 125%;
+  font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+i,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}

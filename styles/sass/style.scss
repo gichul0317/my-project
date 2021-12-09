@@ -1,47 +1,10 @@
-@import 'setup';
-
-$primary: #1576b9;
-$secondary: #f8f8f8;
-$third: #5b6972;
-$white: #fff;
-
-html {
-  font-size: 125%;
-  font-family: 'Lato', sans-serif;
-  scroll-behavior: smooth;
-  height: -webkit-fill-available;
-}
+@import './setup';
+@import './colors';
+@import './mixins';
 
 body {
   background-color: $secondary;
   position: relative;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-li,
-i,
-span {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  display: block;
-  width: 100%;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: #000;
 }
 
 .wrapper {
@@ -171,6 +134,7 @@ header {
       animation: scroll-down 5s infinite;
       background-color: transparent;
       border: none;
+      z-index: 22;
       // outline: none;
       &:hover, &:focus {
         cursor: pointer;
@@ -195,13 +159,7 @@ header {
       height: calc(100% / 2);
       width: 100%;
       h2 {
-        margin-top: 10px;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 2.2rem;
-        font-weight: 900;
-        line-height: 0.7;
-        color: $primary;
-        text-transform: uppercase;
+        @include sectionTitle;
         span {
           font-size: 3rem;
         }
@@ -288,12 +246,7 @@ header {
 .changing-fonts {
   margin-top: 100px;
   h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 900;
-    line-height: 0.7;
-    color: $primary;
-    text-transform: uppercase;
+    @include sectionTitle;
     span {
       font-size: 3rem;
     }
@@ -363,12 +316,7 @@ header {
 .studio-ghibli {
   margin-top: 100px;
   h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 900;
-    line-height: 0.7;
-    color: $primary;
-    text-transform: uppercase;
+    @include sectionTitle;
     span {
       font-size: 3rem;
     }
@@ -439,12 +387,7 @@ header {
 .vid-monster {
   margin-top: 100px;
   h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 900;
-    line-height: 0.7;
-    color: $primary;
-    text-transform: uppercase;
+    @include sectionTitle;
     span {
       font-size: 3rem;
     }
@@ -515,12 +458,7 @@ header {
 .shopper-mapper {
   margin-top: 100px;
   h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 900;
-    line-height: 0.7;
-    color: $primary;
-    text-transform: uppercase;
+    @include sectionTitle;
     span {
       font-size: 3rem;
     }
@@ -597,12 +535,7 @@ footer {
     justify-content: space-between;
     padding: 0 30px;
     h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 900;
-      line-height: 0.7;
-      color: $primary;
-      text-transform: uppercase;
+      @include sectionTitle;
       span {
         font-size: 3rem;
       }

@@ -8,10 +8,10 @@ app.displayNav = function () {
   const navBtn = document.querySelector('.nav-btn');
   const target = document.querySelector('.menu');
   const overlay = document.querySelector('.overlay');
-  navBtn.addEventListener('click', function () {
-    target.classList.toggle('hidden');
-    overlay.classList.toggle('hidden');
-  });
+  // navBtn.addEventListener('click', function () {
+  // target.classList.toggle('hidden');
+  // overlay.classList.toggle('hidden');
+  // });
 };
 
 app.closeByOverlay = function () {
@@ -36,6 +36,7 @@ app.scrollPage = function () {
   const sectionTo = document.querySelector('#about');
 
   btnScroll.addEventListener('click', function () {
+    console.log('clicked')
     sectionTo.scrollIntoView({ behavior: 'smooth' });
   })
 }
