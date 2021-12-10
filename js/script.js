@@ -32,7 +32,7 @@ app.displayPage = function () {
 };
 
 app.scrollPage = function () {
-  const btnScroll = document.querySelector('.scroll-down');
+  const btnScroll = document.querySelector('.home__scroll-down');
   const sectionTo = document.querySelector('#about');
 
   btnScroll.addEventListener('click', function () {

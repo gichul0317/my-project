@@ -312,111 +312,49 @@ a {
 
 body {
   background-color: #f8f8f8;
-  position: relative;
 }
 
 .wrapper {
-  max-width: 360px;
   width: 100%;
-  margin: 0 auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hidden {
   display: none;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #1576b9;
-  opacity: 0.85;
-  z-index: 10;
-}
-
-.menu-nav li {
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-.menu-nav li:hover,
-.menu-nav li:focus {
-  -webkit-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
-}
-.menu-nav li a {
-  color: #fff;
-}
-
-.menu {
-  position: fixed;
-  top: 25%;
-  left: 0;
-  width: 30%;
-  height: 50%;
-  z-index: 17;
-  background-color: #5b6972;
-  border-radius: 0 15px 15px 0;
-}
-.menu .menu-container {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.menu .menu-container .menu-nav {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.menu .menu-container .menu-nav li {
-  padding: 20px 0;
-}
-
-header {
+.home {
   position: relative;
-}
-header .wrapper {
   height: 100vh;
-  min-height: -webkit-fill-available;
 }
-header .half-color {
+.home__half-color {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 50%;
   height: 100%;
   background-color: #1576b9;
 }
-header .content-container {
+.home__content-container {
+  max-width: 700px;
+  width: 100%;
   height: 100%;
   position: relative;
-  padding: 60px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -427,42 +365,22 @@ header .content-container {
       -ms-flex-align: center;
           align-items: center;
 }
-header .content-container .nav-btn-container {
-  position: absolute;
-  right: 60px;
-  top: 35px;
-}
-header .content-container .nav-btn-container .nav-btn {
-  position: fixed;
-  font-size: 2rem;
-  z-index: 22;
-  color: #1576b9;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-}
-header .content-container .nav-btn-container .nav-btn:hover, header .content-container .nav-btn-container .nav-btn:focus {
-  cursor: pointer;
-  -webkit-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
-}
-header .content-container h1 {
+.home__title {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 5rem;
-  letter-spacing: 2px;
+  font-size: 6.286rem;
+  letter-spacing: 0.143rem;
   line-height: 1;
 }
-header .content-container h1 span {
+.home__title span {
   color: #1576b9;
 }
-header .content-container .scroll-down {
+.home__scroll-down {
   position: absolute;
   top: 75%;
   left: 30%;
-  font-size: 3rem;
+  font-size: 3.143rem;
   color: #fff;
   -webkit-animation: scroll-down 5s infinite;
           animation: scroll-down 5s infinite;
@@ -470,149 +388,139 @@ header .content-container .scroll-down {
   border: none;
   z-index: 22;
 }
-header .content-container .scroll-down:hover, header .content-container .scroll-down:focus {
+.home__scroll-down:hover, .home__scroll-down:focus {
   cursor: pointer;
 }
 
 .about {
-  margin-top: 100px;
+  padding: 3.143rem 1.571rem 1.571rem;
 }
-.about .content-container {
-  height: 60%;
+.about__content-container {
+  max-width: 1800px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 0 30px;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.about .content-container .img-container {
-  height: calc(100% / 2);
+.about__img-container {
+  width: 30%;
 }
-.about .content-container .text-container {
-  margin-top: 20px;
-  height: calc(100% / 2);
-  width: 100%;
+.about__text-container {
+  width: 70%;
 }
-.about .content-container .text-container h2 {
+.about__textbox {
+  padding: 0 2.857rem;
+}
+.about__title {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.2rem;
+  font-size: 2.429rem;
   font-weight: 900;
-  line-height: 0.7;
+  line-height: 1;
   color: #1576b9;
   text-transform: uppercase;
 }
-.about .content-container .text-container h2 span {
-  font-size: 3rem;
-}
-.about .content-container .text-container .social-list {
-  margin: 30px 0;
-  width: 100%;
+.about__social-list {
+  margin: 0.714rem 0;
+  padding: 0 0.286rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
-.about .content-container .text-container .social-list li a:nth-of-type(1) {
-  padding: 0 10px 0 0;
+.about__icon {
+  padding-right: 0.714rem;
+  font-size: 1.143rem;
 }
-.about .content-container .text-container .social-list li a {
-  padding: 0 10px;
-  font-size: 1.3rem;
-}
-.about .content-container .text-container p {
-  margin-top: 20px;
-}
-.about .skills-container {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: 40%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.about .skills-container .skills {
-  height: 100%;
-  width: 100%;
-  margin-right: 25px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.social-list a i {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.social-list a i:hover,
-.social-list a i:focus {
-  -webkit-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
-  color: #1576b9;
-}
-
-.skills li i {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 2.2rem;
-  padding: 10px;
-}
-.skills li i:hover, .skills li i:focus {
-  cursor: pointer;
-  color: #1576b9;
-}
-
-.skills span {
+.about__text {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  text-align: center;
-  margin-top: 10px;
+  padding: 0 0.286rem;
+  margin-bottom: 0.429rem;
+}
+.about__skills-container {
+  max-width: 1800px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.571rem 0;
+}
+.about__skills {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.about__skillIcn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.714rem;
+  padding: 0.571rem;
+}
+.about__skillIcn:hover, .about__skillIcn:focus {
+  cursor: pointer;
+  color: #1576b9;
+}
+.about__skillDesc {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.286rem;
 }
 
 .projects {
-  padding: 0 30px;
+  padding: 3.143rem 1.571rem 1.571rem;
 }
 
-.changing-fonts {
-  margin-top: 100px;
+.changing-fonts__content-container {
+  max-width: 1800px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.changing-fonts h2 {
+.changing-fonts__img-container {
+  width: 30%;
+}
+.changing-fonts__text-container {
+  width: 70%;
+}
+.changing-fonts__textbox {
+  padding: 0 2.857rem;
+}
+.changing-fonts__title {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.2rem;
+  font-size: 2.429rem;
   font-weight: 900;
-  line-height: 0.7;
+  line-height: 1;
   color: #1576b9;
   text-transform: uppercase;
-}
-.changing-fonts h2 span {
-  font-size: 3rem;
 }
 .changing-fonts .content-container {
   height: 100%;
@@ -713,9 +621,9 @@ header .content-container .scroll-down:hover, header .content-container .scroll-
 }
 .studio-ghibli h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.2rem;
+  font-size: 2.429rem;
   font-weight: 900;
-  line-height: 0.7;
+  line-height: 1;
   color: #1576b9;
   text-transform: uppercase;
 }
@@ -824,9 +732,9 @@ header .content-container .scroll-down:hover, header .content-container .scroll-
 }
 .vid-monster h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.2rem;
+  font-size: 2.429rem;
   font-weight: 900;
-  line-height: 0.7;
+  line-height: 1;
   color: #1576b9;
   text-transform: uppercase;
 }
@@ -935,9 +843,9 @@ header .content-container .scroll-down:hover, header .content-container .scroll-
 }
 .shopper-mapper h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.2rem;
+  font-size: 2.429rem;
   font-weight: 900;
-  line-height: 0.7;
+  line-height: 1;
   color: #1576b9;
   text-transform: uppercase;
 }
@@ -1060,9 +968,9 @@ footer .content-container {
 }
 footer .content-container h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.2rem;
+  font-size: 2.429rem;
   font-weight: 900;
-  line-height: 0.7;
+  line-height: 1;
   color: #1576b9;
   text-transform: uppercase;
 }
@@ -1274,433 +1182,5 @@ footer .copyright {
   100% {
     -webkit-transform: translateY(10px);
             transform: translateY(10px);
-  }
-}
-@media (min-width: 600px) {
-  .wrapper {
-    max-width: 800px;
-  }
-
-  header .content-container .nav-btn-container {
-    right: 110px;
-    top: 60px;
-  }
-  header .content-container .nav-btn-container .nav-btn {
-    font-size: 3.5rem;
-  }
-  header .content-container h1 {
-    font-size: 7rem;
-  }
-  header .content-container .scroll-down {
-    top: 77%;
-    left: 38%;
-  }
-
-  .about .content-container .text-container h2 {
-    font-size: 3rem;
-  }
-  .about .content-container .text-container h2 span {
-    font-size: 4rem;
-  }
-  .about .content-container .text-container .social-list li a:nth-of-type(1) {
-    padding: 0 15px 0 0;
-  }
-  .about .content-container .text-container .social-list li a {
-    padding: 0 15px;
-    font-size: 1.4rem;
-  }
-  .about .content-container .text-container p {
-    font-size: 1.2rem;
-    margin-top: 30px;
-  }
-
-  .skills li i {
-    padding: 15px;
-    font-size: 3rem;
-  }
-
-  .changing-fonts h2 {
-    font-size: 3rem;
-  }
-  .changing-fonts h2 span {
-    font-size: 4rem;
-  }
-  .changing-fonts .content-container .text-container .description p {
-    font-size: 1.2rem;
-  }
-  .changing-fonts .content-container .text-container .made-with {
-    padding: 0 35px;
-  }
-  .changing-fonts .content-container .text-container .made-with .icons i {
-    font-size: 2.5rem;
-  }
-
-  .studio-ghibli h2 {
-    font-size: 3rem;
-  }
-  .studio-ghibli h2 span {
-    font-size: 4rem;
-  }
-  .studio-ghibli .content-container .text-container .description p {
-    font-size: 1.2rem;
-  }
-  .studio-ghibli .content-container .text-container .made-with {
-    padding: 0 35px;
-  }
-  .studio-ghibli .content-container .text-container .made-with .icons i {
-    font-size: 2.5rem;
-  }
-
-  .vid-monster h2 {
-    font-size: 3rem;
-  }
-  .vid-monster h2 span {
-    font-size: 4rem;
-  }
-  .vid-monster .content-container .text-container .description p {
-    font-size: 1.2rem;
-  }
-  .vid-monster .content-container .text-container .made-with {
-    padding: 0 35px;
-  }
-  .vid-monster .content-container .text-container .made-with .icons i {
-    font-size: 2.5rem;
-  }
-
-  .shopper-mapper h2 {
-    font-size: 3rem;
-  }
-  .shopper-mapper h2 span {
-    font-size: 4rem;
-  }
-  .shopper-mapper .content-container .text-container .description p {
-    font-size: 1.2rem;
-  }
-  .shopper-mapper .content-container .text-container .made-with {
-    padding: 0 35px;
-  }
-  .shopper-mapper .content-container .text-container .made-with .icons i {
-    font-size: 2.5rem;
-  }
-
-  footer .content-container h2 {
-    font-size: 3rem;
-  }
-  footer .content-container h2 span {
-    font-size: 4rem;
-  }
-  footer .content-container .text-container .contact-info p {
-    font-size: 1.2rem;
-  }
-  footer .content-container .contact-link {
-    margin-top: 40px;
-  }
-  footer .content-container .contact-link a {
-    font-size: 2.2rem;
-  }
-
-  .contact-form form button {
-    width: 190px;
-    height: 40px;
-  }
-}
-@media (min-width: 950px) {
-  .wrapper {
-    max-width: 1200px;
-  }
-
-  .menu .menu-container .menu-nav li {
-    padding: 25px 0;
-  }
-  .menu .menu-container .menu-nav li a {
-    font-size: 1.2rem;
-  }
-
-  header .content-container .nav-btn-container .nav-btn {
-    display: none;
-  }
-  header .content-container h1 {
-    font-size: 9rem;
-  }
-  header .content-container .scroll-down {
-    top: 78%;
-    left: 40%;
-    font-size: 4rem;
-  }
-
-  .about .content-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .about .content-container .img-container {
-    height: 100%;
-    width: 40%;
-    margin-right: 35px;
-  }
-  .about .content-container .text-container {
-    margin-top: 0;
-    height: 100%;
-    width: 60%;
-  }
-  .about .content-container .text-container h2 {
-    font-size: 3.5rem;
-  }
-  .about .content-container .text-container h2 span {
-    font-size: 4.5rem;
-  }
-  .about .content-container .text-container .social-list li a:nth-of-type(1) {
-    padding: 0 20px 0 0;
-  }
-  .about .content-container .text-container .social-list li a {
-    padding: 0 20px;
-    font-size: 1.5rem;
-  }
-  .about .content-container .text-container p {
-    font-size: 1.3rem;
-    margin-top: 40px;
-  }
-  .about .skills-container {
-    margin-top: 30px;
-    padding: 0 30px;
-  }
-
-  .skills li i {
-    font-size: 3.5rem;
-    padding: 25px;
-  }
-
-  .changing-fonts h2 {
-    font-size: 3.5rem;
-  }
-  .changing-fonts h2 span {
-    font-size: 4.5rem;
-  }
-  .changing-fonts .content-container {
-    margin-top: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .changing-fonts .content-container .img-container {
-    height: 100%;
-    width: 50%;
-  }
-  .changing-fonts .content-container .text-container {
-    padding: 0;
-    height: 100%;
-    width: 50%;
-  }
-  .changing-fonts .content-container .text-container .description p {
-    font-size: 1.3rem;
-  }
-  .changing-fonts .content-container .text-container .made-with .title p {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-  }
-  .changing-fonts .content-container .text-container .made-with .icons i {
-    font-size: 3rem;
-  }
-  .changing-fonts .content-container .text-container .links .link-items a {
-    font-size: 1.2rem;
-  }
-
-  .studio-ghibli h2 {
-    font-size: 3.5rem;
-  }
-  .studio-ghibli h2 span {
-    font-size: 4.5rem;
-  }
-  .studio-ghibli .content-container {
-    margin-top: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-  .studio-ghibli .content-container .img-container {
-    height: 100%;
-    width: 50%;
-  }
-  .studio-ghibli .content-container .text-container {
-    padding: 0;
-    height: 100%;
-    width: 50%;
-  }
-  .studio-ghibli .content-container .text-container .description p {
-    font-size: 1.3rem;
-  }
-  .studio-ghibli .content-container .text-container .made-with .title p {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-  }
-  .studio-ghibli .content-container .text-container .made-with .icons i {
-    font-size: 3rem;
-  }
-  .studio-ghibli .content-container .text-container .links .link-items a {
-    font-size: 1.2rem;
-  }
-
-  .vid-monster h2 {
-    font-size: 3.5rem;
-  }
-  .vid-monster h2 span {
-    font-size: 4.5rem;
-  }
-  .vid-monster .content-container {
-    margin-top: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .vid-monster .content-container .img-container {
-    height: 100%;
-    width: 50%;
-  }
-  .vid-monster .content-container .text-container {
-    padding: 0;
-    height: 100%;
-    width: 50%;
-  }
-  .vid-monster .content-container .text-container .description p {
-    font-size: 1.3rem;
-  }
-  .vid-monster .content-container .text-container .made-with .title p {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-  }
-  .vid-monster .content-container .text-container .made-with .icons i {
-    font-size: 3rem;
-  }
-  .vid-monster .content-container .text-container .links .link-items a {
-    font-size: 1.2rem;
-  }
-
-  .shopper-mapper h2 {
-    font-size: 3.5rem;
-  }
-  .shopper-mapper h2 span {
-    font-size: 4.5rem;
-  }
-  .shopper-mapper .content-container {
-    margin-top: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-  .shopper-mapper .content-container .img-container {
-    height: 100%;
-    width: 50%;
-  }
-  .shopper-mapper .content-container .text-container {
-    padding: 0;
-    height: 100%;
-    width: 50%;
-  }
-  .shopper-mapper .content-container .text-container .description p {
-    font-size: 1.3rem;
-  }
-  .shopper-mapper .content-container .text-container .made-with .title p {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-  }
-  .shopper-mapper .content-container .text-container .made-with .icons i {
-    font-size: 3rem;
-  }
-  .shopper-mapper .content-container .text-container .links .link-items a {
-    font-size: 1.2rem;
-  }
-
-  footer .content-container h2 {
-    font-size: 3.5rem;
-  }
-  footer .content-container h2 span {
-    font-size: 4.5rem;
-  }
-  footer .content-container .text-container {
-    margin-top: 40px;
-    text-align: center;
-  }
-  footer .content-container .text-container .contact-info p {
-    font-size: 1.3rem;
-    margin-bottom: 40px;
-  }
-  footer .content-container .contact-link {
-    padding: 0 400px;
-  }
-  footer .content-container .contact-link a {
-    font-size: 2.5rem;
-  }
-
-  .contact-form form {
-    padding: 0 300px;
-  }
-  .contact-form form button {
-    margin: 40px 0;
-    width: 250px;
-    height: 50px;
-  }
-}
-@media (min-width: 1700px) {
-  .wrapper {
-    max-width: 1850px;
-  }
-
-  .about .content-container .text-container {
-    margin-top: 80px;
-  }
-
-  .changing-fonts .content-container .text-container {
-    margin-top: 60px;
-  }
-
-  .studio-ghibli .content-container .text-container {
-    margin-top: 60px;
-  }
-
-  .vid-monster .content-container .text-container {
-    margin-top: 60px;
-  }
-
-  .shopper-mapper .content-container .text-container {
-    margin-top: 60px;
-  }
-
-  footer .content-container {
-    padding: 40px 30px;
-  }
-  footer .content-container .text-container .contact-info {
-    padding: 0 100px;
-  }
-  footer .content-container .contact-link {
-    padding: 0 600px;
-  }
-
-  .contact-form form {
-    padding: 0 450px;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-  header .wrapper {
-    height: 1000px;
-  }
-
-  .menu {
-    top: 15%;
-    height: 80%;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  header .wrapper {
-    height: 1000px;
-  }
-
-  .menu {
-    top: 15%;
-    height: 80%;
   }
 }
