@@ -8,10 +8,7 @@ body {
 }
 
 .wrapper {
-  // max-width: 320px;
-  // width: 100%;
-  // // margin: 0 auto;
-  // min-height: -webkit-fill-available;
+  min-height: -webkit-fill-available;
   width: 100%;
   height: 100%;
   display: flex;
@@ -24,76 +21,11 @@ body {
   display: none;
 }
 
-// overlay css
-// .overlay {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: $primary;
-//   opacity: 0.85;
-//   z-index: 10;
-// }
-
-// menu css
-// .menu-nav {
-//   li {
-//     transition: transform 0.3s;
-//   }
-//   li:hover,
-//   li:focus {
-//     transform: scale(1.2, 1.2);
-//   }
-//   li a {
-//     color: $white;
-//   }
-// }
-
-// .menu {
-//   position: fixed;
-//   top: 25%;
-//   left: 0;
-//   width: 30%;
-//   height: 50%;
-//   z-index: 17;
-//   background-color: $third;
-//   border-radius: 0 15px 15px 0;
-//   .menu-container {
-//     width: 100%;
-//     height: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: space-around;
-//     .menu-nav {
-//       width: 100%;
-//       height: 100%;
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-//       align-items: center;
-//       li {
-//         padding: 20px 0;
-//       }
-//     }
-//   }
-// }
-
 // header css
 .home {
   position: relative;
+  width: 100vw;
   height: 100vh;
-  // .wrapper {
-  //   width: 100%;
-  //   height: 100%;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
   &__half-color {
     position: absolute;
     top: 0;
@@ -101,7 +33,7 @@ body {
     right: 0;
     bottom: 0;
     width: 50%;
-    height: 100%;
+    height: 100vh;
     background-color: $primary;
   }
   &__content-container {
@@ -112,23 +44,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    // .nav-btn-container {
-    //   position: absolute;
-    //   right: 60px;
-    //   top: 35px;
-    //   .nav-btn {
-    //     position: fixed;
-    //     font-size: 2rem;
-    //     z-index: 22;
-    //     color: $primary;
-    //     transition: transform 0.3s ease;
-    //     &:hover,
-    //     &:focus {
-    //       cursor: pointer;
-    //       transform: scale(1.2, 1.2);
-    //     }
-    //   }
-    // }
   }
   &__title {
     font-family: 'Montserrat', sans-serif;
@@ -137,6 +52,9 @@ body {
     font-size: 6.286rem;
     letter-spacing: 0.143rem;
     line-height: 1;
+    @include tablet {
+      font-size: 5.714rem;
+    }
   }
   &__dot {
     color: $primary;
@@ -155,55 +73,77 @@ body {
     &:hover, &:focus {
       cursor: pointer;
     }
+    @include tablet {
+      font-size: 2.857rem;
+    }
   }
 }
 
 // about section css
 .about {
   padding: 3.143rem 1.571rem 1.571rem;
+  @include tablet {
+    padding: 2.571rem 1.286rem 1.286rem;
+  }
   &__content-container {
     max-width: 1800px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    // align-items: center;
-    // .text-container {
-    //   margin-top: 20px;
-    //   height: calc(100% / 2);
-    //   width: 100%;
-    //   h2 {
-    //     @include sectionTitle;
-    //     span {
-    //       font-size: 3rem;
-    //     }
-    //   }
+    @include tablet {
+      flex-direction: column-reverse;
+    }
   }
   &__img-container {
     width: 30%;
+    @include tablet {
+      display: none;
+    }
   }
   &__text-container {
     width: 70%;
+    @include tablet {
+      width: 100%;
+    }
   }
   &__textbox {
     padding: 0 2.857rem;
+    @include tablet {
+      padding: 0;
+    }
   }
   &__title {
     @include sectionTitle;
+    @include tablet {
+      font-size: 1.857rem;
+    }
   }
   &__social-list {
     margin: 0.714rem 0;
     padding: 0 0.286rem;
     display: flex;
+    @include tablet {
+      margin: 0.571rem 0;
+      padding: 0 0.143rem;
+    }
   }
   &__icon {
     padding-right: 0.714rem;
     font-size: 1.143rem;
+    @include tablet {
+      padding-right: 0.571rem 0;
+      font-size: 1rem;
+    }
   }
   &__text {
     @include normalText;
     padding: 0 0.286rem;
     margin-bottom: 0.429rem;
+    @include tablet {
+      font-size: 0.857rem;
+      padding: 0 0.143rem;
+    }
   }
   &__skills-container {
     max-width: 1800px;
@@ -212,10 +152,12 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0.571rem 0;
+    @include tablet {
+      // padding: ;
+    }
   }
   &__skills {
     width: 100%;
-    // height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -231,49 +173,87 @@ body {
       cursor: pointer;
       color: $primary;
     }
+    @include tablet {
+      padding: 0.429rem;
+      font-size: 1.286rem;
+    }
   }
   &__skillDesc {
     @include normalText;
     margin-top: 0.286rem;
+    @include tablet {
+      font-size: 0.714rem;
+    }
   }
 }
 
 // projects css
 .projects {
   padding: 3.143rem 1.571rem 1.571rem;
+  @include tablet {
+    padding: 2.571rem 1.286rem 1.286rem;
+  }
 }
 
 // changing-fonts project css
 .changing-fonts {
   margin-bottom: 5.714rem;
+  @include tablet {
+    margin-bottom: 4.286rem;
+  }
   &__content-container {
     max-width: 1800px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @include tablet {
+      flex-direction: column-reverse;
+    }
   }
   &__img-container {
     width: 30%;
+    @include tablet {
+      display: none;
+    }
   }
   &__text-container {
     width: 70%;
+    @include tablet {
+      width: 100%;
+    }
   }
   &__textbox {
     padding: 0 2.857rem;
+    @include tablet {
+      padding: 0;
+    }
   }
   &__title {
     @include sectionTitle;
+    @include tablet {
+      font-size: 1.857rem;
+    }
   }
   &__description {
     margin: 0.714rem 0;
+    @include tablet {
+
+    }
   }
   &__text {
     @include normalText;
     padding: 0 0.286rem;
     margin-bottom: 0.429rem;
+    @include tablet {
+      font-size: 0.857rem;
+      padding: 0 0.143rem;
+    }
   }
   &__made-with {
     padding: 0 0.286rem;
+    @include tablet {
+      padding: 0 0.143rem;
+    }
   }
   &__icons {
     width: 350px;
@@ -298,29 +278,50 @@ body {
     &:hover, &:focus {
       color: $primary;
     }
+    @include tablet {
+      font-size: 0.857rem;
+    }
   }
 }
 
 // studio-ghibli project css
 .studio-ghibli {
   margin-bottom: 5.714rem;
+  @include tablet {
+    margin-bottom: 4.286rem;
+  }
   &__content-container {
     max-width: 1800px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @include tablet {
+      flex-direction: column-reverse;
+    }
   }
   &__img-container {
     width: 30%;
+    @include tablet {
+      display: none;
+    }
   }
   &__text-container {
     width: 70%;
+    @include tablet {
+      width: 100%;
+    }
   }
   &__textbox {
     padding: 0 2.857rem;
+    @include tablet {
+      padding: 0;
+    }
   }
   &__title {
     @include sectionTitle;
+    @include tablet {
+      font-size: 1.857rem;
+    }
   }
   &__description {
     margin: 0.714rem 0;
@@ -329,9 +330,16 @@ body {
     @include normalText;
     padding: 0 0.286rem;
     margin-bottom: 0.429rem;
+    @include tablet {
+      font-size: 0.857rem;
+      padding: 0 0.143rem;
+    }
   }
   &__made-with {
     padding: 0 0.286rem;
+    @include tablet {
+      padding: 0 0.143rem;
+    }
   }
   &__icons {
     width: 350px;
@@ -354,29 +362,50 @@ body {
     &:hover, &:focus {
       color: $primary;
     }
+    @include tablet {
+      font-size: 0.857rem;
+    }
   }
 }
 
 // vid-monster project css
 .vid-monster {
   margin-bottom: 5.714rem;
+  @include tablet {
+    margin-bottom: 4.286rem;
+  }
   &__content-container {
     max-width: 1800px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @include tablet {
+      flex-direction: column-reverse;
+    }
   }
   &__img-container {
     width: 30%;
+    @include tablet {
+      display: none;
+    }
   }
   &__text-container {
     width: 70%;
+    @include tablet {
+      width: 100%;
+    }
   }
   &__textbox {
     padding: 0 2.857rem;
+    @include tablet {
+      padding: 0;
+    }
   }
   &__title {
     @include sectionTitle;
+    @include tablet {
+      font-size: 1.857rem;
+    }
   }
   &__description {
     margin: 0.714rem 0;
@@ -385,9 +414,16 @@ body {
     @include normalText;
     padding: 0 0.286rem;
     margin-bottom: 0.429rem;
+    @include tablet {
+      font-size: 0.857rem;
+      padding: 0 0.143rem;
+    }
   }
   &__made-with {
     padding: 0 0.286rem;
+    @include tablet {
+      padding: 0 0.143rem;
+    }
   }
   &__icons {
     margin: 1rem 0;
@@ -405,29 +441,50 @@ body {
     &:hover, &:focus {
       color: $primary;
     }
+    @include tablet {
+      font-size: 0.857rem;
+    }
   }
 }
 
 // shopper-mapper project css
 .shopper-mapper {
   margin-bottom: 2.714rem;
+  @include tablet {
+    margin-bottom: 1.857rem;
+  }
   &__content-container {
     max-width: 1800px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @include tablet {
+      flex-direction: column-reverse;
+    }
   }
   &__img-container {
     width: 30%;
+    @include tablet {
+      display: none;
+    }
   }
   &__text-container {
     width: 70%;
+    @include tablet {
+      width: 100%;
+    }
   }
   &__textbox {
     padding: 0 2.857rem;
+    @include tablet {
+      padding: 0;
+    }
   }
   &__title {
     @include sectionTitle;
+    @include tablet {
+      font-size: 1.857rem;
+    }
   }
   &__description {
     margin: 0.714rem 0;
@@ -436,9 +493,16 @@ body {
     @include normalText;
     padding: 0 0.286rem;
     margin-bottom: 0.429rem;
+    @include tablet {
+      font-size: 0.857rem;
+      padding: 0 0.143rem;
+    }
   }
   &__made-with {
     padding: 0 0.286rem;
+    @include tablet {
+      padding: 0 0.143rem;
+    }
   }
   &__icons {
     margin: 1rem 0;
@@ -455,6 +519,9 @@ body {
     border-bottom: 5px solid $primary;
     &:hover, &:focus {
       color: $primary;
+    }
+    @include tablet {
+      font-size: 0.857rem;
     }
   }
 }
@@ -464,6 +531,9 @@ body {
 .footer {
   &__wrapper {
     padding: 3.143rem 1.571rem 1.571rem;
+    @include tablet {
+      padding: 2.571rem 1.286rem 1.286rem;
+    }
   }
   &__content-container {
     max-width: 1800px;
@@ -471,18 +541,31 @@ body {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    @include tablet {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
   }
   &__contact-form {
     width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include tablet {
+      width: 55%;
+      margin-top: 1.286rem;
+    }
   }
   &__formtitle {
     @include sectionTitle;
     font-size: 1.429rem;
     color: $third;
     margin-bottom: 0.714rem;
+    @include tablet {
+      font-size: 1.143rem;
+      text-align: center;
+    }
   }
   &__input {
     padding: 0.3rem;
@@ -491,9 +574,15 @@ body {
     border-bottom: 2px solid $primary;
     margin-bottom: 0.286rem;
     font-size: 0.743rem;
+    @include tablet {
+      height: 45px;
+    }
   } 
   ::placeholder {
     font-size: 0.743rem;
+    @include tablet {
+      font-size: 0.571rem;
+    }
   }
   &__textarea {
     padding: 0.3rem;
@@ -503,6 +592,9 @@ body {
     margin-bottom: 0.286rem;
     height: 350px;
     font-size: 0.743rem;
+    @include tablet {
+      height: 250px;
+    }
   }
   &__button {
     align-self: center;
@@ -522,28 +614,54 @@ body {
       background: $primary;
       cursor: pointer;
     }
+    @include tablet {
+      font-size: 0.571rem;
+      width: 120px;
+      height: 35px;
+    }
   }
   &__text-container {
     width: 50%;
+    @include tablet {
+      width: 100%;
+    }
   }
   &__textbox {
     padding: 0 0.714rem;
+    @include tablet {
+      padding: 0;
+    }
   }
   &__title {
     @include sectionTitle;
+    @include tablet {
+      font-size: 1.857rem;
+    }
   }
   &__contact-link {
     margin: 0.714rem 0;
     padding: 0 0.286rem;
+    @include tablet {
+      margin: 0.571rem 0;
+      padding: 0 0.143rem;
+    }
   }
   &__icon {
     padding-right: 0.714rem;
     font-size: 1.143rem;
+    @include tablet {
+      padding-right: 0.571rem 0;
+      font-size: 1rem;
+    }
   }
   &__text {
     @include normalText;
     padding: 0 0.286rem;
     margin-bottom: 0.429rem;
+    @include tablet {
+      font-size: 0.857rem;
+      padding: 0 0.143rem;
+    }
   }
   &__bar {
     display: flex;
@@ -551,11 +669,17 @@ body {
     align-items: center;
     background-color: $primary;
     height: 65px;
+    @include tablet {
+      height: 45px;
+    }
   }
   &__bartext {
     @include normalText;
     font-size: 0.771rem;
     color: $white;
+    @include tablet {
+      font-size: 0.571rem;
+    }
   }
 }
 
@@ -1284,3 +1408,78 @@ body {
 //     height: 80%;
 //   }
 // }
+
+// overlay css
+// .overlay {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: $primary;
+//   opacity: 0.85;
+//   z-index: 10;
+// }
+
+// menu css
+// .menu-nav {
+//   li {
+//     transition: transform 0.3s;
+//   }
+//   li:hover,
+//   li:focus {
+//     transform: scale(1.2, 1.2);
+//   }
+//   li a {
+//     color: $white;
+//   }
+// }
+
+// .menu {
+//   position: fixed;
+//   top: 25%;
+//   left: 0;
+//   width: 30%;
+//   height: 50%;
+//   z-index: 17;
+//   background-color: $third;
+//   border-radius: 0 15px 15px 0;
+//   .menu-container {
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: space-around;
+//     .menu-nav {
+//       width: 100%;
+//       height: 100%;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       align-items: center;
+//       li {
+//         padding: 20px 0;
+//       }
+//     }
+//   }
+// }
+// .nav-btn-container {
+    //   position: absolute;
+    //   right: 60px;
+    //   top: 35px;
+    //   .nav-btn {
+    //     position: fixed;
+    //     font-size: 2rem;
+    //     z-index: 22;
+    //     color: $primary;
+    //     transition: transform 0.3s ease;
+    //     &:hover,
+    //     &:focus {
+    //       cursor: pointer;
+    //       transform: scale(1.2, 1.2);
+    //     }
+    //   }
+    // }
