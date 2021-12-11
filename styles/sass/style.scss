@@ -137,9 +137,9 @@ body {
     font-size: 6.286rem;
     letter-spacing: 0.143rem;
     line-height: 1;
-    span {
-      color: $primary;
-    }
+  }
+  &__dot {
+    color: $primary;
   }
   &__scroll-down {
     position: absolute;
@@ -245,6 +245,7 @@ body {
 
 // changing-fonts project css
 .changing-fonts {
+  margin-bottom: 5.714rem;
   &__content-container {
     max-width: 1800px;
     width: 100%;
@@ -263,371 +264,392 @@ body {
   &__title {
     @include sectionTitle;
   }
-  .content-container {
-    height: 100%;
+  &__description {
+    margin: 0.714rem 0;
+  }
+  &__text {
+    @include normalText;
+    padding: 0 0.286rem;
+    margin-bottom: 0.429rem;
+  }
+  &__made-with {
+    padding: 0 0.286rem;
+  }
+  &__icons {
+    width: 350px;
     display: flex;
-    flex-direction: column;
-    padding: 10px 20px;
-    .img-container {
-      height: 30%;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .text-container {
-      height: 70%;
-      width: 100%;
-      padding: 0 10px;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: flex-start;
-      align-items: center;
-      .description {
-        margin-bottom: 40px;
-        p {
-          margin-bottom: 20px;
-        }
-      }
-      .made-with {
-        width: 100%;
-        margin-bottom: 40px;
-        .title {
-          display: flex;
-          justify-content: center;
-          margin-bottom: 10px;
-        }
-        .icons {
-          display: flex;
-          justify-content: space-around;
-          i {
-            font-size: 2rem;
-          }
-        }
-      }
-      .links {
-        width: 100%;
-        .link-items {
-          display: flex;
-          justify-content: space-around;
-          a {
-            transition: transform 0.5s ease;
-          }
-          a:hover,
-          a:focus {
-            color: $primary;
-            transform: scale(1.2, 1.2);
-          }
-        }
-      }
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  &__icon {
+    // display: flex;
+    // justify-content: space-around;
+    font-size: 1.571rem;
+    // margin-right: 0.571rem;
+  }
+  &__links {
+
+  }
+  &__link {
+    @include normalText;
+    margin-right: 0.571rem;
+    border-bottom: 5px solid $primary;
+    &:hover, &:focus {
+      color: $primary;
     }
   }
 }
 
 // studio-ghibli project css
 .studio-ghibli {
-  margin-top: 100px;
-  h2 {
-    @include sectionTitle;
-    span {
-      font-size: 3rem;
-    }
-  }
-  .content-container {
-    height: 100%;
+  margin-bottom: 5.714rem;
+  &__content-container {
+    max-width: 1800px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    padding: 10px 20px;
-    .img-container {
-      height: 30%;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .text-container {
-      height: 70%;
-      width: 100%;
-      padding: 0 10px;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: flex-start;
-      align-items: center;
-      .description {
-        margin-bottom: 40px;
-        p {
-          margin-bottom: 20px;
-        }
-      }
-      .made-with {
-        margin-bottom: 40px;
-        width: 100%;
-        .title {
-          display: flex;
-          justify-content: center;
-          margin-bottom: 10px;
-        }
-        .icons {
-          display: flex;
-          justify-content: space-around;
-          i {
-            font-size: 2rem;
-          }
-        }
-      }
-      .links {
-        width: 100%;
-        .link-items {
-          display: flex;
-          justify-content: space-around;
-          a {
-            transition: transform 0.5s ease;
-          }
-          a:hover,
-          a:focus {
-            color: $primary;
-            transform: scale(1.2, 1.2);
-          }
-        }
-      }
+  }
+  &__img-container {
+    width: 30%;
+  }
+  &__text-container {
+    width: 70%;
+  }
+  &__textbox {
+    padding: 0 2.857rem;
+  }
+  &__title {
+    @include sectionTitle;
+  }
+  &__description {
+    margin: 0.714rem 0;
+  }
+  &__text {
+    @include normalText;
+    padding: 0 0.286rem;
+    margin-bottom: 0.429rem;
+  }
+  &__made-with {
+    padding: 0 0.286rem;
+  }
+  &__icons {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  &__icon {
+    // display: flex;
+    // justify-content: space-around;
+    font-size: 1.571rem;
+    // margin-right: 0.571rem;
+    width: 70px;
+  }
+  &__link {
+    @include normalText;
+    margin-right: 0.571rem;
+    border-bottom: 5px solid $primary;
+    &:hover, &:focus {
+      color: $primary;
     }
   }
 }
 
 // vid-monster project css
 .vid-monster {
-  margin-top: 100px;
-  h2 {
-    @include sectionTitle;
-    span {
-      font-size: 3rem;
-    }
-  }
-  .content-container {
-    height: 100%;
+  margin-bottom: 5.714rem;
+  &__content-container {
+    max-width: 1800px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    padding: 10px 20px;
-    .img-container {
-      height: 30%;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .text-container {
-      height: 70%;
-      width: 100%;
-      padding: 0 10px;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: flex-start;
-      align-items: center;
-      .description {
-        margin-bottom: 40px;
-        p {
-          margin-bottom: 20px;
-        }
-      }
-      .made-with {
-        width: 100%;
-        margin-bottom: 40px;
-        .title {
-          display: flex;
-          justify-content: center;
-          margin-bottom: 10px;
-        }
-        .icons {
-          display: flex;
-          justify-content: space-around;
-          i {
-            font-size: 2rem;
-          }
-        }
-      }
-      .links {
-        width: 100%;
-        .link-items {
-          display: flex;
-          justify-content: space-around;
-          a {
-            transition: transform 0.5s ease;
-          }
-          a:hover,
-          a:focus {
-            color: $primary;
-            transform: scale(1.2, 1.2);
-          }
-        }
-      }
+  }
+  &__img-container {
+    width: 30%;
+  }
+  &__text-container {
+    width: 70%;
+  }
+  &__textbox {
+    padding: 0 2.857rem;
+  }
+  &__title {
+    @include sectionTitle;
+  }
+  &__description {
+    margin: 0.714rem 0;
+  }
+  &__text {
+    @include normalText;
+    padding: 0 0.286rem;
+    margin-bottom: 0.429rem;
+  }
+  &__made-with {
+    padding: 0 0.286rem;
+  }
+  &__icons {
+    margin: 1rem 0;
+  }
+  &__icon {
+    // display: flex;
+    // justify-content: space-around;
+    font-size: 1.571rem;
+    margin-right: 0.571rem;
+  }
+  &__link {
+    @include normalText;
+    margin-right: 0.571rem;
+    border-bottom: 5px solid $primary;
+    &:hover, &:focus {
+      color: $primary;
     }
   }
 }
 
 // shopper-mapper project css
 .shopper-mapper {
-  margin-top: 100px;
-  h2 {
-    @include sectionTitle;
-    span {
-      font-size: 3rem;
-    }
-  }
-  .content-container {
-    height: 100%;
+  margin-bottom: 2.714rem;
+  &__content-container {
+    max-width: 1800px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    padding: 10px 20px;
-    .img-container {
-      height: 30%;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .text-container {
-      height: 70%;
-      width: 100%;
-      padding: 0 10px;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: flex-start;
-      align-items: center;
-      .description {
-        margin-bottom: 40px;
-        p {
-          margin-bottom: 20px;
-        }
-      }
-      .made-with {
-        width: 100%;
-        margin-bottom: 40px;
-        .title {
-          display: flex;
-          justify-content: center;
-          margin-bottom: 10px;
-        }
-        .icons {
-          display: flex;
-          justify-content: space-around;
-          i {
-            font-size: 2rem;
-          }
-        }
-      }
-      .links {
-        width: 100%;
-        .link-items {
-          display: flex;
-          justify-content: space-around;
-          a {
-            transition: transform 0.5s ease;
-          }
-          a:hover,
-          a:focus {
-            color: $primary;
-            transform: scale(1.2, 1.2);
-          }
-        }
-      }
+  }
+  &__img-container {
+    width: 30%;
+  }
+  &__text-container {
+    width: 70%;
+  }
+  &__textbox {
+    padding: 0 2.857rem;
+  }
+  &__title {
+    @include sectionTitle;
+  }
+  &__description {
+    margin: 0.714rem 0;
+  }
+  &__text {
+    @include normalText;
+    padding: 0 0.286rem;
+    margin-bottom: 0.429rem;
+  }
+  &__made-with {
+    padding: 0 0.286rem;
+  }
+  &__icons {
+    margin: 1rem 0;
+  }
+  &__icon {
+    // display: flex;
+    // justify-content: space-around;
+    font-size: 1.571rem;
+    margin-right: 0.571rem;
+  }
+  &__link {
+    @include normalText;
+    margin-right: 0.571rem;
+    border-bottom: 5px solid $primary;
+    &:hover, &:focus {
+      color: $primary;
     }
   }
 }
+
 
 // footer section css
-footer {
-  margin-top: 100px;
-  .content-container {
-    height: 90%;
+.footer {
+  &__wrapper {
+    padding: 3.143rem 1.571rem 1.571rem;
+  }
+  &__content-container {
+    max-width: 1800px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  &__contact-form {
+    width: 45%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 0 30px;
-    h2 {
-      @include sectionTitle;
-      span {
-        font-size: 3rem;
-      }
-    }
-    .text-container {
-      margin-top: 20px;
-      height: 80%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .contact-info {
-        width: 100%;
-        height: 50%;
-        p {
-          margin-bottom: 20px;
-        }
-      }
-      .contact-form {
-        width: 100%;
-        height: 50%;
-      }
-    }
-    .contact-link {
-      margin-top: 30px;
-      height: 20%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      a {
-        font-size: 2rem;
-        transition: transform 0.5s ease;
-      }
-      a:hover,
-      a:focus {
-        color: $primary;
-        transform: scale(1.2, 1.2);
-      }
-    }
+    justify-content: center;
   }
-  .copyright {
-    height: 10%;
-    text-align: center;
-    padding: 50px 15px;
+  &__formtitle {
+    @include sectionTitle;
+    font-size: 1.429rem;
+    color: $third;
+    margin-bottom: 0.714rem;
   }
-}
-
-// form css
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  textarea {
-    margin-top: 10px;
-    resize: none;
+  &__input {
+    padding: 0.3rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $primary;
+    margin-bottom: 0.286rem;
+    font-size: 0.743rem;
+  } 
+  ::placeholder {
+    font-size: 0.743rem;
   }
-  input {
-    margin-top: 10px;
+  &__textarea {
+    padding: 0.3rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $primary; 
+    margin-bottom: 0.286rem;
+    height: 350px;
+    font-size: 0.743rem;
   }
-  button {
+  &__button {
+    align-self: center;
     border: none;
     border-radius: 10px;
-    margin-top: 10px;
-    align-self: center;
-    width: 180px;
+    width: 150px;
+    height: 45px;
     text-transform: uppercase;
     background-color: $third;
     color: $white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 0.743rem;
     transition: all 0.3s;
+    margin-top: 1.429rem;
+    &:hover, &:focus {
+      background: $primary;
+      cursor: pointer;
+    }
   }
-  button:hover,
-  button:focus {
+  &__text-container {
+    width: 50%;
+  }
+  &__textbox {
+    padding: 0 0.714rem;
+  }
+  &__title {
+    @include sectionTitle;
+  }
+  &__contact-link {
+    margin: 0.714rem 0;
+    padding: 0 0.286rem;
+  }
+  &__icon {
+    padding-right: 0.714rem;
+    font-size: 1.143rem;
+  }
+  &__text {
+    @include normalText;
+    padding: 0 0.286rem;
+    margin-bottom: 0.429rem;
+  }
+  &__bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: $primary;
-    transform: scale(1.2, 1.2);
-    cursor: pointer;
+    height: 65px;
   }
-  ::placeholder {
-    text-align: center;
+  &__bartext {
+    @include normalText;
+    font-size: 0.771rem;
+    color: $white;
   }
 }
+
+
+// footer {
+//   padding: 3.143rem 1.571rem 1.571rem;
+//   .content-container {
+//     height: 90%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     padding: 0 30px;
+//     h2 {
+//       @include sectionTitle;
+//       span {
+//         font-size: 3rem;
+//       }
+//     }
+//     .text-container {
+//       margin-top: 20px;
+//       height: 80%;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       align-items: center;
+//       .contact-info {
+//         width: 100%;
+//         height: 50%;
+//         p {
+//           margin-bottom: 20px;
+//         }
+//       }
+//       .contact-form {
+//         width: 100%;
+//         height: 50%;
+//       }
+//     }
+//     .contact-link {
+//       margin-top: 30px;
+//       height: 20%;
+//       display: flex;
+//       justify-content: space-around;
+//       align-items: center;
+//       a {
+//         font-size: 2rem;
+//         transition: transform 0.5s ease;
+//       }
+//       a:hover,
+//       a:focus {
+//         color: $primary;
+//         transform: scale(1.2, 1.2);
+//       }
+//     }
+//   }
+//   .copyright {
+//     height: 10%;
+//     text-align: center;
+//     padding: 50px 15px;
+//   }
+// }
+
+// // form css
+// .contact-form form {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   textarea {
+//     margin-top: 10px;
+//     resize: none;
+//   }
+//   input {
+//     margin-top: 10px;
+//   }
+//   button {
+//     border: none;
+//     border-radius: 10px;
+//     margin-top: 10px;
+//     align-self: center;
+//     width: 180px;
+//     text-transform: uppercase;
+//     background-color: $third;
+//     color: $white;
+//     transition: all 0.3s;
+//   }
+//   button:hover,
+//   button:focus {
+//     background-color: $primary;
+//     transform: scale(1.2, 1.2);
+//     cursor: pointer;
+//   }
+//   ::placeholder {
+//     text-align: center;
+//   }
+// }
 
 // animations
 @keyframes scroll-down {

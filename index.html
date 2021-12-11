@@ -44,7 +44,7 @@
         <button class="home__scroll-down"><i class="fas fa-angle-down"></i></button>
         <h1 class="home__title">
           He<br />
-          llo<span>.</span>
+          llo<span class="home__dot">.</span>
         </h1>
       </div>
     </div>
@@ -176,7 +176,7 @@
     <section class="projects" id="projects">
       <!-- changing fonts -->
       <div class="wrapper">
-        <div class="changing-fonts" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="changing-fonts" data-aos="fade-right" data-aos-duration="2000">
           <div class="changing-fonts__content-container">
             <div class="changing-fonts__img-container">
               <img src="./assets/changing-font-snap.png" alt="changing font project snapshot" />
@@ -198,23 +198,20 @@
                     and colors. This app is built with jQuery.
                   </p>
                 </div>
-                <div class="made-with">
-                  <div class="title">
-                    <p>MADE WITH</p>
-                  </div>
-                  <div class="icons">
-                    <i class="fab fa-html5"><span class="sr-only">HTML5</span></i>
-                    <i class="fab fa-css3-alt"><span class="sr-only">CSS3</span></i>
-                    <i class="devicon-jquery-plain"><span class="sr-only">jQuery</span></i>
-                    <i class="fas fa-mobile-alt">
+                <div class="changing-fonts__made-with">
+                  <!-- <div class="changing-fonts__icons">
+                    <i class="fab fa-html5 changing-fonts__icon"><span class="sr-only">HTML5</span></i>
+                    <i class="fab fa-css3-alt changing-fonts__icon"><span class="sr-only">CSS3</span></i>
+                    <i class="devicon-jquery-plain changing-fonts__icon"><span class="sr-only">jQuery</span></i>
+                    <i class="fas fa-mobile-alt changing-fonts__icon">
                       <span class="sr-only">Responsive Design</span>
                     </i>
-                  </div>
-                </div>
-                <div class="links">
-                  <div class="link-items">
-                    <a href="https://gichul0317.github.io/changing-fonts/" target="_blank">Live Site</a>
-                    <a href="https://github.com/gichul0317/changing-fonts" target="_blank">GitHub</a>
+                  </div> -->
+                  <div class="changing-fonts__links">
+                    <a href="https://gichul0317.github.io/changing-fonts/" target="_blank"
+                      class="changing-fonts__link">Live Site</a>
+                    <a href="https://github.com/gichul0317/changing-fonts" target="_blank"
+                      class="changing-fonts__link">GitHub</a>
                   </div>
                 </div>
               </div>
@@ -223,49 +220,51 @@
         </div>
 
         <!-- studio ghibli -->
-        <div class="studio-ghibli" data-aos="zoom-in" data-aos-duration="1000">
-          <h2>
-            Studio<br />
-            Ghibli<span>.</span>
-          </h2>
-          <div class="content-container">
-            <div class="img-container">
+        <div class="studio-ghibli" data-aos="fade-left" data-aos-duration="2000">
+          <div class="studio-ghibli__content-container">
+            <div class="studio-ghibli__img-container">
               <img src="./assets/studio-ghibli-snap.png" alt="studio ghibli project snapshot" />
             </div>
-            <div class="text-container">
-              <div class="description">
-                <p>Do you love to watch studio ghibli's animations?</p>
-                <p>
-                  You can watch trailers of studio ghibli's animations and
-                  view story outlines, running times and ratings in this
-                  Studio Ghibli app. This app is built with studio ghibli
-                  API and pair-programmed with Shouvik Roy.
-                </p>
-              </div>
-              <div class="made-with">
-                <div class="title">
-                  <p>MADE WITH</p>
+            <div class="studio-ghibli__text-container">
+              <div class="studio-ghibli__textbox">
+                <h2 class="studio-ghibli__title">
+                  Studio<br />
+                  Ghibli<span>.</span>
+                </h2>
+                <div class="studio-ghibli__description">
+                  <p class="studio-ghibli__text">Do you love to watch studio ghibli's animations?</p>
+                  <p class="studio-ghibli__text">
+                    You can watch trailers of studio ghibli's animations and
+                    view story outlines, running times and ratings in this
+                    Studio Ghibli app. This app is built with studio ghibli
+                    API and pair-programmed with Shouvik Roy.
+                  </p>
                 </div>
-                <div class="icons">
-                  <i class="fab fa-html5"><span class="sr-only">HTML5</span></i>
-                  <i class="fab fa-sass">
-                    <span class="sr-only">Sass</span>
-                  </i>
-                  <i class="fab fa-js">
-                    <span class="sr-only">JavaScript</span>
-                  </i>
-                  <i class="fas fa-mobile-alt">
-                    <span class="sr-only">Responsive Design</span>
-                  </i>
-                  <i class="fas fa-users">
-                    <span class="sr-only">Pair Programming</span>
-                  </i>
-                </div>
-              </div>
-              <div class="links">
-                <div class="link-items">
-                  <a href="https://studioghibli-project.netlify.app/" target="_blank">Live Site</a>
-                  <a href="https://github.com/Shouvik-and-Gichul/Studio-ghibli-movies" target="_blank">GitHub</a>
+                <div class="studio-ghibli__made-with">
+                  <!-- <div class="studio-ghibli__icons">
+                    <i class="fab fa-html5 studio-ghibli__icon"><span class="sr-only">HTML5</span></i>
+                    <i class="fab fa-sass studio-ghibli__icon">
+                      <span class="sr-only">Sass</span>
+                    </i>
+                    <i class="fab fa-js studio-ghibli__icon">
+                      <span class="sr-only">JavaScript</span>
+                    </i>
+                    <i class="fas fa-mobile-alt studio-ghibli__icon">
+                      <span class="sr-only">Responsive Design</span>
+                    </i>
+                    <i class="fas fa-users studio-ghibli__icon">
+                      <span class="sr-only">Pair Programming</span>
+                    </i>
+                  </div> -->
+                  <div class="links">
+                    <div class="link-items">
+                      <a href="https://studioghibli-project.netlify.app/" target="_blank"
+                        class="studio-ghibli__link">Live
+                        Site</a>
+                      <a href="https://github.com/Shouvik-and-Gichul/Studio-ghibli-movies" target="_blank"
+                        class="studio-ghibli__link">GitHub</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -273,53 +272,54 @@
         </div>
 
         <!-- vid-monster -->
-        <div class="vid-monster" data-aos="zoom-in" data-aos-duration="1000">
-          <h2>
-            Vid-<br />
-            Monster<span>.</span>
-          </h2>
-          <div class="content-container">
-            <div class="img-container">
+        <div class="vid-monster" data-aos="fade-right" data-aos-duration="2000">
+          <div class="vid-monster__content-container">
+            <div class="vid-monster__img-container">
               <img src="./assets/vid-monster-snap.png" alt="vid-monster project snapshot" />
             </div>
-            <div class="text-container">
-              <div class="description">
-                <p>
-                  Have you played retro games in Nintendo Game Boy? Do you
-                  like to play retro games like old Pokémon series?
-                </p>
-                <p>
-                  Vid-Monster is a retro style game application, as similar
-                  as old Pokémon series. Player needs to defeat the
-                  vid-monster by choosing various actions such as 'social
-                  distancing', 'wash hands', 'mask wearing' and 'vaccine
-                  shot'. We need a hero to end this pandemic! This
-                  application is built with React and Firebase.
-                </p>
-              </div>
-              <div class="made-with">
-                <div class="title">
-                  <p>MADE WITH</p>
+            <div class="vid-monster__text-container">
+              <div class="vid-monster__textbox">
+                <h2 class="vid-monster__title">
+                  Vid-<br />
+                  Monster<span>.</span>
+                </h2>
+                <div class="vid-monster__description">
+                  <p class="vid-monster__text">
+                    Have you played retro games in Nintendo Game Boy? Do you
+                    like to play retro games like old Pokémon series?
+                  </p>
+                  <p class="vid-monster__text">
+                    Vid-Monster is a retro style game application, as similar
+                    as old Pokémon series. Player needs to defeat the
+                    vid-monster by choosing various actions such as 'social
+                    distancing', 'wash hands', 'mask wearing' and 'vaccine
+                    shot'. We need a hero to end this pandemic! This
+                    application is built with React and Firebase.
+                  </p>
                 </div>
-                <div class="icons">
-                  <i class="fab fa-react">
-                    <span class="sr-only">React.js</span>
-                  </i>
-                  <i class="fab fa-css3-alt">
-                    <span class="sr-only">CSS3</span>
-                  </i>
-                  <i class="devicon-firebase-plain">
-                    <span class="sr-only">Firebase</span>
-                  </i>
-                  <i class="fas fa-mobile-alt">
-                    <span class="sr-only">Responsive Design</span>
-                  </i>
-                </div>
-              </div>
-              <div class="links">
-                <div class="link-items">
-                  <a href="https://vid-monster.netlify.app/" target="_blank">Live Site</a>
-                  <a href="https://github.com/gichul0317/gichul-jaun-project3" target="_blank">GitHub</a>
+                <div class="vid-monster__made-with">
+                  <!-- <div class="vid-monster__icons">
+                    <i class="fab fa-react vid-monster__icon">
+                      <span class="sr-only">React.js</span>
+                    </i>
+                    <i class="fab fa-css3-alt vid-monster__icon">
+                      <span class="sr-only">CSS3</span>
+                    </i>
+                    <i class="devicon-firebase-plain vid-monster__icon">
+                      <span class="sr-only">Firebase</span>
+                    </i>
+                    <i class="fas fa-mobile-alt vid-monster__icon">
+                      <span class="sr-only">Responsive Design</span>
+                    </i>
+                  </div> -->
+                  <div class="links">
+                    <div class="link-items">
+                      <a href="https://vid-monster.netlify.app/" target="_blank" class="vid-monster__link">Live
+                        Site</a>
+                      <a href="https://github.com/gichul0317/gichul-jaun-project3" target="_blank"
+                        class="vid-monster__link">GitHub</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -327,112 +327,139 @@
         </div>
 
         <!-- shopper-mapper -->
-        <div class="shopper-mapper" data-aos="zoom-in" data-aos-duration="1000">
-          <h2>
-            Shopper-<br />
-            Mapper<span>.</span>
-          </h2>
-          <div class="content-container">
-            <div class="img-container">
+        <div class="shopper-mapper" data-aos="fade-left" data-aos-duration="2000">
+          <div class="shopper-mapper__content-container">
+            <div class="shopper-mapper__img-container">
               <img src="./assets/shopper-mapper-snap.png" alt="shopper-mapper project snapshot" />
             </div>
-            <div class="text-container">
-              <div class="description">
-                <p>
-                  Do you want to find and try new coffee shops, restaurants
-                  or bars around your place?
-                </p>
-                <p>
-                  Shopper-Mapper app finds places located within 10km of
-                  your address and provides directions. This app is built
-                  with React and MapQuest API, and pair-programmed with
-                  Paula Poirier, Tejaswini Veena and Shouvik Roy.
-                </p>
-              </div>
-              <div class="made-with">
-                <div class="title">
-                  <p>MADE WITH</p>
+            <div class="shopper-mapper__text-container">
+              <div class="shopper-mapper__textbox">
+                <h2 class="shopper-mapper__title">
+                  Shopper-<br />
+                  Mapper<span>.</span>
+                </h2>
+                <div class="shopper-mapper__description">
+                  <p class="shopper-mapper__text">
+                    Do you want to find and try new coffee shops, restaurants
+                    or bars around your place?
+                  </p>
+                  <p class="shopper-mapper__text">
+                    Shopper-Mapper app finds places located within 10km of
+                    your address and provides directions. This app is built
+                    with React and MapQuest API, and pair-programmed with
+                    Paula Poirier, Tejaswini Veena and Shouvik Roy.
+                  </p>
                 </div>
-                <div class="icons">
-                  <i class="fab fa-react">
-                    <span class="sr-only">React.js</span>
-                  </i>
-                  <i class="fab fa-css3-alt">
-                    <span class="sr-only">CSS3</span>
-                  </i>
-                  <i class="fas fa-mobile-alt">
-                    <span class="sr-only">Responsive Design</span>
-                  </i>
-                  <i class="fas fa-users">
-                    <span class="sr-only">Pair Programming</span>
-                  </i>
-                </div>
-              </div>
-              <div class="links">
-                <div class="link-items">
-                  <a href="https://practical-meitner-05cbb0.netlify.app/" target="_blank">Live Site</a>
-                  <a href="https://github.com/Best-Team-of-Cohort34/shopper-mapper" target="_blank">GitHub</a>
+                <div class="shopper-mapper__made-with">
+                  <!-- <div class="shopper-mapper__icons">
+                    <i class="fab fa-react shopper-mapper__icon">
+                      <span class="sr-only">React.js</span>
+                    </i>
+                    <i class="fab fa-css3-alt shopper-mapper__icon">
+                      <span class="sr-only">CSS3</span>
+                    </i>
+                    <i class="fas fa-mobile-alt shopper-mapper__icon">
+                      <span class="sr-only">Responsive Design</span>
+                    </i>
+                    <i class="fas fa-users shopper-mapper__icon">
+                      <span class="sr-only">Pair Programming</span>
+                    </i>
+                  </div> -->
+                  <div class="links">
+                    <div class="link-items">
+                      <a href="https://practical-meitner-05cbb0.netlify.app/" target="_blank"
+                        class="shopper-mapper__link">Live Site</a>
+                      <a href="https://github.com/Best-Team-of-Cohort34/shopper-mapper" target="_blank"
+                        class="shopper-mapper__link">GitHub</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+
+        <!-- <div class="other-projects">
+          <div class="other-projects__content-container">
+            <div class="other-projects__img-container">
+              <img src="" alt="coming soon...">
+            </div>
+            <div class="other-projects__text-container">
+              <div class="other-projects__textbox">
+                <h2 class="other-projects__title">
+                  coming soon...
+                </h2>
+              </div>
+              <div class="other-projects__description">
+                <p class="other-projects__text">
+                  coming soon...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
     </section>
   </main>
 
   <!-- footer (contact) -->
-  <footer id="contact">
-    <div class="wrapper">
-      <div class="content-container">
-        <h2>
-          Contact <br />
-          Me<span>.</span>
-        </h2>
-        <div class="text-container">
-          <div class="contact-info">
-            <p>
-              Are you interested about my projects? Do you have any
-              questions about me?
-            </p>
-            <p>
-              Please contact me by this handy contact form or feel free to
-              reach out to me by email or LinkedIn below. I am always open
-              to chat and happy to be connected with you!
-            </p>
-            <p>Thanks for stopping by 😁✨</p>
-          </div>
-          <div class="contact-form">
-            <form action="POST" name="contact" method="POST" data-netlify="true">
-              <label for="user-name" class="sr-only">user-name</label>
-              <input type="text" id="user-name" required placeholder="Your Name" name="user-name" />
-              <label for="user-email" class="sr-only">user-email</label>
-              <input type="email" id="user-email" required placeholder="Your Email" name="user-email" />
-              <label for="comments" class="sr-only">comments</label>
-              <textarea name="comments" id="comments" cols="30" rows="10"
-                placeholder="Hello! Let's have a chat!✨"></textarea>
-              <!-- <div data-netlify-recaptcha="true"></div> -->
-              <button type="submit">Get in touch</button>
-            </form>
+  <footer id="contact" class="footer">
+    <div class="wrapper footer__wrapper">
+      <div class="footer__content-container">
+        <form action="POST" name="contact" method="POST" data-netlify="true" class="footer__contact-form">
+          <h3 class="footer__formtitle">Let's have a chat!✨</h3>
+          <label for="user-name" class="sr-only">user-name</label>
+          <input type="text" id="user-name" required placeholder="Name" name="user-name" class="footer__input" />
+          <label for="user-email" class="sr-only">user-email</label>
+          <input type="email" id="user-email" required placeholder="Email" name="user-email" class="footer__input" />
+          <label for="comments" class="sr-only">comments</label>
+          <textarea name="comments" id="comments" required placeholder="comments" class="footer__textarea"></textarea>
+          <!-- <div data-netlify-recaptcha="true"></div> -->
+          <button type="submit" class="footer__button">send</button>
+        </form>
+        <div class="footer__text-container">
+          <div class="footer__textbox">
+            <h2 class="footer__title">
+              Contact <br />
+              Me<span>.</span>
+            </h2>
+            <div class="footer__contact-link">
+              <a href="mailto:gichul0317@gmail.com" title="gichul0317@gmail.com">
+                <i class="fas fa-envelope footer__icon">
+                  <span class="sr-only">email</span>
+                </i>
+              </a>
+              <a href="https://www.linkedin.com/in/gichuljaun/" target="_blank" title="linkedin.com/in/gichuljaun/">
+                <i class="fab fa-linkedin footer__icon">
+                  <span class="sr-only">LinkedIn</span>
+                </i>
+              </a>
+              <a href="https://github.com/gichul0317" target="_blank" title="github.com/gichul0317">
+                <i class="fab fa-github-square footer__icon">
+                  <span class="sr-only">GitHub</span>
+                </i>
+              </a>
+            </div>
+            <div class="footer__info">
+              <p class="footer__text">
+                Are you interested about my projects? Do you have any
+                questions about me?
+              </p>
+              <p class="footer__text">
+                Please contact me by this handy contact form or feel free to
+                reach out to me by email or LinkedIn below. I am always open
+                to chat and happy to be connected with you!
+              </p>
+              <p class="footer__text">
+                Thanks for stopping by 😁✨
+              </p>
+            </div>
           </div>
         </div>
-        <div class="contact-link">
-          <a href="mailto:gichul0317@gmail.com" title="gichul0317@gmail.com">
-            <i class="fas fa-envelope">
-              <span class="sr-only">email</span>
-            </i>
-          </a>
-          <a href="https://www.linkedin.com/in/gichuljaun/" target="_blank" title="linkedin.com/in/gichuljaun/">
-            <i class="fab fa-linkedin"><span class="sr-only">LinkedIn</span></i>
-          </a>
-          <a href="https://github.com/gichul0317" target="_blank" title="github.com/gichul0317">
-            <i class="fab fa-github-square"><span class="sr-only">GitHub</span></i>
-          </a>
-        </div>
       </div>
-      <div class="copyright">
-        <p>Designed and Made by Gichul Jaun, 2021</p>
-      </div>
+    </div>
+    <div class="footer__bar">
+      <p class="footer__bartext">Designed and Made by Gichul Jaun, 2021</p>
     </div>
   </footer>
 </body>
