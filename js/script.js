@@ -42,7 +42,8 @@ app.scrollPage = function () {
 }
 
 app.init = function () {
-  AOS.init({ disable: 'mobile' });
+  // AOS.init({ disable: 'mobile' });
+  AOS.init();
   app.displayNav();
   app.closeByOverlay();
   app.scrollPage();

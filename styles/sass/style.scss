@@ -682,13 +682,12 @@ body {
     border: none;
     border-bottom: 2px solid $primary;
     margin-bottom: 0.286rem;
-    font-size: 0.743rem;
+    overflow: hidden;
     @include tablet {
       height: 45px;
     };
     @include mobile {
       height: 40px;
-      font-size: 0.571rem;
     };
   } 
   ::placeholder {
@@ -705,6 +704,7 @@ body {
     margin-bottom: 0.286rem;
     height: 350px;
     font-size: 0.743rem;
+    resize: none;
     @include tablet {
       height: 250px;
     }
