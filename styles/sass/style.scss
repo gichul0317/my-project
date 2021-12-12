@@ -26,6 +26,7 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   &__half-color {
     position: absolute;
     top: 0;
@@ -80,7 +81,6 @@ body {
     };
     @include mobile {
       top: 65%;
-      left: 35%;
       font-size: 1.857rem;
     };
   }
@@ -184,6 +184,9 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    };
   }
   &__skillIcn {
     display: flex;
@@ -211,6 +214,7 @@ body {
     margin-top: 0.286rem;
     @include tablet {
       font-size: 0.714rem;
+      text-align: center;
     };
     @include mobile {
       font-size: 0.4rem;
@@ -655,7 +659,7 @@ body {
       margin-top: 2.571rem;
     };
     @include mobile {
-      width: 65%;
+      width: 90%;
       margin-top: 2.143rem;
     };
   }
@@ -730,7 +734,8 @@ body {
     };
     @include mobile {
       font-size: 0.514rem;
-      width: 110px;
+      width: 100px;
+      height: 30px;
     };
   }
   &__text-container {
@@ -804,7 +809,7 @@ body {
       font-size: 0.571rem;
     };
     @include mobile {
-      font-size: 0.514rem;
+      font-size: 0.414rem;
     };
   }
 }
