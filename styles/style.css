@@ -6,6 +6,9 @@ html {
 
 body {
   margin: 0;
+  font-size: 125%;
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
 }
 
 article,
@@ -274,13 +277,6 @@ template {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-html {
-  font-size: 125%;
-  font-family: "Lato", sans-serif;
-  scroll-behavior: smooth;
-  height: -webkit-fill-available;
 }
 
 h1,
