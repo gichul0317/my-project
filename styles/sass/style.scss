@@ -54,7 +54,10 @@ body {
     line-height: 1;
     @include tablet {
       font-size: 5.714rem;
-    }
+    };
+    @include mobile {
+      font-size: 3.429rem;
+    };
   }
   &__dot {
     color: $primary;
@@ -69,13 +72,17 @@ body {
     background-color: transparent;
     border: none;
     z-index: 22;
-    // outline: none;
     &:hover, &:focus {
       cursor: pointer;
     }
     @include tablet {
       font-size: 2.857rem;
-    }
+    };
+    @include mobile {
+      top: 65%;
+      left: 35%;
+      font-size: 1.857rem;
+    };
   }
 }
 
@@ -84,7 +91,10 @@ body {
   padding: 3.143rem 1.571rem 1.571rem;
   @include tablet {
     padding: 2.571rem 1.286rem 1.286rem;
-  }
+  };
+  @include mobile {
+    padding: 1.429rem 0.857rem 0.857rem;
+  };
   &__content-container {
     max-width: 1800px;
     width: 100%;
@@ -93,31 +103,34 @@ body {
     justify-content: space-between;
     @include tablet {
       flex-direction: column-reverse;
-    }
+    };
   }
   &__img-container {
     width: 30%;
     @include tablet {
       display: none;
-    }
+    };
   }
   &__text-container {
     width: 70%;
     @include tablet {
       width: 100%;
-    }
+    };
   }
   &__textbox {
     padding: 0 2.857rem;
     @include tablet {
       padding: 0;
-    }
+    };
   }
   &__title {
     @include sectionTitle;
     @include tablet {
       font-size: 1.857rem;
-    }
+    };
+    @include mobile {
+      font-size: 1.429rem;
+    };
   }
   &__social-list {
     margin: 0.714rem 0;
@@ -126,15 +139,23 @@ body {
     @include tablet {
       margin: 0.571rem 0;
       padding: 0 0.143rem;
-    }
+    };
+    @include mobile {
+      margin: 0.429rem 0;
+      // justify-content: center;
+    };
   }
   &__icon {
     padding-right: 0.714rem;
     font-size: 1.143rem;
     @include tablet {
-      padding-right: 0.571rem 0;
+      padding-right: 0.571rem;
       font-size: 1rem;
-    }
+    };
+    @include mobile {
+      padding-right: 0.286rem;
+      font-size: 0.857rem;
+    };
   }
   &__text {
     @include normalText;
@@ -143,7 +164,10 @@ body {
     @include tablet {
       font-size: 0.857rem;
       padding: 0 0.143rem;
-    }
+    };
+    @include mobile {
+      font-size: 0.629rem;
+    };
   }
   &__skills-container {
     max-width: 1800px;
@@ -154,7 +178,7 @@ body {
     padding: 0.571rem 0;
     @include tablet {
       // padding: ;
-    }
+    };
   }
   &__skills {
     width: 100%;
@@ -176,14 +200,21 @@ body {
     @include tablet {
       padding: 0.429rem;
       font-size: 1.286rem;
-    }
+    };
+    @include mobile {
+      padding: 0.286rem;
+      font-size: 1rem;
+    };
   }
   &__skillDesc {
     @include normalText;
     margin-top: 0.286rem;
     @include tablet {
       font-size: 0.714rem;
-    }
+    };
+    @include mobile {
+      font-size: 0.4rem;
+    };
   }
 }
 
@@ -192,7 +223,10 @@ body {
   padding: 3.143rem 1.571rem 1.571rem;
   @include tablet {
     padding: 2.571rem 1.286rem 1.286rem;
-  }
+  };
+  @include mobile {
+    padding: 1.429rem 0.857rem 0.857rem;
+  };
 }
 
 // changing-fonts project css
@@ -200,7 +234,10 @@ body {
   margin-bottom: 5.714rem;
   @include tablet {
     margin-bottom: 4.286rem;
-  }
+  };
+  @include mobile {
+    margin-bottom: 2.857rem;
+  };
   &__content-container {
     max-width: 1800px;
     width: 100%;
@@ -208,31 +245,35 @@ body {
     justify-content: space-between;
     @include tablet {
       flex-direction: column-reverse;
-    }
+      text-align: right;
+    };
   }
   &__img-container {
     width: 30%;
     @include tablet {
       display: none;
-    }
+    };
   }
   &__text-container {
     width: 70%;
     @include tablet {
       width: 100%;
-    }
+    };
   }
   &__textbox {
     padding: 0 2.857rem;
     @include tablet {
       padding: 0;
-    }
+    };
   }
   &__title {
     @include sectionTitle;
     @include tablet {
       font-size: 1.857rem;
-    }
+    };
+    @include mobile {
+      font-size: 1.429rem;
+    };
   }
   &__description {
     margin: 0.714rem 0;
@@ -247,7 +288,10 @@ body {
     @include tablet {
       font-size: 0.857rem;
       padding: 0 0.143rem;
-    }
+    };
+    @include mobile {
+      font-size: 0.629rem;
+    };
   }
   &__made-with {
     padding: 0 0.286rem;
@@ -280,7 +324,13 @@ body {
     }
     @include tablet {
       font-size: 0.857rem;
-    }
+      margin-right: 0;
+      margin-left: 0.571rem;
+    };
+    @include mobile {
+      font-size: 0.629rem;
+      border-bottom: 3px solid $primary;
+    };
   }
 }
 
@@ -289,7 +339,10 @@ body {
   margin-bottom: 5.714rem;
   @include tablet {
     margin-bottom: 4.286rem;
-  }
+  };
+  @include mobile {
+    margin-bottom: 2.857rem;
+  };
   &__content-container {
     max-width: 1800px;
     width: 100%;
@@ -297,7 +350,8 @@ body {
     justify-content: space-between;
     @include tablet {
       flex-direction: column-reverse;
-    }
+      text-align: left;
+    };
   }
   &__img-container {
     width: 30%;
@@ -321,7 +375,10 @@ body {
     @include sectionTitle;
     @include tablet {
       font-size: 1.857rem;
-    }
+    };
+    @include mobile {
+      font-size: 1.429rem;
+    };
   }
   &__description {
     margin: 0.714rem 0;
@@ -333,7 +390,10 @@ body {
     @include tablet {
       font-size: 0.857rem;
       padding: 0 0.143rem;
-    }
+    };
+    @include mobile {
+      font-size: 0.629rem;
+    };
   }
   &__made-with {
     padding: 0 0.286rem;
@@ -364,7 +424,11 @@ body {
     }
     @include tablet {
       font-size: 0.857rem;
-    }
+    };
+    @include mobile {
+      font-size: 0.629rem;
+      border-bottom: 3px solid $primary;
+    };
   }
 }
 
@@ -373,7 +437,10 @@ body {
   margin-bottom: 5.714rem;
   @include tablet {
     margin-bottom: 4.286rem;
-  }
+  };
+  @include mobile {
+    margin-bottom: 2.857rem;
+  };
   &__content-container {
     max-width: 1800px;
     width: 100%;
@@ -381,7 +448,8 @@ body {
     justify-content: space-between;
     @include tablet {
       flex-direction: column-reverse;
-    }
+      text-align: right;
+    };
   }
   &__img-container {
     width: 30%;
@@ -405,7 +473,10 @@ body {
     @include sectionTitle;
     @include tablet {
       font-size: 1.857rem;
-    }
+    };
+    @include mobile {
+      font-size: 1.429rem;
+    };
   }
   &__description {
     margin: 0.714rem 0;
@@ -417,7 +488,10 @@ body {
     @include tablet {
       font-size: 0.857rem;
       padding: 0 0.143rem;
-    }
+    };
+    @include mobile {
+      font-size: 0.629rem;
+    };
   }
   &__made-with {
     padding: 0 0.286rem;
@@ -443,7 +517,13 @@ body {
     }
     @include tablet {
       font-size: 0.857rem;
-    }
+      margin-right: 0;
+      margin-left: 0.571rem;
+    };
+    @include mobile {
+      font-size: 0.629rem;
+      border-bottom: 3px solid $primary;
+    };
   }
 }
 
@@ -452,7 +532,10 @@ body {
   margin-bottom: 2.714rem;
   @include tablet {
     margin-bottom: 1.857rem;
-  }
+  };
+  @include mobile {
+    margin-bottom: 1.286rem;
+  };
   &__content-container {
     max-width: 1800px;
     width: 100%;
@@ -460,7 +543,8 @@ body {
     justify-content: space-between;
     @include tablet {
       flex-direction: column-reverse;
-    }
+      text-align: left;
+    };
   }
   &__img-container {
     width: 30%;
@@ -484,7 +568,10 @@ body {
     @include sectionTitle;
     @include tablet {
       font-size: 1.857rem;
-    }
+    };
+    @include mobile {
+      font-size: 1.429rem;
+    };
   }
   &__description {
     margin: 0.714rem 0;
@@ -496,7 +583,10 @@ body {
     @include tablet {
       font-size: 0.857rem;
       padding: 0 0.143rem;
-    }
+    };
+    @include mobile {
+      font-size: 0.629rem;
+    };
   }
   &__made-with {
     padding: 0 0.286rem;
@@ -522,7 +612,11 @@ body {
     }
     @include tablet {
       font-size: 0.857rem;
-    }
+    };
+    @include mobile {
+      font-size: 0.629rem;
+      border-bottom: 3px solid $primary;
+    };
   }
 }
 
@@ -533,7 +627,10 @@ body {
     padding: 3.143rem 1.571rem 1.571rem;
     @include tablet {
       padding: 2.571rem 1.286rem 1.286rem;
-    }
+    };
+    @include mobile {
+      padding: 1.429rem 0.857rem 0.857rem;
+    };
   }
   &__content-container {
     max-width: 1800px;
@@ -545,7 +642,8 @@ body {
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
-    }
+      text-align: right;
+    };
   }
   &__contact-form {
     width: 45%;
@@ -554,8 +652,12 @@ body {
     justify-content: center;
     @include tablet {
       width: 55%;
-      margin-top: 1.286rem;
-    }
+      margin-top: 2.571rem;
+    };
+    @include mobile {
+      width: 65%;
+      margin-top: 2.143rem;
+    };
   }
   &__formtitle {
     @include sectionTitle;
@@ -565,7 +667,10 @@ body {
     @include tablet {
       font-size: 1.143rem;
       text-align: center;
-    }
+    };
+    @include mobile {
+      font-size: 0.714rem;
+    };
   }
   &__input {
     padding: 0.3rem;
@@ -576,13 +681,17 @@ body {
     font-size: 0.743rem;
     @include tablet {
       height: 45px;
-    }
+    };
+    @include mobile {
+      height: 40px;
+      font-size: 0.571rem;
+    };
   } 
   ::placeholder {
     font-size: 0.743rem;
     @include tablet {
       font-size: 0.571rem;
-    }
+    };
   }
   &__textarea {
     padding: 0.3rem;
@@ -618,7 +727,11 @@ body {
       font-size: 0.571rem;
       width: 120px;
       height: 35px;
-    }
+    };
+    @include mobile {
+      font-size: 0.514rem;
+      width: 110px;
+    };
   }
   &__text-container {
     width: 50%;
@@ -636,7 +749,10 @@ body {
     @include sectionTitle;
     @include tablet {
       font-size: 1.857rem;
-    }
+    };
+    @include mobile {
+      font-size: 1.429rem;
+    };
   }
   &__contact-link {
     margin: 0.714rem 0;
@@ -650,9 +766,10 @@ body {
     padding-right: 0.714rem;
     font-size: 1.143rem;
     @include tablet {
-      padding-right: 0.571rem 0;
+      padding-right: 0;
+      padding-left: 0.571rem;
       font-size: 1rem;
-    }
+    };
   }
   &__text {
     @include normalText;
@@ -661,7 +778,10 @@ body {
     @include tablet {
       font-size: 0.857rem;
       padding: 0 0.143rem;
-    }
+    };
+    @include mobile {
+      font-size: 0.629rem;
+    };
   }
   &__bar {
     display: flex;
@@ -671,7 +791,10 @@ body {
     height: 65px;
     @include tablet {
       height: 45px;
-    }
+    };
+    @include mobile {
+      height: 35px;
+    };
   }
   &__bartext {
     @include normalText;
@@ -679,7 +802,10 @@ body {
     color: $white;
     @include tablet {
       font-size: 0.571rem;
-    }
+    };
+    @include mobile {
+      font-size: 0.514rem;
+    };
   }
 }
 
