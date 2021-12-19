@@ -716,6 +716,7 @@ body {
     height: 350px;
     font-size: 0.743rem;
     resize: none;
+    border-radius: 0;
     @include tablet {
       height: 250px;
     }

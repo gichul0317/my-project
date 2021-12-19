@@ -1336,6 +1336,7 @@ body {
   height: 350px;
   font-size: 0.743rem;
   resize: none;
+  border-radius: 0;
 }
 @media (max-width: 1023px) {
   .footer__textarea {
