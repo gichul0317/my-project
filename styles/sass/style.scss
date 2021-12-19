@@ -5,10 +5,12 @@
 body {
   background-color: $secondary;
   // position: relative;
+  // -webkit-text-size-adjust: 150%;
+  // -webkit-padding-start: 0px;
 }
 
 .wrapper {
-  min-height: -webkit-fill-available;
+  // min-height: -webkit-fill-available;
   width: 100%;
   height: 100%;
   display: flex;
@@ -236,6 +238,7 @@ body {
 // changing-fonts project css
 .changing-fonts {
   margin-bottom: 5.714rem;
+  overflow: hidden;
   @include tablet {
     margin-bottom: 4.286rem;
   };
@@ -320,6 +323,7 @@ body {
 
   }
   &__link {
+    display: inline-block;
     @include normalText;
     margin-right: 0.571rem;
     border-bottom: 5px solid $primary;
@@ -341,6 +345,7 @@ body {
 // studio-ghibli project css
 .studio-ghibli {
   margin-bottom: 5.714rem;
+  overflow: hidden;
   @include tablet {
     margin-bottom: 4.286rem;
   };
@@ -421,6 +426,7 @@ body {
   }
   &__link {
     @include normalText;
+    display: inline-block;
     margin-right: 0.571rem;
     border-bottom: 5px solid $primary;
     &:hover, &:focus {
@@ -439,6 +445,7 @@ body {
 // vid-monster project css
 .vid-monster {
   margin-bottom: 5.714rem;
+  overflow: hidden;
   @include tablet {
     margin-bottom: 4.286rem;
   };
@@ -514,6 +521,7 @@ body {
   }
   &__link {
     @include normalText;
+    display: inline-block;
     margin-right: 0.571rem;
     border-bottom: 5px solid $primary;
     &:hover, &:focus {
@@ -534,6 +542,7 @@ body {
 // shopper-mapper project css
 .shopper-mapper {
   margin-bottom: 2.714rem;
+  overflow: hidden;
   @include tablet {
     margin-bottom: 1.857rem;
   };
@@ -609,6 +618,7 @@ body {
   }
   &__link {
     @include normalText;
+    display: inline-block;
     margin-right: 0.571rem;
     border-bottom: 5px solid $primary;
     &:hover, &:focus {

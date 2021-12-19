@@ -311,7 +311,6 @@ body {
 }
 
 .wrapper {
-  min-height: -webkit-fill-available;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -632,6 +631,7 @@ body {
 
 .changing-fonts {
   margin-bottom: 5.714rem;
+  overflow: hidden;
 }
 @media (max-width: 1023px) {
   .changing-fonts {
@@ -750,6 +750,7 @@ body {
   font-size: 1.571rem;
 }
 .changing-fonts__link {
+  display: inline-block;
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -775,6 +776,7 @@ body {
 
 .studio-ghibli {
   margin-bottom: 5.714rem;
+  overflow: hidden;
 }
 @media (max-width: 1023px) {
   .studio-ghibli {
@@ -897,6 +899,7 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  display: inline-block;
   margin-right: 0.571rem;
   border-bottom: 5px solid #1576b9;
 }
@@ -917,6 +920,7 @@ body {
 
 .vid-monster {
   margin-bottom: 5.714rem;
+  overflow: hidden;
 }
 @media (max-width: 1023px) {
   .vid-monster {
@@ -1029,6 +1033,7 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  display: inline-block;
   margin-right: 0.571rem;
   border-bottom: 5px solid #1576b9;
 }
@@ -1051,6 +1056,7 @@ body {
 
 .shopper-mapper {
   margin-bottom: 2.714rem;
+  overflow: hidden;
 }
 @media (max-width: 1023px) {
   .shopper-mapper {
@@ -1163,6 +1169,7 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  display: inline-block;
   margin-right: 0.571rem;
   border-bottom: 5px solid #1576b9;
 }
