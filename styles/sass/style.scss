@@ -64,3 +64,204 @@
     color: $white;
   }
 }
+
+.about {
+  @include Section;
+  &__majors {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+  }
+  &__jobs {
+
+  }
+}
+
+.major {
+  &__icon {
+    width: 170px;
+    height: 170px;
+    font-size: 70px;
+    line-height: 170px;
+    margin: auto;
+    border: 1px solid $primary;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    color: $primary;
+    i {
+      transition: all 300ms ease;
+    }
+    i &:active, &:hover {
+      color: $yellow;
+      transform: rotate(-30deg) scale(1.1);
+    }
+  }
+  &__title {
+    color: $darkgrey;
+  }
+  &__desc {
+    color: $darkgrey;
+    @include Text;
+  }
+}
+
+.job {
+  display: flex;
+  align-items: center;
+  &__desc {
+    margin: 0 16px;
+    text-align: left;
+  }
+  &__name {
+    color: $darkwhite;
+    font-size: 0.571rem;
+  }
+  &__period {
+    color: $darkwhite;
+    font-size: 14px;
+  }
+}
+
+.skills {
+  background-color: $yellow;
+  &__container {
+    @include Section;
+  }
+}
+
+.skillset {
+  display: flex;
+  color: $lightwhite;
+  margin: 20px 0;
+  &__left {
+    flex-basis: 60%;
+    background-color: $darkgrey;
+    padding: 20px 40px;
+  }
+  &__right {
+    flex-basis: 40%;
+  }
+  &__title {
+    color: $white;
+  }
+}
+
+.skill {
+  margin-bottom: 10px;
+  &__desc {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__bar {
+    width: 100%;
+    height: 3px;
+    background-color: grey;
+  }
+  &__value {
+    // width: 100%;
+    height: 3px;
+    background-color: $orange;
+  }
+}
+
+.tools {
+  padding: 20px;
+  background-color: rgb(62, 58, 58);
+}
+
+.etc {
+  padding: 20px;
+  background-color: grey;
+}
+
+.work {
+  @include Section;
+  &__categories {
+    margin: 40px;
+  }
+  &__button {
+    border: 1px solid $darkwhite;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 8px 48px;
+    background-color: transparent;
+  }
+  &__active, &__button:active, &__button:hover {
+    background-color: pink;
+    color: $white;
+  }
+  &__count {
+    border: 1px solid $orange;
+    border-radius: 50%;
+    background-color: $orange;
+    color: $white;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    line-height: 24px;
+    position: relative;
+    top: -20px;
+    left: 4px;
+    opacity: 0;
+    transition: all 300ms ease-in;
+  }
+  &__active &__count, &__button:hover &__count {
+    opacity: 1;
+    top: 0;
+  }
+  &__projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.project {
+  position: relative;
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  background-color: $lightwhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover &__desc {
+    opacity: 0.8;
+    transform: translateY(0px);
+  }
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  &__desc {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 300ms ease-in;
+  }
+  &__title {
+    color: $white;
+  }
+  &__title:after {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background-color: $darkwhite;
+    display: block;
+    position: relative;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: 8px;
+  }
+  &__text {
+    color: $white;
+  }
+}

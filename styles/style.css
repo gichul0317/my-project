@@ -372,3 +372,251 @@ a {
   border-radius: 5px;
   color: #fff;
 }
+
+.about {
+  text-align: center;
+  padding: 4.167rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.about__majors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 80px 0;
+}
+.major__icon {
+  width: 170px;
+  height: 170px;
+  font-size: 70px;
+  line-height: 170px;
+  margin: auto;
+  border: 1px solid #1576b9;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  color: #1576b9;
+}
+.major__icon i {
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+i .major__icon:active, .major__icon:hover {
+  color: #fff7d1;
+  -webkit-transform: rotate(-30deg) scale(1.1);
+          transform: rotate(-30deg) scale(1.1);
+}
+.major__title {
+  color: #4d4d4d;
+}
+.major__desc {
+  color: #4d4d4d;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.167rem;
+  font-weight: 400;
+}
+
+.job {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.job__desc {
+  margin: 0 16px;
+  text-align: left;
+}
+.job__name {
+  color: #bdbdbd;
+  font-size: 0.571rem;
+}
+.job__period {
+  color: #bdbdbd;
+  font-size: 14px;
+}
+
+.skills {
+  background-color: #fff7d1;
+}
+.skills__container {
+  text-align: center;
+  padding: 4.167rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.skillset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #eeeeee;
+  margin: 20px 0;
+}
+.skillset__left {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  background-color: #4d4d4d;
+  padding: 20px 40px;
+}
+.skillset__right {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+.skillset__title {
+  color: #fff;
+}
+
+.skill {
+  margin-bottom: 10px;
+}
+.skill__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: grey;
+}
+.skill__value {
+  height: 3px;
+  background-color: #feb546;
+}
+
+.tools {
+  padding: 20px;
+  background-color: #3e3a3a;
+}
+
+.etc {
+  padding: 20px;
+  background-color: grey;
+}
+
+.work {
+  text-align: center;
+  padding: 4.167rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.work__categories {
+  margin: 40px;
+}
+.work__button {
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 8px 48px;
+  background-color: transparent;
+}
+.work__active, .work__button:active, .work__button:hover {
+  background-color: pink;
+  color: #fff;
+}
+.work__count {
+  border: 1px solid #feb546;
+  border-radius: 50%;
+  background-color: #feb546;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  line-height: 24px;
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+}
+.work__active .work__count, .work__button:hover .work__count {
+  opacity: 1;
+  top: 0;
+}
+.work__projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project {
+  position: relative;
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  background-color: #eeeeee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.project:hover .project__desc {
+  opacity: 0.8;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+.project__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.project__desc {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+}
+.project__title {
+  color: #fff;
+}
+.project__title:after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #bdbdbd;
+  display: block;
+  position: relative;
+  left: 50%;
+  margin-left: -12px;
+  margin-top: 8px;
+}
+.project__text {
+  color: #fff;
+}
