@@ -2,3 +2,65 @@
 @import './colors';
 @import './mixins';
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: $primary;
+  &__menubox {
+    display: flex;
+  }
+  &__list {
+    padding: 8px 12px;
+    margin: 0 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    &:active, &:hover {
+      background-color: $third;
+    }
+  }
+  &__active {
+    border: 1px solid $white;
+  }
+  &__logo {
+    width: 250px;
+    height: 250px;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.home {
+  background-image: url('../../assets/home-hero.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  text-align: center;
+  &__img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid $white;
+  }
+  &__title {
+    color: $white;
+  }
+  &__desc {
+    color: $white;
+  }
+  &__button {
+    @include Text;
+    font-weight: 900;
+    margin: 2rem;
+    padding: 0.667rem 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid $white;
+    border-radius: 5px;
+    color: $white;
+  }
+}

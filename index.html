@@ -85,14 +85,15 @@
 
 <body>
   <!-- navbar -->
-  <nav id="navbar">
+  <nav id="navbar" class="navbar">
     <div class="navbar__logo">
-      <img src="./assets/logo.png" alt="white version logo">
-      <a href="#">Gichul-J</a>
+      <a href="#">
+        <img src="./assets/logo.png" alt="white version logo" class="navbar__img">
+      </a>
     </div>
     <div class="navbar__menu">
       <ul class="navbar__menubox">
-        <li class="navbar__list">Home</li>
+        <li class="navbar__list navbar__active">Home</li>
         <li class="navbar__list">About</li>
         <li class="navbar__list">Skills</li>
         <li class="navbar__list">My works</li>
@@ -103,8 +104,8 @@
   </nav>
 
   <!-- Home -->
-  <section id="home">
-    <img class="home__img" src="./assets/profile-pic.jpeg" alt="gichul's profile photo">
+  <section id="home" class="home">
+    <img class="home__img" src="./assets/profile.png" alt="gichul's profile photo">
     <h1 class="home__title">Hello, <br />I am Gichul Jaun</h1>
     <h2 class="home__desc">A Frontend Developer currently residing in Toronto, Ontario</h2>
     <button class="home__button">Contact Me</button>
@@ -252,21 +253,100 @@
       </div>
     </div>
   </section>
+
   <!-- work -->
   <section id="work">
-
+    <h1>My work</h1>
+    <h3>Projects</h3>
+    <div class="work__categories">
+      <button class="work__button">
+        All<span class="work__count">4</span>
+      </button>
+      <button class="work__button">
+        JavaScript<span class="work__count">1</span>
+      </button>
+      <button class="work__button">
+        jQuery<span class="work__count">1</span>
+      </button>
+      <button class="work__button">
+        React<span class="work__count">2</span>
+      </button>
+    </div>
+    <div class="work__projects">
+      <a href="" class="project" target="_blank">
+        <img src="./assets/vid-monster-snap.png" alt="vid-monster" class="project__img">
+        <div class="project__desc">
+          <h3>Vid-Monster</h3>
+          <span>lorem ipsum</span>
+        </div>
+      </a>
+      <a href="" class="project" target="_blank">
+        <img src="./assets/studio-ghibli-snap.png" alt="studio-ghibli" class="project__img">
+        <div class="project__desc">
+          <h3>Studio-Ghibli</h3>
+          <span>lorem ipsum</span>
+        </div>
+      </a>
+      <a href="" class="project" target="_blank">
+        <img src="./assets/changing-font-snap.png" alt="chainging font" class="project__img">
+        <div class="project__desc">
+          <h3>Changing Font</h3>
+          <span>lorem ipsum</span>
+        </div>
+      </a>
+      <a href="" class="project" target="_blank">
+        <img src="./assets/shopper-mapper-snap.png" alt="shopper-mapper" class="project__img">
+        <div class="project__desc">
+          <h3>Shopper-Mapper</h3>
+          <span>lorem ipsum</span>
+        </div>
+      </a>
+    </div>
   </section>
+
   <!-- testimonials -->
-  <section id="testimonials">
+  <!-- <section id="testimonials">
+    <h1>Testimonials</h1>
+    <h3>See what they say about me</h3>
+    <div class="testimonials">
+      <div class="testimonial">
+        <img src="" alt="" class="testimonial__avatar">
+        <div class="testimonial__speech">
+          <p>lorem ipsum</p>
+          <p class="testimonial__nam">
+            <a href="">myname</a> /someplace
+          </p>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="" alt="" class="testimonial__avatar">
+        <div class="testimonial__speech">
+          <p>lorem ipsum</p>
+          <p class="testimonial__nam">
+            <a href="">myname</a> /someplace
+          </p>
+        </div>
+      </div>
+    </div>
+  </section> -->
 
-  </section>
   <!-- contact -->
   <section id="contact">
-
+    <h1 class="contact__title">Let's talk</h1>
+    <h2 class="contact__email">gichul0317@gmail.com</h2>
+    <div class="contact__links">
+      <a href="" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="" target="_blank">
+        <i class="fa-brands fa-github-square"></i>
+      </a>
+    </div>
+    <!-- contact form here -->
+    <p class="contact__rights">
+      Developed by Gichul Jaun, 2022
+    </p>
   </section>
-  <footer>
-
-  </footer>
 </body>
 
 

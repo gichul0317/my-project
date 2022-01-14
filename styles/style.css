@@ -7,6 +7,7 @@ html {
 body {
   margin: 0;
   scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
 }
 
 article,
@@ -290,11 +291,6 @@ span {
   padding: 0;
 }
 
-img {
-  display: block;
-  width: 100%;
-}
-
 li {
   list-style: none;
 }
@@ -302,4 +298,77 @@ li {
 a {
   text-decoration: none;
   color: #000;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  background-color: #1576b9;
+}
+.navbar__menubox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.navbar__list {
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.navbar__list:active, .navbar__list:hover {
+  background-color: #5b6972;
+}
+.navbar__active {
+  border: 1px solid #fff;
+}
+.navbar__logo {
+  width: 250px;
+  height: 250px;
+}
+.navbar__img {
+  width: 100%;
+  height: 100%;
+}
+
+.home {
+  background-image: url("../../assets/home-hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  text-align: center;
+}
+.home__img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.home__title {
+  color: #fff;
+}
+.home__desc {
+  color: #fff;
+}
+.home__button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.167rem;
+  font-weight: 400;
+  font-weight: 900;
+  margin: 2rem;
+  padding: 0.667rem 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
 }

@@ -6,6 +6,7 @@ html {
 body {
   margin: 0;
   scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
 }
 article,
 aside,
@@ -241,11 +242,6 @@ i,
 span {
   margin: 0;
   padding: 0;
-}
-
-img {
-  display: block;
-  width: 100%;
 }
 
 li {
