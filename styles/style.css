@@ -984,6 +984,28 @@ a {
   background: #0077b6;
 }
 
+.arrow__up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 50px;
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  background-color: #00b4d8;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
+  pointer-events: none;
+}
+.arrow__up--show {
+  cursor: pointer;
+  pointer-events: auto;
+  opacity: 1;
+}
+
 .footer {
   height: 60px;
   background-color: #4d4d4d;

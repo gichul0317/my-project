@@ -497,6 +497,27 @@
   }
 }
 
+.arrow__up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 50px;
+  width: 70px;
+  height: 70px;
+  color: $white;
+  border: none;
+  border-radius: 50%;
+  background-color: $third;
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+  pointer-events: none;
+  &--show {
+    cursor: pointer;
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
 .footer {
   height: 60px;
   background-color: $darkgrey;

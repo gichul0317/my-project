@@ -55,6 +55,29 @@ app.homeTransparent = function () {
   })
 }
 
+// show arrow up button when scroll down
+app.arrowBtn = function () {
+  const home = document.querySelector('.home__container');
+  const homeHeight = home.getBoundingClientRect().height;
+  const arrowUp = document.querySelector('.arrow__up')
+  document.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight / 2) {
+      arrowUp.classList.add('arrow__up--show');
+    } else {
+      arrowUp.classList.remove('arrow__up--show');
+    }
+  })
+}
+
+// scroll to up when arro up button is clicked 
+app.arrowBtnHandle = function () {
+  const arrowUp = document.querySelector('.arrow__up');
+  arrowUp.addEventListener('click', () => {
+    app.scrollSelector('#home');
+  })
+}
+
+// call functions
 app.init = function () {
   // AOS.init({ disable: 'mobile' });
   // AOS.init();
@@ -62,6 +85,8 @@ app.init = function () {
   app.scrollPage();
   app.scrollContact();
   app.homeTransparent();
+  app.arrowBtn();
+  app.arrowBtnHandle();
 };
 
 app.init();
