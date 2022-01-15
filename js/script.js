@@ -15,7 +15,6 @@ app.navScroll = function () {
   })
 }
 
-
 app.displayNav = function () {
   // const navBtn = document.querySelector('.nav-btn');
   // const target = document.querySelector('.menu');
@@ -31,23 +30,24 @@ app.displayPage = function () {
 };
 
 app.scrollPage = function () {
-  // const homeBtn = document.querySelector('');
-
-  // const btnScroll = document.querySelector('.home__scroll-down');
-  // const sectionTo = document.querySelector('#about');
-
-  // btnScroll.addEventListener('click', function () {
-  //   console.log('clicked')
-  //   sectionTo.scrollIntoView({ behavior: 'smooth' });
-  // })
+  const navbarMenu = document.querySelector('.navbar__menu');
+  navbarMenu.addEventListener('click', (e) => {
+    const target = e.target;
+    const link = target.dataset.link;
+    if (link === null) {
+      return;
+    }
+    const scrollTo = document.querySelector(link);
+    scrollTo.scrollIntoView({ behavior: 'smooth' });
+  })
 }
 
 app.init = function () {
   // AOS.init({ disable: 'mobile' });
   app.navScroll();
+  app.scrollPage();
   AOS.init();
   app.displayNav();
-  app.scrollPage();
 };
 
 app.init();
