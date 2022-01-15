@@ -302,6 +302,8 @@ a {
 }
 
 .navbar {
+  width: 100%;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -312,6 +314,9 @@ a {
       -ms-flex-align: center;
           align-items: center;
   padding: 15px;
+  background-color: transparent;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 @media (max-width: 767px) {
   .navbar {
@@ -323,6 +328,10 @@ a {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+}
+.navbar--dark {
+  background-color: #0077b6;
+  padding: 10px;
 }
 .navbar__menu {
   display: -webkit-box;
@@ -387,6 +396,7 @@ a {
   background-size: cover;
   background-position: center;
   padding: 40px;
+  padding-top: 140px;
   text-align: center;
 }
 .home__img {
