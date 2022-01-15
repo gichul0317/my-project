@@ -405,14 +405,14 @@ a {
   font-size: 28px;
   font-weight: 900;
   color: #fff;
-  margin: 0.556rem;
+  margin: 10px;
 }
 .home__button {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  margin: 1.778rem;
-  padding: 0.667rem 1rem;
+  margin: 35px;
+  padding: 12px 18px;
   background-color: transparent;
   cursor: pointer;
   border: 2px solid #fff;
@@ -427,10 +427,15 @@ a {
 
 .about__container {
   text-align: center;
-  padding: 4.167rem;
+  padding: 80px;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .about__container {
+    padding: 40px;
+  }
 }
 .about__title {
   font-family: "Roboto", sans-serif;
@@ -441,7 +446,7 @@ a {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  margin: 1.333rem 0;
+  margin: 25px 0;
 }
 .about__majors {
   display: -webkit-box;
@@ -450,10 +455,13 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 2.778rem 0;
+  margin: 50px 0;
 }
 @media (max-width: 767px) {
   .about__majors {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -466,7 +474,7 @@ a {
 }
 @media (max-width: 767px) {
   .major {
-    margin-bottom: 1.667rem;
+    margin-bottom: 30px;
   }
 }
 .major__icon {
@@ -499,7 +507,7 @@ a {
   font-size: 16px;
   font-weight: 400;
   color: #4d4d4d;
-  margin-top: 0.278rem;
+  margin-top: 5px;
 }
 
 .job {
@@ -509,7 +517,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 0.556rem;
+  margin-bottom: 10px;
 }
 .job__desc {
   margin: 0 20px;
@@ -532,24 +540,29 @@ a {
 }
 .skills__container {
   text-align: center;
-  padding: 4.167rem;
+  padding: 80px;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .skills__container {
+    padding: 40px;
+  }
 }
 .skills__title {
   font-family: "Roboto", sans-serif;
   font-size: 48px;
   font-weight: 900;
   color: #fff;
-  margin-bottom: 0.556rem;
+  margin-bottom: 10px;
 }
 .skills__subtitle {
   font-family: "Roboto", sans-serif;
   font-size: 28px;
   font-weight: 900;
   color: #fff;
-  margin-bottom: 0.278rem;
+  margin-bottom: 5px;
 }
 .skills__text {
   font-family: "Roboto", sans-serif;
@@ -562,7 +575,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 1.389rem 0;
+  margin: 25px 0;
 }
 @media (max-width: 767px) {
   .skillset {
@@ -647,10 +660,15 @@ a {
 
 .work__container {
   text-align: center;
-  padding: 4.167rem;
+  padding: 80px;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .work__container {
+    padding: 40px;
+  }
 }
 .work__title {
   font-family: "Roboto", sans-serif;
@@ -668,6 +686,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -675,15 +695,30 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 767px) {
+  .work__categories {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
 .work__button {
   border: 1px solid #bdbdbd;
   border-radius: 5px;
   font-size: 18px;
-  width: 180px;
+  width: 170px;
   height: 40px;
   background-color: transparent;
   text-align: center;
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  .work__button {
+    margin: 5px;
+  }
 }
 .work__active, .work__button:active, .work__button:hover {
   background-color: #0077b6;
@@ -801,14 +836,22 @@ a {
 }
 
 .contact {
-  background-color: #4d4d4d;
+  background-image: url("../../assets/home-hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .contact__container {
   text-align: center;
-  padding: 4.167rem;
+  padding: 80px;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .contact__container {
+    padding: 40px;
+  }
 }
 .contact__title {
   font-family: "Roboto", sans-serif;
@@ -837,7 +880,7 @@ a {
 .contact__links i:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  color: #0096c7;
+  color: #fb8500;
 }
 
 .form {
@@ -856,11 +899,11 @@ a {
   margin: 0 auto;
 }
 .form__input {
-  padding: 0.2rem;
+  padding: 3px;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #fff;
-  margin-bottom: 0.286rem;
+  margin-bottom: 5px;
   overflow: hidden;
   border-radius: 0;
   color: #fff;
@@ -896,11 +939,11 @@ a {
   font-size: 18px;
 }
 .form__textarea {
-  padding: 0.2rem;
+  padding: 3px;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #fff;
-  margin-bottom: 0.286rem;
+  margin-bottom: 5px;
   height: 250px;
   resize: none;
   border-radius: 0;
@@ -916,22 +959,22 @@ a {
       align-self: center;
   border: 2px solid #fff;
   border-radius: 5px;
-  padding: 0.667rem 1rem;
+  padding: 12px 18px;
   text-transform: uppercase;
   background-color: transparent;
   color: #fff;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  margin-top: 1.429rem;
+  margin-top: 20px;
   cursor: pointer;
 }
 .form__button:hover, .form__button:focus {
-  background: #0096c7;
+  background: #0077b6;
 }
 
 .footer {
   height: 60px;
-  background-color: #0077b6;
+  background-color: #4d4d4d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -74,12 +74,12 @@
   &__desc {
     @include Medium;
     color: $white;
-    margin: 0.556rem;
+    margin: 10px;
   }
   &__button {
     @include Regular;
-    margin: 1.778rem;
-    padding: 0.667rem 1rem;
+    margin: 35px;
+    padding: 12px 18px;
     background-color: transparent;
     cursor: pointer;
     border: 2px solid $white;
@@ -96,19 +96,23 @@
   // background-color: $lightwhite;
   &__container {
     @include Section;
+    @include mobile {
+      padding: 40px;
+    }
   }
   &__title {
     @include Large;
   }
   &__text {
     @include Regular;
-    margin: 1.333rem 0;
+    margin: 25px 0;
   }
   &__majors {
     display: flex;
     justify-content: space-between;
-    margin: 2.778rem 0;
+    margin: 50px 0;
     @include mobile {
+      align-items: center;
       flex-direction: column;
     }
   }
@@ -121,7 +125,7 @@
   width: 270px;
   height: 270px;
   @include mobile {
-    margin-bottom: 1.667rem;
+    margin-bottom: 30px;
   }
   &__icon {
     width: 170px;
@@ -154,14 +158,14 @@
   &__desc {
     @include Small;
     color: $darkgrey;
-    margin-top: 0.278rem;
+    margin-top: 5px;
   }
 }
 
 .job {
   display: flex;
   align-items: center;
-  margin-bottom: 0.556rem;
+  margin-bottom: 10px;
   &__desc {
     margin: 0 20px;
     text-align: left;
@@ -179,16 +183,19 @@
   background-color: $darkgrey;
   &__container {
     @include Section;
+    @include mobile {
+      padding: 40px;
+    }
   }
   &__title {
     @include Large;
     color: $white;
-    margin-bottom: 0.556rem;
+    margin-bottom: 10px;
   }
   &__subtitle {
     @include Medium;
     color: $white;
-    margin-bottom: 0.278rem;
+    margin-bottom: 5px;
   }
   &__text {
     @include Regular;
@@ -198,7 +205,7 @@
 
 .skillset {
   display: flex;
-  margin: 1.389rem 0;
+  margin: 25px 0;
   @include mobile {
     flex-direction: column;
   }
@@ -261,6 +268,9 @@
 .work {
   &__container {
     @include Section;
+    @include mobile {
+      padding: 40px;
+    }
   }
   &__title {
     @include Large;
@@ -272,19 +282,28 @@
   &__categories {
     margin: 40px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    @include mobile {
+      justify-content: center;
+      flex-grow: 1;
+    }
   }
   &__button {
     border: 1px solid $darkwhite;
     border-radius: 5px;
     font-size: 18px;
     // padding: 8px 48px;
-    width: 180px;
+    // margin: 0 10px;
+    width: 170px;
     height: 40px;
     background-color: transparent;
     text-align: center;
     cursor: pointer;
+    @include mobile {
+      margin: 5px;
+    }
   }
   &__active, &__button:active, &__button:hover {
     background-color: $primary;
@@ -373,9 +392,16 @@
 }
 
 .contact {
-  background-color: $darkgrey;
+  // background-color: $darkgrey;
+  background-image: url('../../assets/home-hero.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   &__container {
     @include Section;
+    @include mobile {
+      padding: 40px;
+    }
   }
   &__title {
     @include Large;
@@ -397,7 +423,7 @@
     }
     i:hover {
       transform: scale(1.1);
-      color: $secondary;
+      color: $orange;
     }
   }
 }
@@ -410,11 +436,11 @@
   justify-content: center;
   margin: 0 auto;
   &__input {
-    padding: 0.2rem;
+    padding: 3px;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid $white;
-    margin-bottom: 0.286rem;
+    margin-bottom: 5px;
     overflow: hidden;
     border-radius: 0;
     color: $white;
@@ -430,11 +456,11 @@
     font-size: 18px;
   }
   &__textarea {
-    padding: 0.2rem;
+    padding: 3px;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid $white; 
-    margin-bottom: 0.286rem;
+    margin-bottom: 5px;
     height: 250px;
     resize: none;
     border-radius: 0;
@@ -447,22 +473,22 @@
     align-self: center;
     border: 2px solid $white;
     border-radius: 5px;
-    padding: 0.667rem 1rem;
+    padding: 12px 18px;
     text-transform: uppercase;
     background-color: transparent;
     color: $white;
     transition: all 300ms ease;
-    margin-top: 1.429rem;
+    margin-top: 20px;
     cursor: pointer;
     &:hover, &:focus {
-      background: $secondary;
+      background: $primary;
     }
   }
 }
 
 .footer {
   height: 60px;
-  background-color: $primary;
+  background-color: $darkgrey;
   display: flex;
   justify-content: center;
   align-items: center;
