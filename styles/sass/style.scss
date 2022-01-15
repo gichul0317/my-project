@@ -7,29 +7,50 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: $primary;
-  &__menubox {
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__menu {
     display: flex;
+    @include mobile {
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      display: none;
+    }
   }
   &__list {
+    @include Micro;
     padding: 8px 12px;
     margin: 0 4px;
     cursor: pointer;
     border-radius: 5px;
+    color: $white;
+    transition: all 300ms ease-in;
     &:active, &:hover {
-      background-color: $third;
+      background-color: $primary;
     }
   }
   &__active {
     border: 1px solid $white;
   }
   &__logo {
-    width: 250px;
-    height: 250px;
+    @include Large;
+    color: $white;
   }
-  &__img {
-    width: 100%;
-    height: 100%;
+  &__togglebtn {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 63px;
+    right: 52px;
+    font-size: 32px;
+    color: $white;
+    display: none;
+    @include  mobile {
+      display: block;
+    }
   }
 }
 
@@ -44,33 +65,52 @@
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border: 2px solid $white;
+    border: 3px solid $white;
   }
   &__title {
+    @include Large;
     color: $white;
   }
   &__desc {
+    @include Regular;
     color: $white;
+    margin: 0.556rem;
   }
   &__button {
-    @include Text;
-    font-weight: 900;
-    margin: 2rem;
+    @include Micro;
+    margin: 1.778rem;
     padding: 0.667rem 1rem;
     background-color: transparent;
     cursor: pointer;
     border: 2px solid $white;
     border-radius: 5px;
     color: $white;
+    transition: all 300ms ease-in;
+    &:hover, &:focus {
+      background-color: $primary;
+    }
   }
 }
 
 .about {
-  @include Section;
+  // background-color: $lightwhite;
+  &__container {
+    @include Section;
+  }
+  &__title {
+    @include Large;
+  }
+  &__text {
+    @include Regular;
+    margin: 1.333rem 0;
+  }
   &__majors {
     display: flex;
     justify-content: space-between;
-    margin: 80px 0;
+    margin: 2.778rem 0;
+    @include mobile {
+      flex-direction: column;
+    }
   }
   &__jobs {
 
@@ -78,87 +118,116 @@
 }
 
 .major {
+  width: 270px;
+  height: 270px;
+  @include mobile {
+    margin-bottom: 1.667rem;
+  }
   &__icon {
     width: 170px;
     height: 170px;
     font-size: 70px;
     line-height: 170px;
     margin: auto;
-    border: 1px solid $primary;
+    border: 3px solid $primary;
     border-radius: 50%;
     margin-bottom: 15px;
     color: $primary;
-    i {
-      transition: all 300ms ease;
-    }
-    i &:active, &:hover {
-      color: $yellow;
+    transition: all 300ms ease-in;
+    &:active, &:hover {
+      color: $orange;
       transform: rotate(-30deg) scale(1.1);
+      border-color: $orange;
     }
+    // i {
+    //   transition: all 300ms ease-in;
+    // }
+    // i &:active, &:hover {
+    //   color: $orange;
+    //   transform: rotate(-30deg) scale(1.1);
+    // }
   }
   &__title {
+    @include Small;
     color: $darkgrey;
   }
   &__desc {
+    @include Tiny;
     color: $darkgrey;
-    @include Text;
+    margin-top: 0.278rem;
   }
 }
 
 .job {
   display: flex;
   align-items: center;
+  margin-bottom: 0.556rem;
   &__desc {
-    margin: 0 16px;
+    margin: 0 20px;
     text-align: left;
   }
   &__name {
-    color: $darkwhite;
-    font-size: 0.571rem;
+    @include Tiny;
+    margin-bottom: 5px;
   }
   &__period {
-    color: $darkwhite;
     font-size: 14px;
   }
 }
 
 .skills {
-  background-color: $yellow;
+  background-color: $darkgrey;
   &__container {
     @include Section;
+  }
+  &__title {
+    @include Large;
+    color: $white;
+    margin-bottom: 0.556rem;
+  }
+  &__subtitle {
+    @include Medium;
+    color: $white;
+    margin-bottom: 0.278rem;
+  }
+  &__text {
+    @include Regular;
+    color: $white;
   }
 }
 
 .skillset {
   display: flex;
-  color: $lightwhite;
-  margin: 20px 0;
+  margin: 1.389rem 0;
+  @include mobile {
+    flex-direction: column;
+  }
   &__left {
     flex-basis: 60%;
-    background-color: $darkgrey;
     padding: 20px 40px;
   }
   &__right {
     flex-basis: 40%;
   }
   &__title {
+    @include Small;
     color: $white;
   }
 }
 
 .skill {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   &__desc {
     display: flex;
     justify-content: space-between;
+    color: $white;
   }
   &__bar {
     width: 100%;
     height: 3px;
-    background-color: grey;
+    background-color: $darkwhite;
   }
   &__value {
-    // width: 100%;
     height: 3px;
     background-color: $orange;
   }
@@ -166,28 +235,57 @@
 
 .tools {
   padding: 20px;
-  background-color: rgb(62, 58, 58);
+  &__title {
+    color: $white;
+    @include Tiny;
+  }
+  &__list {
+    @include Tiny;
+    color: $white;
+  }
 }
 
 .etc {
   padding: 20px;
-  background-color: grey;
+  &__title {
+    @include Tiny;
+    color: $white;
+  }
+  &__list {
+    @include Tiny;
+    color: $white;
+  }
 }
 
 .work {
-  @include Section;
+  &__container {
+    @include Section;
+  }
+  &__title {
+    @include Large;
+  }
+  &__subtitle {
+    @include Regular;
+  }
   &__categories {
     margin: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   &__button {
     border: 1px solid $darkwhite;
     border-radius: 5px;
     font-size: 18px;
-    padding: 8px 48px;
+    // padding: 8px 48px;
+    width: 180px;
+    height: 40px;
     background-color: transparent;
+    text-align: center;
+    cursor: pointer;
   }
   &__active, &__button:active, &__button:hover {
-    background-color: pink;
+    background-color: $primary;
     color: $white;
   }
   &__count {
@@ -197,11 +295,11 @@
     color: $white;
     width: 24px;
     height: 24px;
-    display: inline-block;
     line-height: 24px;
+    display: inline-block;
     position: relative;
     top: -20px;
-    left: 4px;
+    left: 5px;
     opacity: 0;
     transition: all 300ms ease-in;
   }
@@ -218,13 +316,16 @@
 
 .project {
   position: relative;
-  width: 280px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
   margin: 2px;
   background-color: $lightwhite;
   display: flex;
   justify-content: center;
   align-items: center;
+  @include mobile {
+    flex-grow: 1;
+  }
   &:hover &__desc {
     opacity: 0.8;
     transform: translateY(0px);
@@ -249,19 +350,50 @@
   }
   &__title {
     color: $white;
+    @include Small;
   }
   &__title:after {
     content: '';
-    width: 25px;
+    width: 70px;
     height: 2px;
     background-color: $darkwhite;
     display: block;
     position: relative;
     left: 50%;
-    margin-left: -12px;
+    margin-left: -35px;
     margin-top: 8px;
+    margin-bottom: 3px;
   }
   &__text {
+    color: $white;
+  }
+}
+
+.contact {
+  background-color: $darkgrey;
+  &__container {
+    @include Section;
+  }
+  &__title {
+    @include Large;
+    color: $white;
+    margin: 32px 0;
+  }
+  &__links {
+    margin: 24px 0;
+    i {
+      font-size: 1rem;
+      color: $white;
+      transition: all 300ms ease-in;
+      margin: 0 5px;
+    }
+    i:hover {
+      transform: scale(1.1);
+      color: $orange;
+    }
+  }
+  &__rights {
+    @include Tiny;
     color: $white;
   }
 }

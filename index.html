@@ -9,11 +9,11 @@
   <meta name="description" content="portfolio for gichul-j">
   <meta name="author" content="developed by gichul-j">
   <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./styles/style.css" />
@@ -84,95 +84,96 @@
 </ul> -->
 
 <body>
-  <!-- navbar -->
-  <nav id="navbar" class="navbar">
-    <div class="navbar__logo">
-      <a href="#">
-        <img src="./assets/logo.png" alt="white version logo" class="navbar__img">
-      </a>
-    </div>
-    <div class="navbar__menu">
-      <ul class="navbar__menubox">
-        <li class="navbar__list navbar__active">Home</li>
-        <li class="navbar__list">About</li>
-        <li class="navbar__list">Skills</li>
-        <li class="navbar__list">My works</li>
-        <li class="navbar__list">Testimonials</li>
-        <li class="navbar__list">Contact</li>
-      </ul>
-    </div>
-  </nav>
-
   <!-- Home -->
   <section id="home" class="home">
+    <!-- navbar -->
+    <nav id="navbar" class="navbar">
+      <a class="navbar__logo" href="#home">
+        &lt;/&gt;
+      </a>
+      <div class="navbar__menu">
+        <ul class="navbar__menu">
+          <li class="navbar__list navbar__active">Home</li>
+          <li class="navbar__list">About</li>
+          <li class="navbar__list">Skills</li>
+          <li class="navbar__list">My works</li>
+          <!-- <li class="navbar__list">Testimonials</li> -->
+          <li class="navbar__list">Contact</li>
+        </ul>
+      </div>
+      <!-- toggle btn -->
+      <button class="navbar__togglebtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
     <img class="home__img" src="./assets/profile.png" alt="gichul's profile photo">
-    <h1 class="home__title">Hello, <br />I am Gichul Jaun</h1>
+    <h1 class="home__title">Hello,<br />I am Gichul Jaun</h1>
     <h2 class="home__desc">A Frontend Developer currently residing in Toronto, Ontario</h2>
     <button class="home__button">Contact Me</button>
   </section>
 
   <!-- about -->
   <section id="about" class="about">
-    <h1>About Me</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero, recusandae velit exercitationem sed minima
-      iure explicabo corporis ipsa! Porro vel placeat praesentium voluptas, enim similique modi est eum eius?</p>
-    <div class="about__majors">
-      <div class="major">
-        <div class="major__icon">
-          <i class="fab fa-html5 about__skillIcn"></i>
-        </div>
-        <div class="major__title">HTML5</div>
-        <div class="major_desc">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem neque quas tempore non cum hic
-          deleniti quos? Rerum repellendus at facilis. Fugiat, et ipsa quibusdam consequuntur nulla reiciendis commodi?
-        </div>
-      </div>
-      <div class="major">
-        <div class="major__icon">
-          <i class="fab fa-html5 about__skillIcn"></i>
-        </div>
-        <div class="major__title">HTML5</div>
-        <div class="major_desc">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem neque quas tempore non cum hic
-          deleniti quos? Rerum repellendus at facilis. Fugiat, et ipsa quibusdam consequuntur nulla reiciendis commodi?
-        </div>
-      </div>
-      <div class="major">
-        <div class="major__icon">
-          <i class="fab fa-html5 about__skillIcn"></i>
-        </div>
-        <div class="major__title">HTML5</div>
-        <div class="major_desc">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem neque quas tempore non cum hic
-          deleniti quos? Rerum repellendus at facilis. Fugiat, et ipsa quibusdam consequuntur nulla reiciendis commodi?
-        </div>
-      </div>
-    </div>
-    <div class="about__jobs">
-      <div class="job">
-        <img src="./assets/atreo_logo.jpeg" alt="atreo logo" class="job__logo">
-        <div class="job__desc">
-          <p class="job__name">
-            Currently working at Atreo Media as a Web Developer Intern
+    <div class="about__container">
+      <h1 class="about__title">About Me</h1>
+      <p class="about__text">
+        From a IT Support and Security roles and to become a web developer, I am combining knowledge in network system
+        and creative design to provide user-friendly and accessible applications. Along with skills listed here, I love
+        to
+        learn new libraries, tools and concepts in web-development. I am excited
+        to make the leap and continue refining my skills with the right company.
+      </p>
+      <div class="about__majors">
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-html5 about__skillIcn"></i>
+          </div>
+          <h3 class="major__title">HTML5</h3>
+          <p class="major__desc">
+            Semantic Elements, Accessibility
           </p>
-          <p class="job__period">
-            2021 Oct - Current
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <h3 class="major__title">CSS3</h3>
+          <p class="major__desc">
+            Responsive, Animation
+          </p>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-js"></i>
+          </div>
+          <h3 class="major__title">JavaScript</h3>
+          <p class="major__desc">
+            React, jQuery
           </p>
         </div>
       </div>
-      <div class="job">
-        <img src="./assets/juno_logo.png" alt="juno logo" class="job__logo">
-        <div class="job__desc">
-          <p class="job__name">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius eaque suscipit asperiores dolores! Libero sit
-            mollitia amet officia voluptatem doloribus soluta eligendi provident veritatis. Asperiores aut facere ex
-            quidem quaerat.
-          </p>
-          <p class="job__period">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto delectus nisi unde sapiente voluptatum.
-            Laboriosam quisquam quaerat laborum. Veniam fugiat error doloremque quis. Ipsam modi doloribus debitis,
-            maxime eaque fugiat?
-          </p>
+      <div class="about__jobs">
+        <div class="job">
+          <img src="./assets/atreo_logo.png" alt="atreo logo" class="job__logo">
+          <div class="job__desc">
+            <p class="job__name">
+              Currently working at Atreo Media as a Web Developer Intern
+            </p>
+            <p class="job__period">
+              Oct 2021 - Current
+            </p>
+          </div>
+        </div>
+        <div class="job">
+          <img src="./assets/juno_logo.png" alt="juno logo" class="job__logo">
+          <div class="job__desc">
+            <p class="job__name">
+              Student at Juno College of Technology
+            </p>
+            <p class="job__period">
+              May 2021 - July 2021
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -181,9 +182,9 @@
   <!-- skills -->
   <section id="skills" class="skills">
     <div class="skills__container">
-      <h1>Skills</h1>
-      <h2>Skills & Attributes</h2>
-      <p>
+      <h1 class="skills__title">Skills</h1>
+      <h2 class="skills__subtitle">Skills & Attributes</h2>
+      <p class="skills__text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus officiis unde odit maxime quae hic quo
         voluptatum explicabo ipsa eius nisi, suscipit facilis adipisci dolorem illo modi reprehenderit voluptates quam!
       </p>
@@ -228,6 +229,15 @@
           </div>
           <div class="skill">
             <div class="skill__desc">
+              <span>jQuery</span>
+              <span>85%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__desc">
               <span>React</span>
               <span>82%</span>
             </div>
@@ -239,20 +249,20 @@
         <div class="skillset__right">
           <div class="tools">
             <h3 class="tools__title">Tools</h3>
-            <ul class="tools__list">
-              <li><span>Visual Studio Code</span></li>
-              <li><span>Git & Github</span></li>
-              <li><span>Firebase</span></li>
-              <li><span>Adobe XD</span></li>
-              <li><span>Figma</span></li>
+            <ul>
+              <li class="tools__list"><span>Visual Studio Code</span></li>
+              <li class="tools__list"><span>Git & Github</span></li>
+              <li class="tools__list"><span>Firebase</span></li>
+              <li class="tools__list"><span>Adobe XD</span></li>
+              <li class="tools__list"><span>Figma</span></li>
             </ul>
           </div>
           <div class="etc">
             <h3 class="etc__title">Etc</h3>
-            <ul class="etc__list">
-              <li><span>team player</span></li>
-              <li><span>object oriented</span></li>
-              <li><span>obstacle</span></li>
+            <ul>
+              <li class="etc__list"><span>Team player</span></li>
+              <li class="etc__list"><span>Objective oriented</span></li>
+              <li class="etc__list"><span>Problem solving</span></li>
             </ul>
           </div>
         </div>
@@ -262,51 +272,53 @@
 
   <!-- work -->
   <section id="work" class="work">
-    <h1>My work</h1>
-    <h3>Projects</h3>
-    <div class="work__categories">
-      <button class="work__button work__active">
-        All <span class="work__count">4</span>
-      </button>
-      <button class="work__button">
-        JavaScript <span class="work__count">1</span>
-      </button>
-      <button class="work__button">
-        jQuery <span class="work__count">1</span>
-      </button>
-      <button class="work__button">
-        React <span class="work__count">2</span>
-      </button>
-    </div>
-    <div class="work__projects">
-      <a href="" class="project" target="_blank">
-        <img src="./assets/vid-monster-snap.png" alt="vid-monster" class="project__img">
-        <div class="project__desc">
-          <h3 class="project__title">Vid-Monster</h3>
-          <span class="project__text">lorem ipsum</span>
-        </div>
-      </a>
-      <a href="" class="project" target="_blank">
-        <img src="./assets/studio-ghibli-snap.png" alt="studio-ghibli" class="project__img">
-        <div class="project__desc">
-          <h3 class="project__title">Studio-Ghibli</h3>
-          <span class="project__text">lorem ipsum</span>
-        </div>
-      </a>
-      <a href="" class="project" target="_blank">
-        <img src="./assets/changing-font-snap.png" alt="chainging font" class="project__img">
-        <div class="project__desc">
-          <h3 class="project__title">Changing Font</h3>
-          <span class="project__text">lorem ipsum</span>
-        </div>
-      </a>
-      <a href="" class="project" target="_blank">
-        <img src="./assets/shopper-mapper-snap.png" alt="shopper-mapper" class="project__img">
-        <div class="project__desc">
-          <h3 class="project__title">Shopper-Mapper</h3>
-          <span class="project__text">lorem ipsum</span>
-        </div>
-      </a>
+    <div class="work__container">
+      <h1 class="work__title">My work</h1>
+      <h3 class="work__subtitle">Projects</h3>
+      <div class="work__categories">
+        <button class="work__button work__active">
+          All <span class="work__count">4</span>
+        </button>
+        <button class="work__button">
+          JavaScript <span class="work__count">1</span>
+        </button>
+        <button class="work__button">
+          jQuery <span class="work__count">1</span>
+        </button>
+        <button class="work__button">
+          React <span class="work__count">2</span>
+        </button>
+      </div>
+      <div class="work__projects">
+        <a href="https://vid-monster.netlify.app/" class="project" target="_blank">
+          <img src="./assets/vid-monster-snap.png" alt="vid-monster" class="project__img">
+          <div class="project__desc">
+            <h3 class="project__title">Vid-Monster</h3>
+            <span class="project__text">React and Firebase</span>
+          </div>
+        </a>
+        <a href="https://studioghibli-project.netlify.app/" class="project" target="_blank">
+          <img src="./assets/studio-ghibli-snap.png" alt="studio-ghibli" class="project__img">
+          <div class="project__desc">
+            <h3 class="project__title">Studio-Ghibli</h3>
+            <span class="project__text">JavaScript and Ghibli API</span>
+          </div>
+        </a>
+        <a href="https://gichul0317.github.io/changing-fonts/" class="project" target="_blank">
+          <img src="./assets/changing-font-snap.png" alt="chainging font" class="project__img">
+          <div class="project__desc">
+            <h3 class="project__title">Changing Font</h3>
+            <span class="project__text">jQuery and CSS</span>
+          </div>
+        </a>
+        <a href="https://practical-meitner-05cbb0.netlify.app/" class="project" target="_blank">
+          <img src="./assets/shopper-mapper-snap.png" alt="shopper-mapper" class="project__img">
+          <div class="project__desc">
+            <h3 class="project__title">Shopper-Mapper</h3>
+            <span class="project__text">React and MapQuest API</span>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -337,21 +349,22 @@
   </section> -->
 
   <!-- contact -->
-  <section id="contact">
-    <h1 class="contact__title">Let's talk</h1>
-    <h2 class="contact__email">gichul0317@gmail.com</h2>
-    <div class="contact__links">
-      <a href="" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="" target="_blank">
-        <i class="fa-brands fa-github-square"></i>
-      </a>
+  <section id="contact" class="contact">
+    <div class="contact__container">
+      <h1 class="contact__title">Let's talk</h1>
+      <div class="contact__links">
+        <a href="" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" target="_blank">
+          <i class="fab fa-github-square"></i>
+        </a>
+      </div>
+      <!-- contact form here -->
+      <p class="contact__rights">
+        Developed by Gichul Jaun, 2022
+      </p>
     </div>
-    <!-- contact form here -->
-    <p class="contact__rights">
-      Developed by Gichul Jaun, 2022
-    </p>
   </section>
 </body>
 
