@@ -824,9 +824,108 @@ a {
   color: #fb8500;
 }
 
+.form {
+  max-width: 500px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+.form__input {
+  padding: 0.2rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 0.286rem;
+  overflow: hidden;
+  border-radius: 0;
+  color: #fff;
+}
+@media (max-width: 1023px) {
+  .form__input {
+    height: 45px;
+  }
+}
+@media (max-width: 767px) {
+  .form__input {
+    height: 40px;
+  }
+}
+.form ::-webkit-input-placeholder {
+  color: #bdbdbd;
+  font-size: 0.667rem;
+}
+.form ::-moz-placeholder {
+  color: #bdbdbd;
+  font-size: 0.667rem;
+}
+.form :-ms-input-placeholder {
+  color: #bdbdbd;
+  font-size: 0.667rem;
+}
+.form ::-ms-input-placeholder {
+  color: #bdbdbd;
+  font-size: 0.667rem;
+}
+.form ::placeholder {
+  color: #bdbdbd;
+  font-size: 0.667rem;
+}
+.form__textarea {
+  padding: 0.2rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 0.286rem;
+  height: 250px;
+  font-size: 0.743rem;
+  resize: none;
+  border-radius: 0;
+  color: #fff;
+}
+@media (max-width: 1023px) {
+  .form__textarea {
+    height: 250px;
+  }
+}
+.form__button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 0.667rem 1rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #fff;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  margin-top: 1.429rem;
+  cursor: pointer;
+}
+.form__button:hover, .form__button:focus {
+  background: #0077b6;
+}
+
 .footer {
-  background-color: #4d4d4d;
-  text-align: center;
+  height: 40px;
+  background-color: #0077b6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .footer__rights {
   font-family: "Roboto", sans-serif;
