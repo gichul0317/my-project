@@ -362,15 +362,16 @@ a {
   font-family: "Roboto", sans-serif;
   font-size: 48px;
   font-weight: 900;
+  font-size: 60px;
   color: #fff;
 }
 .navbar__togglebtn {
   background-color: transparent;
   border: none;
   position: absolute;
-  top: 63px;
+  top: 70px;
   right: 52px;
-  font-size: 32px;
+  font-size: 38px;
   color: #fff;
   display: none;
 }

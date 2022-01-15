@@ -37,15 +37,16 @@
   }
   &__logo {
     @include Large;
+    font-size: 60px;
     color: $white;
   }
   &__togglebtn {
     background-color: transparent;
     border: none;
     position: absolute;
-    top: 63px;
+    top: 70px;
     right: 52px;
-    font-size: 32px;
+    font-size: 38px;
     color: $white;
     display: none;
     @include  mobile {
