@@ -15,19 +15,10 @@ app.navScroll = function () {
   })
 }
 
-app.displayNav = function () {
-  // const navBtn = document.querySelector('.nav-btn');
-  // const target = document.querySelector('.menu');
-  // const overlay = document.querySelector('.overlay');
-  // navBtn.addEventListener('click', function () {
-  // target.classList.toggle('hidden');
-  // overlay.classList.toggle('hidden');
-  // });
-};
-
-app.displayPage = function () {
-
-};
+app.scrollSelector = function (item) {
+  const scrollTo = document.querySelector(item);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
 
 app.scrollPage = function () {
   const navbarMenu = document.querySelector('.navbar__menu');
@@ -37,17 +28,23 @@ app.scrollPage = function () {
     if (link === null) {
       return;
     }
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({ behavior: 'smooth' });
+    app.scrollSelector(link);
+  })
+}
+
+app.scrollContact = function () {
+  const btn = document.querySelector('.home__button');
+  btn.addEventListener('click', () => {
+    app.scrollSelector('#contact');
   })
 }
 
 app.init = function () {
   // AOS.init({ disable: 'mobile' });
+  // AOS.init();
   app.navScroll();
   app.scrollPage();
-  AOS.init();
-  app.displayNav();
+  app.scrollContact();
 };
 
 app.init();
