@@ -29,7 +29,7 @@
     color: $white;
     transition: all 300ms ease-in;
     &:active, &:hover {
-      background-color: $primary;
+      background-color: $third;
     }
   }
   &__active {
@@ -379,17 +379,21 @@
     color: $white;
     margin: 32px 0;
   }
+  &__text {
+    @include Micro;
+    color: $white;
+  }
   &__links {
     margin: 24px 0;
     i {
-      font-size: 1rem;
+      font-size: 1.556rem;
       color: $white;
       transition: all 300ms ease-in;
       margin: 0 5px;
     }
     i:hover {
       transform: scale(1.1);
-      color: $orange;
+      color: $secondary;
     }
   }
 }
@@ -448,7 +452,7 @@
     margin-top: 1.429rem;
     cursor: pointer;
     &:hover, &:focus {
-      background: $primary;
+      background: $secondary;
     }
   }
 }
