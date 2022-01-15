@@ -360,12 +360,23 @@
           <i class="fab fa-github-square"></i>
         </a>
       </div>
-      <!-- contact form here -->
-      <p class="contact__rights">
-        Developed by Gichul Jaun, 2022
-      </p>
+      <form action="POST" name="contact" method="POST" data-netlify="true" class="form">
+        <label for="user-name" class="sr-only">user-name</label>
+        <input type="text" id="user-name" required placeholder="Name" name="user-name" class="form__input" />
+        <label for="user-email" class="sr-only">user-email</label>
+        <input type="email" id="user-email" required placeholder="Email" name="user-email" class="form__input" />
+        <label for="comments" class="sr-only">comments</label>
+        <textarea name="comments" id="comments" required placeholder="Comments" class="form__textarea"></textarea>
+        <!-- <div data-netlify-recaptcha="true"></div> -->
+        <button type="submit" class="form__button">send</button>
+      </form>
     </div>
   </section>
+  <footer class="footer">
+    <span class="footer__rights">
+      Developed by Gichul Jaun, 2022
+    </span>
+  </footer>
 </body>
 
 

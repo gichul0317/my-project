@@ -392,6 +392,15 @@
       color: $orange;
     }
   }
+}
+
+.form {
+  
+}
+
+.footer {
+  background-color: $darkgrey;
+  text-align: center;
   &__rights {
     @include Tiny;
     color: $white;
