@@ -21,7 +21,7 @@
     }
   }
   &__list {
-    @include Micro;
+    @include Regular;
     padding: 8px 12px;
     margin: 0 4px;
     cursor: pointer;
@@ -72,12 +72,12 @@
     color: $white;
   }
   &__desc {
-    @include Regular;
+    @include Medium;
     color: $white;
     margin: 0.556rem;
   }
   &__button {
-    @include Micro;
+    @include Regular;
     margin: 1.778rem;
     padding: 0.667rem 1rem;
     background-color: transparent;
@@ -148,11 +148,11 @@
     // }
   }
   &__title {
-    @include Small;
+    @include Regular;
     color: $darkgrey;
   }
   &__desc {
-    @include Tiny;
+    @include Small;
     color: $darkgrey;
     margin-top: 0.278rem;
   }
@@ -167,11 +167,11 @@
     text-align: left;
   }
   &__name {
-    @include Tiny;
+    @include Small;
     margin-bottom: 5px;
   }
   &__period {
-    font-size: 14px;
+    @include Small;
   }
 }
 
@@ -210,7 +210,7 @@
     flex-basis: 40%;
   }
   &__title {
-    @include Small;
+    @include Regular;
     color: $white;
   }
 }
@@ -218,6 +218,7 @@
 .skill {
   margin-bottom: 15px;
   &__desc {
+    @include Regular;
     display: flex;
     justify-content: space-between;
     color: $white;
@@ -237,10 +238,10 @@
   padding: 20px;
   &__title {
     color: $white;
-    @include Tiny;
+    @include Regular;
   }
   &__list {
-    @include Tiny;
+    @include Small;
     color: $white;
   }
 }
@@ -248,11 +249,11 @@
 .etc {
   padding: 20px;
   &__title {
-    @include Tiny;
+    @include Regular;
     color: $white;
   }
   &__list {
-    @include Tiny;
+    @include Small;
     color: $white;
   }
 }
@@ -263,9 +264,10 @@
   }
   &__title {
     @include Large;
+    margin-bottom: 15px;
   }
   &__subtitle {
-    @include Regular;
+    @include Medium;
   }
   &__categories {
     margin: 40px;
@@ -350,7 +352,7 @@
   }
   &__title {
     color: $white;
-    @include Small;
+    @include Regular;
   }
   &__title:after {
     content: '';
@@ -365,6 +367,7 @@
     margin-bottom: 3px;
   }
   &__text {
+    @include Small;
     color: $white;
   }
 }
@@ -380,14 +383,14 @@
     margin: 32px 0;
   }
   &__text {
-    @include Micro;
+    @include Regular;
     color: $white;
     margin-bottom: 15px;
   }
   &__links {
     margin: 24px 0;
     i {
-      font-size: 1.556rem;
+      font-size: 32px;
       color: $white;
       transition: all 300ms ease-in;
       margin: 0 5px;
@@ -424,7 +427,7 @@
   }
   ::placeholder {
     color: $darkwhite;
-    font-size: 0.667rem;
+    font-size: 18px;
   }
   &__textarea {
     padding: 0.2rem;
@@ -433,7 +436,6 @@
     border-bottom: 2px solid $white; 
     margin-bottom: 0.286rem;
     height: 250px;
-    font-size: 0.743rem;
     resize: none;
     border-radius: 0;
     color: $white;
@@ -465,7 +467,7 @@
   justify-content: center;
   align-items: center;
   &__rights {
-    @include Tiny;
+    @include Small;
     color: $white;
   }
 }
