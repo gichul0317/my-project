@@ -382,6 +382,7 @@
   &__text {
     @include Micro;
     color: $white;
+    margin-bottom: 15px;
   }
   &__links {
     margin: 24px 0;
@@ -458,7 +459,7 @@
 }
 
 .footer {
-  height: 40px;
+  height: 60px;
   background-color: $primary;
   display: flex;
   justify-content: center;

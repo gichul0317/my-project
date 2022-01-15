@@ -813,6 +813,7 @@ a {
   font-size: 0.778rem;
   font-weight: 400;
   color: #fff;
+  margin-bottom: 15px;
 }
 .contact__links {
   margin: 24px 0;
@@ -921,7 +922,7 @@ a {
 }
 
 .footer {
-  height: 40px;
+  height: 60px;
   background-color: #0077b6;
   display: -webkit-box;
   display: -ms-flexbox;
