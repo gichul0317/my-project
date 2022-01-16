@@ -87,6 +87,13 @@ app.project = function () {
     if (filter === null) {
       return;
     }
+    // remove active button state
+    const active = document.querySelector('.work__button.work__active');
+    active.classList.remove('work__active');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    target.classList.add('work__active');
+
+    // add animation and filtering
     projectContainer.classList.add('work__projects--animation');
     setTimeout(() => {
       projects.forEach(item => {
@@ -98,7 +105,6 @@ app.project = function () {
       });
       projectContainer.classList.remove('work__projects--animation');
     }, 300);
-
   });
 }
 
