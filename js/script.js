@@ -14,14 +14,14 @@ app.navScroll = function () {
     } else {
       navbar.classList.remove('navbar--dark');
     }
-  })
-}
+  });
+};
 
 // selector function
 app.scrollSelector = function (item) {
   const scrollTo = document.querySelector(item);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
-}
+};
 
 // scroll into each sections when navbar is clicked
 app.scrollPage = function () {
@@ -33,16 +33,16 @@ app.scrollPage = function () {
       return;
     }
     app.scrollSelector(link);
-  })
-}
+  });
+};
 
 // scroll into contact section when home button is clicked 
 app.scrollContact = function () {
   const btn = document.querySelector('.home__button');
   btn.addEventListener('click', () => {
     app.scrollSelector('#contact');
-  })
-}
+  });
+};
 
 // change home section's content opacity when scroll down
 app.homeTransparent = function () {
@@ -66,16 +66,16 @@ app.arrowBtn = function () {
     } else {
       arrowUp.classList.remove('arrow__up--show');
     }
-  })
-}
+  });
+};
 
-// scroll to up when arro up button is clicked 
+// scroll up when arrow up button is clicked 
 app.arrowBtnHandle = function () {
   const arrowUp = document.querySelector('.arrow__up');
   arrowUp.addEventListener('click', () => {
     app.scrollSelector('#home');
-  })
-}
+  });
+};
 
 // projects part
 app.project = function () {
@@ -106,7 +106,25 @@ app.project = function () {
       projectContainer.classList.remove('work__projects--animation');
     }, 300);
   });
-}
+};
+
+// scroll to home when logo is clicked 
+app.logoHandle = function () {
+  const logo = document.querySelector('.navbar__logo');
+  logo.addEventListener('click', () => {
+    app.scrollSelector('#home');
+  });
+};
+
+// navbar display in mobile view 
+app.navbarDisplay = function () {
+  const toggleBtn = document.querySelector('.navbar__togglebtn');
+  toggleBtn.addEventListener('click', () => {
+    console.log('click');
+    const menu = document.querySelector('.navbar__menu');
+    menu.classList.toggle('show');
+  });
+};
 
 // call functions
 app.init = function () {
@@ -119,6 +137,8 @@ app.init = function () {
   app.arrowBtn();
   app.arrowBtnHandle();
   app.project();
+  app.logoHandle();
+  app.navbarDisplay();
 };
 
 app.init();

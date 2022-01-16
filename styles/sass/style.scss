@@ -15,12 +15,16 @@
   @include mobile {
     flex-direction: column;
     align-items: flex-start;
+    background-color: $primary;
   }
   &--dark {
     background-color: $primary;
     padding: 10px;
   }
   &__menu {
+    .show {
+      display: block;
+    }
     display: flex;
     @include mobile {
       flex-direction: column;
@@ -48,16 +52,18 @@
     @include Large;
     font-size: 60px;
     color: $white;
+    cursor: pointer;
   }
   &__togglebtn {
     background-color: transparent;
     border: none;
     position: absolute;
-    top: 70px;
+    top: 30px;
     right: 52px;
     font-size: 38px;
     color: $white;
     display: none;
+    cursor: pointer;
     @include  mobile {
       display: block;
     }
@@ -536,5 +542,19 @@
   &__rights {
     @include Small;
     color: $white;
+  }
+}
+
+
+// media query for navbar togglebtn 
+@media (max-width: 767px) {
+  // .navbar__menu {
+  //   flex-direction: column;
+  //   text-align: center;
+  //   width: 100%;
+  //   display: none;
+  // }
+  .navbar__menu.show {
+    display: block;
   }
 }

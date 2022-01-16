@@ -328,6 +328,7 @@ a {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    background-color: #0077b6;
   }
 }
 .navbar--dark {
@@ -338,6 +339,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.navbar__menu .show {
+  display: block;
 }
 @media (max-width: 767px) {
   .navbar__menu {
@@ -374,16 +378,18 @@ a {
   font-weight: 900;
   font-size: 60px;
   color: #fff;
+  cursor: pointer;
 }
 .navbar__togglebtn {
   background-color: transparent;
   border: none;
   position: absolute;
-  top: 70px;
+  top: 30px;
   right: 52px;
   font-size: 38px;
   color: #fff;
   display: none;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .navbar__togglebtn {
@@ -1035,4 +1041,10 @@ a {
   font-size: 16px;
   font-weight: 400;
   color: #fff;
+}
+
+@media (max-width: 767px) {
+  .navbar__menu.show {
+    display: block;
+  }
 }
