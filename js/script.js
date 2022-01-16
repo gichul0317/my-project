@@ -77,6 +77,31 @@ app.arrowBtnHandle = function () {
   })
 }
 
+// projects part
+app.project = function () {
+  const workContainer = document.querySelector('.work__categories');
+  const projectContainer = document.querySelector('.work__projects');
+  const projects = document.querySelectorAll('.project');
+  workContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (filter === null) {
+      return;
+    }
+    projectContainer.classList.add('work__projects--animation');
+    setTimeout(() => {
+      projects.forEach(item => {
+        if (filter === 'all' || filter === item.dataset.type) {
+          item.classList.remove('project--hidden');
+        } else {
+          item.classList.add('project--hidden');
+        }
+      });
+      projectContainer.classList.remove('work__projects--animation');
+    }, 300);
+
+  });
+}
+
 // call functions
 app.init = function () {
   // AOS.init({ disable: 'mobile' });
@@ -87,6 +112,7 @@ app.init = function () {
   app.homeTransparent();
   app.arrowBtn();
   app.arrowBtnHandle();
+  app.project();
 };
 
 app.init();
