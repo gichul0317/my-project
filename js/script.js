@@ -32,6 +32,7 @@ app.scrollPage = function () {
     if (link === null) {
       return;
     }
+    navbarMenu.classList.remove('show');
     app.scrollSelector(link);
   });
 };
