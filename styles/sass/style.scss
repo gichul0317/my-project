@@ -54,8 +54,8 @@
     background-color: transparent;
     border: none;
     position: absolute;
-    top: 30px;
-    right: 52px;
+    top: 35px;
+    right: 40px;
     font-size: 38px;
     color: $white;
     display: none;
@@ -83,11 +83,18 @@
   &__title {
     @include Extra;
     color: $white;
+    @include mobile {
+      @include Large;
+      font-weight: 900;
+    }
   }
   &__desc {
     @include Large;
     color: $white;
     margin: 10px;
+    @include mobile {
+      @include Medium;
+    }
   }
   &__button {
     @include Medium;
@@ -99,6 +106,9 @@
     border-radius: 5px;
     color: $white;
     transition: all 300ms ease-in;
+    @include mobile {
+      @include Regular;
+    }
     &:hover, &:focus {
       background-color: $primary;
     }
@@ -115,10 +125,17 @@
   }
   &__title {
     @include Extra;
+    @include mobile {
+      @include Large;
+      font-weight: 900;   
+    }
   }
   &__text {
     @include Medium;
     margin: 25px 0;
+    @include mobile {
+      @include Regular;
+    }
   }
   &__majors {
     display: flex;
@@ -167,11 +184,17 @@
   &__title {
     @include Medium;
     color: $darkgrey;
+    @include mobile {
+      @include Regular;
+    }
   }
   &__desc {
     @include Regular;
     color: $darkgrey;
     margin-top: 5px;
+    @include mobile {
+      @include Small;
+    }
   }
 }
 
@@ -186,6 +209,9 @@
   &__name {
     @include Regular;
     margin-bottom: 5px;
+    @include mobile {
+      @include Small;
+    }
   }
   &__period {
     @include Small;
@@ -204,15 +230,25 @@
     @include Extra;
     color: $white;
     margin-bottom: 10px;
+    @include mobile {
+      @include Large;
+      font-weight: 900;
+    }
   }
   &__subtitle {
     @include Large;
     color: $white;
     margin-bottom: 5px;
+    @include mobile {
+      @include Medium;
+    }
   }
   &__text {
     @include Medium;
     color: $white;
+    @include mobile {
+      @include Regular;
+    }
   }
 }
 
@@ -289,9 +325,16 @@
   &__title {
     @include Extra;
     margin-bottom: 15px;
+    @include mobile {
+      @include Large;
+      font-weight: 900;
+    }
   }
   &__subtitle {
     @include Large;
+    @include mobile {
+      @include Medium;
+    }
   }
   &__categories {
     margin: 40px 60px;
@@ -430,11 +473,18 @@
     @include Extra;
     color: $white;
     margin: 32px 0;
+    @include mobile {
+      @include Large;
+      font-weight: 900;
+    }
   }
   &__text {
     @include Medium;
     color: $white;
     margin-bottom: 15px;
+    @include mobile {
+      @include Regular;
+    }
   }
   &__links {
     margin: 24px 0;
@@ -504,6 +554,9 @@
     transition: all 300ms ease;
     margin-top: 20px;
     cursor: pointer;
+    @include mobile {
+      @include Regular;
+    }
     &:hover, &:focus {
       background: $primary;
     }

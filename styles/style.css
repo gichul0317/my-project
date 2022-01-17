@@ -379,8 +379,8 @@ a {
   background-color: transparent;
   border: none;
   position: absolute;
-  top: 30px;
-  right: 52px;
+  top: 35px;
+  right: 40px;
   font-size: 38px;
   color: #fff;
   display: none;
@@ -413,12 +413,27 @@ a {
   font-weight: 900;
   color: #fff;
 }
+@media (max-width: 767px) {
+  .home__title {
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    font-weight: 900;
+  }
+}
 .home__desc {
   font-family: "Roboto", sans-serif;
   font-size: 48px;
   font-weight: 400;
   color: #fff;
   margin: 10px;
+}
+@media (max-width: 767px) {
+  .home__desc {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+  }
 }
 .home__button {
   font-family: "Roboto", sans-serif;
@@ -433,6 +448,13 @@ a {
   color: #fff;
   -webkit-transition: all 300ms ease-in;
   transition: all 300ms ease-in;
+}
+@media (max-width: 767px) {
+  .home__button {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
 }
 .home__button:hover, .home__button:focus {
   background-color: #0077b6;
@@ -455,11 +477,26 @@ a {
   font-size: 65px;
   font-weight: 900;
 }
+@media (max-width: 767px) {
+  .about__title {
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    font-weight: 900;
+  }
+}
 .about__text {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 28px;
   margin: 25px 0;
+}
+@media (max-width: 767px) {
+  .about__text {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
 }
 .about__majors {
   display: -webkit-box;
@@ -515,12 +552,26 @@ a {
   font-size: 28px;
   color: #4d4d4d;
 }
+@media (max-width: 767px) {
+  .major__title {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
 .major__desc {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
   color: #4d4d4d;
   margin-top: 5px;
+}
+@media (max-width: 767px) {
+  .major__desc {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+  }
 }
 
 .job {
@@ -541,6 +592,13 @@ a {
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 5px;
+}
+@media (max-width: 767px) {
+  .job__name {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+  }
 }
 .job__period {
   font-family: "Roboto", sans-serif;
@@ -570,6 +628,14 @@ a {
   color: #fff;
   margin-bottom: 10px;
 }
+@media (max-width: 767px) {
+  .skills__title {
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    font-weight: 900;
+  }
+}
 .skills__subtitle {
   font-family: "Roboto", sans-serif;
   font-size: 48px;
@@ -577,11 +643,25 @@ a {
   color: #fff;
   margin-bottom: 5px;
 }
+@media (max-width: 767px) {
+  .skills__subtitle {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+  }
+}
 .skills__text {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 28px;
   color: #fff;
+}
+@media (max-width: 767px) {
+  .skills__text {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
 }
 
 .skillset {
@@ -691,10 +771,25 @@ a {
   font-weight: 900;
   margin-bottom: 15px;
 }
+@media (max-width: 767px) {
+  .work__title {
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    font-weight: 900;
+  }
+}
 .work__subtitle {
   font-family: "Roboto", sans-serif;
   font-size: 48px;
   font-weight: 400;
+}
+@media (max-width: 767px) {
+  .work__subtitle {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+  }
 }
 .work__categories {
   margin: 40px 60px;
@@ -887,12 +982,27 @@ a {
   color: #fff;
   margin: 32px 0;
 }
+@media (max-width: 767px) {
+  .contact__title {
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    font-weight: 900;
+  }
+}
 .contact__text {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 28px;
   color: #fff;
   margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .contact__text {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
 }
 .contact__links {
   margin: 24px 0;
@@ -995,6 +1105,13 @@ a {
   transition: all 300ms ease;
   margin-top: 20px;
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  .form__button {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
 }
 .form__button:hover, .form__button:focus {
   background: #0077b6;
