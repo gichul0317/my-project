@@ -21,6 +21,7 @@ app.navScroll = function () {
 app.scrollSelector = function (item) {
   const scrollTo = document.querySelector(item);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
+  app.intersection.selectNavItem(app.intersection.navItems[app.intersection.sectionId.indexOf(item)]);
 };
 
 // scroll into each sections when navbar is clicked
@@ -34,7 +35,7 @@ app.scrollPage = function () {
     }
     navbarMenu.classList.remove('show');
     app.scrollSelector(link);
-    // app.intersection.selectNavItem(target);
+    app.intersection.selectNavItem(target);
   });
 };
 
@@ -122,21 +123,11 @@ app.logoHandle = function () {
 app.navbarDisplay = function () {
   const toggleBtn = document.querySelector('.navbar__togglebtn');
   toggleBtn.addEventListener('click', () => {
-    console.log('click');
+    // console.log('click');
     const menu = document.querySelector('.navbar__menu');
     menu.classList.toggle('show');
   });
 };
-
-// // intersection helper
-// app.selectNavItem = (selected) => {
-//   const sectionId = ['#home', '#about', '#skills', '#work', '#contact'];
-//   const navItems = sectionId.map(id => document.querySelector(`[data-link="${id}"]`));
-//   let selectedNavItem = navItems[0];
-//   selectedNavItem.classList.remove('navbar__active');
-//   selectedNavItem = selected;
-//   selectedNavItem.classList.add('navbar__active');
-// }
 
 // intersection 
 app.intersection = function () {
@@ -144,12 +135,15 @@ app.intersection = function () {
   const sections = sectionId.map(id => document.querySelector(id));
   const navItems = sectionId.map(id => document.querySelector(`[data-link="${id}"]`));
   // console.log(navItems);
+  this.intersection.navItems = navItems;
+  this.intersection.sectionId = sectionId;
 
-  const selectNavItem = (selected) => {
+  const selectNavItem = function (selected) {
     selectedNavItem.classList.remove('navbar__active');
     selectedNavItem = selected;
     selectedNavItem.classList.add('navbar__active');
   }
+  this.intersection.selectNavItem = selectNavItem;
 
   let selectedNavIndex = 0;
   let selectedNavItem = navItems[0];
@@ -175,10 +169,10 @@ app.intersection = function () {
   const observer = new IntersectionObserver(callback, options);
   sections.forEach(item => observer.observe(item));
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener('wheel', () => {
     if (window.scrollY === 0) {
       selectedNavIndex = 0;
-    } else if (window.scrollY + window.innerHeight === document.body.clientHeight) {
+    } else if (Math.round(window.scrollY + window.innerHeight) >= document.body.clientHeight) {
       selectedNavIndex = navItems.length - 1;
     }
     selectNavItem(navItems[selectedNavIndex]);
@@ -198,7 +192,7 @@ app.init = function () {
   app.project();
   app.logoHandle();
   app.navbarDisplay();
-  // app.intersection();
+  app.intersection();
 };
 
 app.init();
