@@ -34,6 +34,7 @@ app.scrollPage = function () {
     }
     navbarMenu.classList.remove('show');
     app.scrollSelector(link);
+    // app.intersection.selectNavItem(target);
   });
 };
 
@@ -127,6 +128,63 @@ app.navbarDisplay = function () {
   });
 };
 
+// // intersection helper
+// app.selectNavItem = (selected) => {
+//   const sectionId = ['#home', '#about', '#skills', '#work', '#contact'];
+//   const navItems = sectionId.map(id => document.querySelector(`[data-link="${id}"]`));
+//   let selectedNavItem = navItems[0];
+//   selectedNavItem.classList.remove('navbar__active');
+//   selectedNavItem = selected;
+//   selectedNavItem.classList.add('navbar__active');
+// }
+
+// intersection 
+app.intersection = function () {
+  const sectionId = ['#home', '#about', '#skills', '#work', '#contact'];
+  const sections = sectionId.map(id => document.querySelector(id));
+  const navItems = sectionId.map(id => document.querySelector(`[data-link="${id}"]`));
+  // console.log(navItems);
+
+  const selectNavItem = (selected) => {
+    selectedNavItem.classList.remove('navbar__active');
+    selectedNavItem = selected;
+    selectedNavItem.classList.add('navbar__active');
+  }
+
+  let selectedNavIndex = 0;
+  let selectedNavItem = navItems[0];
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.3,
+  };
+  const callback = (entries, observer) => {
+    entries.forEach(item => {
+      // console.log(item.target);
+      if (!item.isIntersecting && item.intersectionRatio > 0) {
+        const index = sectionId.indexOf(`#${item.target.id}`);
+        // console.log(index, item.target.id);
+        if (item.boundingClientRect.y < 0) {
+          selectedNavIndex = index + 1;
+        } else {
+          selectedNavIndex = index - 1;
+        }
+      }
+    });
+  };
+  const observer = new IntersectionObserver(callback, options);
+  sections.forEach(item => observer.observe(item));
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY === 0) {
+      selectedNavIndex = 0;
+    } else if (window.scrollY + window.innerHeight === document.body.clientHeight) {
+      selectedNavIndex = navItems.length - 1;
+    }
+    selectNavItem(navItems[selectedNavIndex]);
+  })
+};
+
 // call functions
 app.init = function () {
   // AOS.init({ disable: 'mobile' });
@@ -140,6 +198,7 @@ app.init = function () {
   app.project();
   app.logoHandle();
   app.navbarDisplay();
+  // app.intersection();
 };
 
 app.init();

@@ -369,6 +369,9 @@ a {
   border-color: #fff;
   border-radius: 5px;
 }
+.navbar__active {
+  border: 1px solid #fff;
+}
 .navbar__logo {
   font-family: "Roboto", sans-serif;
   font-size: 65px;
