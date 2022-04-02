@@ -405,7 +405,7 @@ a {
 }
 
 .home {
-  background-image: url("../../assets/home-hero.png");
+  background-image: url("../../assets/home-hero-min.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -423,6 +423,8 @@ a {
   font-family: "Roboto", sans-serif;
   font-size: 65px;
   font-weight: 900;
+  line-height: 65px;
+  letter-spacing: -1px;
   color: #fff;
 }
 @media (max-width: 767px) {
@@ -435,8 +437,8 @@ a {
 }
 .home__desc {
   font-family: "Roboto", sans-serif;
-  font-size: 48px;
   font-weight: 400;
+  font-size: 28px;
   color: #fff;
   margin: 10px;
 }
@@ -502,7 +504,7 @@ a {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 28px;
-  margin: 25px 0;
+  margin: 25px auto;
 }
 @media (max-width: 767px) {
   .about__text {
@@ -657,7 +659,7 @@ a {
   font-size: 48px;
   font-weight: 400;
   color: #fff;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 }
 @media (max-width: 767px) {
   .skills__subtitle {
@@ -671,6 +673,7 @@ a {
   font-weight: 400;
   font-size: 28px;
   color: #fff;
+  line-height: 40px;
 }
 @media (max-width: 767px) {
   .skills__text {
