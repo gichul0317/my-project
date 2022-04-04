@@ -505,6 +505,7 @@ a {
   font-weight: 400;
   font-size: 28px;
   margin: 25px auto;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .about__text {
@@ -980,7 +981,7 @@ a {
 }
 
 .contact {
-  background-image: url("../../assets/home-hero.png");
+  background-image: url("../../assets/home-hero-min.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

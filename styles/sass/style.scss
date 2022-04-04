@@ -146,6 +146,7 @@
   &__text {
     @include Medium;
     margin: 25px auto;
+    width: 100%;
     @include mobile {
       @include Regular;
     }
@@ -482,7 +483,7 @@
 
 .contact {
   // background-color: $darkgrey;
-  background-image: url('../../assets/home-hero.png');
+  background-image: url('../../assets/home-hero-min.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
