@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     perPage: 1,
     rewind: true,
     drag: 'free',
-    // autoplay: 'true',
-    // interval: 3000,
+    autoplay: 'true',
+    interval: 2500,
     pauseOnFocus: 'true',
   });
   splide.mount();
