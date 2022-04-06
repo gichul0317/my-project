@@ -2,19 +2,19 @@
   @media (max-width: 767px) {
     @content;
   }
-};
+}
 
 @mixin tablet {
   @media (max-width: 1023px) {
     @content;
   }
-};
+}
 
 @mixin desktop {
   @media (min-width: 1024px) {
     @content;
   }
-};
+}
 
 @mixin Extra {
   font-family: 'Roboto', sans-serif;
@@ -62,6 +62,12 @@
   text-align: center;
   padding: 80px;
   max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@mixin container {
+  max-width: 1160px;
   width: 100%;
   margin: 0 auto;
 }

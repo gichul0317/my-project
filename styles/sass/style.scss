@@ -2,68 +2,86 @@
 @import './colors';
 @import './mixins';
 
-.navbar {
-  width: 100%;
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 65px;
+  color: $white;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 37.5px;
+  color: $lightwhite;
+}
+
+a {
+  color: $white;
+}
+
+p {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  line-height: 24.6px;
+  letter-spacing: 2px;
+  color: $lightwhite;
+}
+
+body {
+  height: 100vh;
+  background: url('../../assets/toronto-hero-min.png') no-repeat center center
+    fixed;
+  background-size: cover;
+  position: relative;
+}
+
+h1 {
+  margin: 20px 0;
+}
+h2 {
+  margin-bottom: 90px;
+}
+button {
+  padding: 12px 20px;
   background-color: transparent;
-  transition: all 300ms ease-in-out;
-  z-index: 7;
-  @include mobile {
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: $primary;
-    padding: 5px 20px;
+  cursor: pointer;
+  border: 2px solid $white;
+  border-radius: 5px;
+  color: $white;
+  transition: all 200ms ease-in;
+  &:hover,
+  &:focus {
+    background-color: $blue;
   }
-  &--dark {
-    background-color: $primary;
-    // padding: 10px;
+}
+
+.navbar {
+  padding: 40px 20px;
+  .container {
+    position: relative;
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   &__menu {
     display: flex;
-    @include mobile {
-      flex-direction: column;
-      text-align: center;
-      width: 100%;
-      display: none;
-    }
+    margin-right: -15px;
   }
   &__list {
-    @include Medium;
-    padding: 8px 12px;
-    margin: 0 4px;
-    cursor: pointer;
-    color: $white;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    transition: all 300ms ease-in;
-    &:active,
-    &:hover {
-      background-color: $third;
-      border-color: $white;
-      border-radius: 5px;
-    }
+    padding: 12px 20px;
   }
   &__active {
-    border: 1px solid $white;
-  }
-  &__logo {
-    @include Extra;
-    color: $white;
-    cursor: pointer;
-    @include mobile {
-      @include Large;
-      font-weight: 900;
-    }
+    border-radius: 2px solid $blue;
   }
   &__togglebtn {
     background-color: transparent;
     border: none;
     position: absolute;
-    top: 17px;
+    top: 7px;
     right: 20px;
     font-size: 30px;
     color: $white;
@@ -75,352 +93,321 @@
   }
 }
 
+.navbar__item:hover,
+.navbar__item:active {
+  border-bottom: 2px solid $blue;
+}
+
+// .navbar {
+//   width: 100%;
+//   position: fixed;
+//   // display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 10px 20px;
+//   background-color: transparent;
+//   transition: all 300ms ease-in-out;
+//   z-index: 7;
+//   @include mobile {
+//     flex-direction: column;
+//     align-items: flex-start;
+//     background-color: $primary;
+//     padding: 5px 20px;
+//   }
+//   &--dark {
+//     background-color: $primary;
+//     // padding: 10px;
+//   }
+//   &__menu {
+//     display: flex;
+//     @include mobile {
+//       flex-direction: column;
+//       text-align: center;
+//       width: 100%;
+//       display: none;
+//     }
+//   }
+//   &__list {
+//     @include Medium;
+//     padding: 8px 12px;
+//     margin: 0 4px;
+//     cursor: pointer;
+//     color: $white;
+//     border: 1px solid transparent;
+//     border-radius: 5px;
+//     transition: all 300ms ease-in;
+//     &:active,
+//     &:hover {
+//       background-color: $third;
+//       border-color: $white;
+//       border-radius: 5px;
+//     }
+//   }
+//   &__active {
+//     border: 1px solid $white;
+//   }
+
+//   &__togglebtn {
+//     background-color: transparent;
+//     border: none;
+//     position: absolute;
+//     top: 17px;
+//     right: 20px;
+//     font-size: 30px;
+//     color: $white;
+//     display: none;
+//     cursor: pointer;
+//     @include mobile {
+//       display: block;
+//     }
+//   }
+// }
+
 .home {
-  background-image: url('../../assets/home-hero-min.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 40px;
-  padding-top: 140px;
-  text-align: center;
-  &__img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 3px solid $white;
+  height: 70%;
+  .container {
+    height: 100%;
+    @include container;
+    display: flex;
+    align-items: center;
   }
-  &__title {
-    @include Extra;
-    line-height: 65px;
-    letter-spacing: -1px;
-    color: $white;
-    @include mobile {
-      @include Large;
-      font-weight: 900;
-    }
-  }
-  &__desc {
-    @include Medium;
-    color: $white;
-    margin: 10px;
-    @include mobile {
-      @include Medium;
-    }
-  }
-  &__button {
-    @include Medium;
-    margin: 35px;
-    padding: 12px 18px;
-    background-color: transparent;
-    cursor: pointer;
-    border: 2px solid $white;
-    border-radius: 5px;
-    color: $white;
-    transition: all 300ms ease-in;
-    @include mobile {
-      @include Regular;
-    }
-    &:hover,
-    &:focus {
-      background-color: $primary;
-    }
+  &__box {
+    padding: 10px;
+    background-color: $black;
+    max-width: 580px;
+    width: 100%;
+    height: 425px;
   }
 }
 
 .about {
-  // background-color: $lightwhite;
-  &__container {
-    @include Section;
-    @include mobile {
-      padding: 16px;
-      padding-top: 80px;
-    }
+  height: 70%;
+  .container {
+    height: 100%;
+    @include container;
+    display: flex;
+    align-items: center;
   }
-  &__title {
-    @include Extra;
-    @include mobile {
-      @include Large;
-      font-weight: 900;
-    }
+  &__box {
+    background-color: $black;
+    height: 425px;
+    display: flex;
+  }
+  &__content {
+    padding: 10px 30px;
   }
   &__text {
-    @include Medium;
-    margin: 25px auto;
-    width: 100%;
-    @include mobile {
-      @include Regular;
-    }
-  }
-  &__majors {
-    display: flex;
-    justify-content: space-between;
-    margin: 50px 0;
-    @include mobile {
-      margin-top: 30px;
-      margin-bottom: 0px;
-      align-items: center;
-      flex-direction: column;
-    }
-  }
-  &__jobs {
-  }
-}
-
-.major {
-  width: 270px;
-  height: 270px;
-  @include mobile {
-    margin-bottom: 30px;
-  }
-  &__icon {
-    width: 170px;
-    height: 170px;
-    font-size: 70px;
-    line-height: 170px;
-    margin: auto;
-    border: 3px solid $primary;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    color: $primary;
-    transition: all 300ms ease-in;
-    &:active,
-    &:hover {
-      color: $orange;
-      transform: rotate(-30deg) scale(1.1);
-      border-color: $orange;
-    }
-    // i {
-    //   transition: all 300ms ease-in;
-    // }
-    // i &:active, &:hover {
-    //   color: $orange;
-    //   transform: rotate(-30deg) scale(1.1);
-    // }
-  }
-  &__title {
-    @include Medium;
-    color: $darkgrey;
-    @include mobile {
-      @include Regular;
-    }
-  }
-  &__desc {
-    @include Regular;
-    color: $darkgrey;
-    margin-top: 5px;
-    @include mobile {
-      @include Small;
-    }
-  }
-}
-
-.job {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  &__desc {
-    margin: 0 20px;
-    text-align: left;
-  }
-  &__name {
-    @include Regular;
-    margin-bottom: 5px;
-    @include mobile {
-      @include Small;
-    }
-  }
-  &__period {
-    @include Small;
+    margin-bottom: 70px;
   }
 }
 
 .skills {
-  background-color: $darkgrey;
-  &__container {
-    @include Section;
-    @include mobile {
-      padding: 16px;
-      padding-top: 80px;
-    }
+  height: 70%;
+  .container {
+    height: 100%;
+    @include container;
+    display: flex;
+    align-items: center;
   }
-  &__title {
-    @include Extra;
-    color: $white;
-    margin-bottom: 10px;
-    @include mobile {
-      @include Large;
-      font-weight: 900;
-    }
+  &__box {
+    background-color: $black;
+    height: 425px;
+    display: flex;
   }
-  &__subtitle {
-    @include Large;
-    color: $white;
-    margin-bottom: 25px;
-    @include mobile {
-      @include Medium;
-    }
+  &__content {
+    padding: 10px 30px;
+    width: 60%;
   }
   &__text {
-    @include Medium;
-    color: $white;
-    line-height: 40px;
-    @include mobile {
-      @include Regular;
-    }
+    margin-bottom: 70px;
   }
 }
 
 .skillset {
+  width: 40%;
   display: flex;
-  margin: 25px 0;
-  @include mobile {
-    flex-direction: column;
-  }
-  &__left {
-    flex-basis: 60%;
-    padding: 20px 40px;
-  }
-  &__right {
-    flex-basis: 40%;
-  }
-  &__title {
-    @include Medium;
-    color: $white;
-  }
-}
-
-.skill {
-  margin-bottom: 15px;
-  &__desc {
-    @include Regular;
-    display: flex;
-    justify-content: space-between;
-    color: $white;
-  }
-  &__bar {
-    width: 100%;
-    height: 3px;
-    background-color: $darkwhite;
-  }
-  &__value {
-    height: 3px;
-    background-color: $orange;
-    transition: all 300ms ease-in;
-  }
-}
-
-.tools {
-  padding: 15px;
-  &__title {
-    color: $white;
-    @include Medium;
-  }
-  &__list {
-    @include Regular;
-    color: $white;
-  }
-}
-
-.etc {
-  padding: 15px;
-  &__title {
-    @include Medium;
-    color: $white;
-  }
-  &__list {
-    @include Regular;
-    color: $white;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 15px;
+  .skill {
+    margin-bottom: 15px;
+    &__desc {
+      font-family: 'Archivo', sans-serif;
+      display: flex;
+      justify-content: space-between;
+      color: $white;
+    }
+    &__bar {
+      width: 100%;
+      height: 3px;
+      background-color: $darkwhite;
+    }
+    &__value {
+      height: 3px;
+      background-color: $blue;
+    }
   }
 }
 
 .work {
-  &__container {
-    @include Section;
-    @include mobile {
-      padding: 16px;
-      padding-top: 80px;
-    }
-  }
-  &__title {
-    @include Extra;
-    margin-bottom: 15px;
-    @include mobile {
-      @include Large;
-      font-weight: 900;
-    }
-  }
-  &__subtitle {
-    @include Large;
-    @include mobile {
-      @include Medium;
-    }
-  }
-  &__categories {
-    margin: 40px 60px;
+  height: 70%;
+  .container {
+    height: 100%;
+    @include container;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
-    @include mobile {
-      justify-content: center;
-      flex-grow: 1;
-    }
   }
-  &__button {
-    position: relative;
-    border: 1px solid $darkwhite;
-    border-radius: 5px;
-    font-size: 18px;
-    // padding: 8px 48px;
-    // margin: 0 10px;
-    width: 170px;
-    height: 40px;
-    background-color: transparent;
-    text-align: center;
-    cursor: pointer;
-    @include mobile {
-      width: 100%;
-      margin: 5px 0;
-    }
+  &__box {
+    padding: 10px 30px;
+    background-color: $black;
+    height: 450px;
   }
-  &__active,
-  &__button:active,
-  &__button:hover {
-    background-color: $primary;
-    color: $white;
-  }
-  &__count {
-    border: 1px solid $orange;
-    border-radius: 50%;
-    background-color: $orange;
-    color: $white;
-    width: 24px;
-    height: 24px;
-    line-height: 24px;
-    display: inline-block;
-    position: absolute;
-    top: -25px;
-    right: 8px;
-    opacity: 0;
-    transition: all 300ms ease-in;
-  }
-  &__active &__count,
-  &__button:hover &__count {
-    opacity: 1;
-    top: 0;
-  }
-  &__projects {
+  .splide__slide {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    opacity: 1;
-    transition: all 300ms ease-out;
-    &--animation {
-      opacity: 0;
-      transform: scale(0.95) translateY(40px);
-    }
+    align-items: center;
+  }
+  &__text {
+    padding-left: 80px;
+  }
+  a {
+    height: 300px;
+  }
+  img {
+    max-height: 100%;
   }
 }
+
+.footer {
+  .container {
+    @include container;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__box {
+    padding: 10px;
+    background-color: $black;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+  }
+  p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 1px;
+  }
+  a {
+    position: relative;
+    z-index: 7;
+    transition: all 200ms ease-in;
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+  }
+  &__credit {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 1px;
+  }
+  &__link {
+    position: absolute;
+    right: 65px;
+    bottom: 15px;
+    width: 100px;
+    height: 10px;
+    background-color: $blue;
+    opacity: 0.8;
+  }
+}
+
+// .work {
+//   &__container {
+//     @include Section;
+//     @include mobile {
+//       padding: 16px;
+//       padding-top: 80px;
+//     }
+//   }
+//   &__title {
+//     @include Extra;
+//     margin-bottom: 15px;
+//     @include mobile {
+//       @include Large;
+//       font-weight: 900;
+//     }
+//   }
+//   &__subtitle {
+//     @include Large;
+//     @include mobile {
+//       @include Medium;
+//     }
+//   }
+//   &__categories {
+//     margin: 40px 60px;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     align-items: center;
+//     @include mobile {
+//       justify-content: center;
+//       flex-grow: 1;
+//     }
+//   }
+//   &__button {
+//     position: relative;
+//     border: 1px solid $darkwhite;
+//     border-radius: 5px;
+//     font-size: 18px;
+//     // padding: 8px 48px;
+//     // margin: 0 10px;
+//     width: 170px;
+//     height: 40px;
+//     background-color: transparent;
+//     text-align: center;
+//     cursor: pointer;
+//     @include mobile {
+//       width: 100%;
+//       margin: 5px 0;
+//     }
+//   }
+//   &__active,
+//   &__button:active,
+//   &__button:hover {
+//     background-color: $primary;
+//     color: $white;
+//   }
+//   &__count {
+//     border: 1px solid $orange;
+//     border-radius: 50%;
+//     background-color: $orange;
+//     color: $white;
+//     width: 24px;
+//     height: 24px;
+//     line-height: 24px;
+//     display: inline-block;
+//     position: absolute;
+//     top: -25px;
+//     right: 8px;
+//     opacity: 0;
+//     transition: all 300ms ease-in;
+//   }
+//   &__active &__count,
+//   &__button:hover &__count {
+//     opacity: 1;
+//     top: 0;
+//   }
+//   &__projects {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     opacity: 1;
+//     transition: all 300ms ease-out;
+//     &--animation {
+//       opacity: 0;
+//       transform: scale(0.95) translateY(40px);
+//     }
+//   }
+// }
 
 .project {
   position: relative;
@@ -622,17 +609,17 @@
   }
 }
 
-.footer {
-  height: 60px;
-  background-color: $darkgrey;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &__rights {
-    @include Regular;
-    color: $white;
-  }
-}
+// .footer {
+//   height: 60px;
+//   background-color: $darkgrey;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   &__rights {
+//     @include Regular;
+//     color: $white;
+//   }
+// }
 
 // media query for navbar togglebtn
 @media (max-width: 767px) {

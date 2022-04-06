@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gichul-j.com</title>
+    <meta name="description" content="portfolio for gichul-j" />
+    <meta name="author" content="developed by gichul-j" />
+    <link rel="icon" type="image/png" href="./assets/portfolio-favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav id="navbar" class="navbar">
+      <div class="container">
+        <a href="index.html">
+          <img
+            src="./assets/portfolio-logo.png"
+            alt="logo"
+            class="navbar__logo"
+          />
+        </a>
+        <ul class="navbar__menu">
+          <li class="navbar__list" data-link="#home">
+            <a class="navbar__item navbar__active" href="index.html">Home</a>
+          </li>
+          <li class="navbar__list" data-link="#about">
+            <a class="navbar__item" href="about.html">About</a>
+          </li>
+          <li class="navbar__list" data-link="#skills">
+            <a class="navbar__item" href="skills.html">Skills</a>
+          </li>
+          <li class="navbar__list" data-link="#work">
+            <a class="navbar__item" href="works.html">My works</a>
+          </li>
+          <!-- <li class="navbar__list">Testimonials</li> -->
+          <li class="navbar__list" data-link="#contact">
+            <a class="navbar__item" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <!-- toggle btn -->
+        <button class="navbar__togglebtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about__box">
+          <div class="about__content">
+            <h1>About Me</h1>
+            <p class="about__text">
+              I design and build beautiful and modern websites. By combining
+              knowledge and best practices in web development and design that I
+              gained from studies and works, I provide user-friendly and
+              accessible web sites and applications. Along with skills listed
+              here, I love to learn new libraries, tools and concepts in web
+              development and web design.
+            </p>
+            <button class="home__button">
+              <a href="contact.html">Contact Me</a>
+            </button>
+          </div>
+          <div>
+            <img src="./assets/profile-resize-min.jpg" alt="profile photo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__box">
+          <!-- <span class="footer__credit">
+            Photo by
+            <a
+              href="https://unsplash.com/@thirdworldhippy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              target="_blank"
+              >mwangi gatheca</a
+            >
+            on
+            <a
+              href="https://unsplash.com/s/photos/toronto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              target="_blank"
+              >Unsplash</a
+            >
+          </span> -->
+          <div class="footer__link"></div>
+          <p>
+            Designed and Developed by
+            <a href="https://www.linkedin.com/in/gichuljaun/" target="_blank"
+              >Gichul Jaun</a
+            >, 2022
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

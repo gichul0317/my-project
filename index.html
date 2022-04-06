@@ -7,61 +7,104 @@
     <title>gichul-j.com</title>
     <meta name="description" content="portfolio for gichul-j" />
     <meta name="author" content="developed by gichul-j" />
-    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="icon" type="image/png" href="./assets/portfolio-favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Archivo&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
-      rel="stylesheet"
-    />
+    /> -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css" /> -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
     <link rel="stylesheet" href="./styles/style.css" />
     <script defer src="./js/script.js"></script>
   </head>
-
   <body>
     <!-- navbar -->
     <nav id="navbar" class="navbar">
-      <span class="navbar__logo"> &lt;/&gt; </span>
-      <ul class="navbar__menu">
-        <li class="navbar__list navbar__active" data-link="#home">Home</li>
-        <li class="navbar__list" data-link="#about">About</li>
-        <li class="navbar__list" data-link="#skills">Skills</li>
-        <li class="navbar__list" data-link="#work">My works</li>
-        <!-- <li class="navbar__list">Testimonials</li> -->
-        <li class="navbar__list" data-link="#contact">Contact</li>
-      </ul>
-      <!-- toggle btn -->
-      <button class="navbar__togglebtn">
-        <i class="fas fa-bars"></i>
-      </button>
+      <div class="container">
+        <a href="index.html">
+          <img
+            src="./assets/portfolio-logo.png"
+            alt="logo"
+            class="navbar__logo"
+          />
+        </a>
+        <ul class="navbar__menu">
+          <li class="navbar__list" data-link="#home">
+            <a class="navbar__item navbar__active" href="index.html">Home</a>
+          </li>
+          <li class="navbar__list" data-link="#about">
+            <a class="navbar__item" href="about.html">About</a>
+          </li>
+          <li class="navbar__list" data-link="#skills">
+            <a class="navbar__item" href="skills.html">Skills</a>
+          </li>
+          <li class="navbar__list" data-link="#work">
+            <a class="navbar__item" href="works.html">My works</a>
+          </li>
+          <!-- <li class="navbar__list">Testimonials</li> -->
+          <li class="navbar__list" data-link="#contact">
+            <a class="navbar__item" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <!-- toggle btn -->
+        <button class="navbar__togglebtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </nav>
 
     <!-- Home -->
     <section id="home" class="home">
-      <div class="home__container">
-        <img
-          class="home__img"
-          src="./assets/profile-min.png"
-          alt="gichul's profile photo"
-        />
-        <h1 class="home__title">Hello<br />I am Gichul Jaun</h1>
-        <h2 class="home__desc">
-          Web Developer currently residing in Toronto, Ontario
-        </h2>
-        <button class="home__button">Contact Me</button>
+      <div class="container">
+        <div class="home__box">
+          <h1>Hello<br />I am Gichul Jaun</h1>
+          <h2 class="home__subtitle">A Web Developer in Toronto, Ontario</h2>
+          <button>
+            <a href="contact.html">Contact Me</a>
+          </button>
+        </div>
       </div>
     </section>
 
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__box">
+          <!-- <span class="footer__credit">
+            Photo by
+            <a
+              href="https://unsplash.com/@thirdworldhippy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              target="_blank"
+              >mwangi gatheca</a
+            >
+            on
+            <a
+              href="https://unsplash.com/s/photos/toronto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              target="_blank"
+              >Unsplash</a
+            >
+          </span> -->
+          <div class="footer__link"></div>
+          <p>
+            Designed and Developed by
+            <a href="https://www.linkedin.com/in/gichuljaun/" target="_blank"
+              >Gichul Jaun</a
+            >, 2022
+          </p>
+        </div>
+      </div>
+    </footer>
+
     <!-- about -->
-    <section id="about" class="about">
+    <!-- <section id="about" class="about">
       <div class="about__container">
         <h1 class="about__title">About Me</h1>
         <p class="about__text">
@@ -120,10 +163,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- skills -->
-    <section id="skills" class="skills">
+    <!-- <section id="skills" class="skills">
       <div class="skills__container">
         <h1 class="skills__title">Skills</h1>
         <h2 class="skills__subtitle">Skills & Attributes</h2>
@@ -213,10 +256,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- work -->
-    <section id="work" class="work">
+    <!-- <section id="work" class="work">
       <div class="work__container">
         <h1 class="work__title">My Works</h1>
         <h3 class="work__subtitle">Projects</h3>
@@ -352,7 +395,7 @@
           </a>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- testimonials -->
     <!-- <section id="testimonials">
@@ -381,15 +424,15 @@
   </section> -->
 
     <!-- contact -->
-    <section id="contact" class="contact">
+    <!-- <section id="contact" class="contact">
       <div class="contact__container">
         <h1 class="contact__title">Let's Talk</h1>
-        <!-- <p class="contact__text">
+        <p class="contact__text">
           Are you interested about my projects? Please contact me by this handy
           contact form or feel free to reach out to me by email or LinkedIn. I
           am always open to chat and happy to be connected with you! Thanks for
           stopping by 😁✨
-        </p> -->
+        </p>
         <p class="contact__text">gichul0317@gmail.com</p>
         <div class="contact__links">
           <a href="https://www.linkedin.com/in/gichuljaun/" target="_blank">
@@ -432,21 +475,21 @@
             placeholder="Comments"
             class="form__textarea"
           ></textarea>
-          <!-- <div data-netlify-recaptcha="true"></div> -->
+          <div data-netlify-recaptcha="true"></div>
           <button type="submit" class="form__button">send</button>
         </form>
       </div>
-    </section>
+    </section> -->
 
     <!-- arrow up -->
-    <button class="arrow__up">
+    <!-- <button class="arrow__up">
       <i class="fas fa-arrow-up"></i>
-    </button>
+    </button> -->
 
     <!-- footer -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <span class="footer__rights"> Developed by Gichul Jaun, 2022 </span>
-    </footer>
+    </footer> -->
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
   </body>
 </html>
