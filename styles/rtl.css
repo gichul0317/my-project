@@ -1,6 +1,4 @@
-.splide--rtl {
-  direction: rtl;
-}w--prev {
+.splide__arrows--rtl .splide__arrow--prev {
   left: auto;
   right: 1em;
 }

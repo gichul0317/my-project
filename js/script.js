@@ -14,6 +14,65 @@ document.addEventListener('DOMContentLoaded', function () {
 
 console.log('loaded...');
 
+//   const toggleBtn = document.querySelector('.navbar__togglebtn');
+//   toggleBtn.addEventListener('click', () => {
+//     // console.log('click');
+//     const menu = document.querySelector('.navbar__menu');
+//     menu.classList.toggle('show');
+//   });
+
+//   const sectionId = ['#home', '#about', '#skills', '#work', '#contact'];
+//   const sections = sectionId.map((id) => document.querySelector(id));
+//   const navItems = sectionId.map((id) =>
+//     document.querySelector(`[data-link="${id}"]`)
+//   );
+//   // console.log(navItems);
+//   this.intersection.navItems = navItems;
+//   this.intersection.sectionId = sectionId;
+
+//   const selectNavItem = function (selected) {
+//     selectedNavItem.classList.remove('navbar__active');
+//     selectedNavItem = selected;
+//     selectedNavItem.classList.add('navbar__active');
+//   };
+//   this.intersection.selectNavItem = selectNavItem;
+
+//   let selectedNavIndex = 0;
+//   let selectedNavItem = navItems[0];
+//   const options = {
+//     root: null,
+//     rootMargin: '0px',
+//     threshold: 0.3,
+//   };
+//   const callback = (entries, observer) => {
+//     entries.forEach((item) => {
+//       // console.log(item.target);
+//       if (!item.isIntersecting && item.intersectionRatio > 0) {
+//         const index = sectionId.indexOf(`#${item.target.id}`);
+//         // console.log(index, item.target.id);
+//         if (item.boundingClientRect.y < 0) {
+//           selectedNavIndex = index + 1;
+//         } else {
+//           selectedNavIndex = index - 1;
+//         }
+//       }
+//     });
+//   };
+//   const observer = new IntersectionObserver(callback, options);
+//   sections.forEach((item) => observer.observe(item));
+
+//   window.addEventListener('wheel', () => {
+//     if (window.scrollY === 0) {
+//       selectedNavIndex = 0;
+//     } else if (
+//       Math.round(window.scrollY + window.innerHeight) >=
+//       document.body.clientHeight
+//     ) {
+//       selectedNavIndex = navItems.length - 1;
+//     }
+//     selectNavItem(navItems[selectedNavIndex]);
+//   });
+
 // const app = {};
 
 // // make navbar color dark when scroll down
