@@ -1,6 +1,6 @@
-.splide__track--ttb > .splide__list {
-  display: block;
-}kit-transform: translate(-50%, 0);
+.splide__arrows--ttb .splide__arrow {
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
 .splide__arrows--ttb .splide__arrow--prev {

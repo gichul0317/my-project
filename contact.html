@@ -14,7 +14,16 @@
       href="https://fonts.googleapis.com/css2?family=Archivo&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./splide/dist/css/splide.min.css" />
+    <script defer src="./js/script.js"></script>
+    <script defer src="./splide/dist/js/splide.min.js"></script>
   </head>
   <body>
     <nav id="navbar" class="navbar">
@@ -51,8 +60,9 @@
       </div>
     </nav>
 
-    <section id="contact" class="contact">
-      <div class="container">
+    <div class="wrapper">
+      <section id="contact" class="contact">
+        <!-- <div class="container"> -->
         <div class="contact__box">
           <div class="contact__content">
             <h1>Contact</h1>
@@ -92,7 +102,7 @@
               <button type="submit" class="form__button">Send</button>
             </form>
           </div>
-          <div>
+          <div class="contact__imgbox">
             <img
               class="contact__img"
               src="./assets/html-key-min.jpg"
@@ -100,13 +110,13 @@
             />
           </div>
         </div>
-      </div>
-    </section>
+        <!-- </div> -->
+      </section>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__box">
-          <!-- <span class="footer__credit">
+      <footer class="footer--right">
+        <div class="container">
+          <div class="footer__box">
+            <!-- <span class="footer__credit">
             Photo by
             <a
               href="https://unsplash.com/@thirdworldhippy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
@@ -120,15 +130,16 @@
               >Unsplash</a
             >
           </span> -->
-          <div class="footer__link"></div>
-          <p>
-            Designed and Developed by
-            <a href="https://www.linkedin.com/in/gichuljaun/" target="_blank"
-              >Gichul Jaun</a
-            >, 2022
-          </p>
+            <div class="footer__link--right"></div>
+            <p>
+              Designed and Developed by
+              <a href="https://www.linkedin.com/in/gichuljaun/" target="_blank"
+                >Gichul Jaun </a
+              ><span>, 2022</span>
+            </p>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

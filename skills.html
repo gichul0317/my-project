@@ -14,7 +14,16 @@
       href="https://fonts.googleapis.com/css2?family=Archivo&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./splide/dist/css/splide.min.css" />
+    <script defer src="./js/script.js"></script>
+    <script defer src="./splide/dist/js/splide.min.js"></script>
   </head>
   <body>
     <nav id="navbar" class="navbar">
@@ -51,22 +60,25 @@
       </div>
     </nav>
 
-    <section id="skills" class="skills">
-      <div class="container">
+    <div class="wrapper">
+      <section id="skills" class="skills">
+        <!-- <div class="container"> -->
         <div class="skills__box">
-          <div class="skills__content">
-            <h1>Skills</h1>
-            <p class="skills__text">
-              I have built projects using HTML5, CSS3, Sass, JavaScript, React,
-              Firebase and Webflow that are mobile-friendly and compliant with
-              accessibility guidelines. I am studying web development and design
-              materials to keep myself engaged in self-improvements.
-            </p>
-            <button class="home__button">
-              <a href="contact.html">Contact Me</a>
-            </button>
-          </div>
-          <div class="skillset">
+          <h1 class="skills__title">Skills</h1>
+          <div class="skills__flexbox">
+            <div class="skills__content">
+              <p class="skills__text">
+                I have built projects using HTML5, CSS3, Sass, JavaScript,
+                React, Firebase and Webflow that are mobile-friendly and
+                compliant with accessibility guidelines. I am studying web
+                development and design materials to keep myself engaged in
+                self-improvements.
+              </p>
+              <button class="skills__button">
+                <a href="contact.html">Contact Me</a>
+              </button>
+            </div>
+            <div class="skillset">
               <div class="skill">
                 <div class="skill__desc">
                   <span>HTML</span>
@@ -130,36 +142,25 @@
                   <div class="skill__value" style="width: 85%"></div>
                 </div>
               </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+        <!-- </div> -->
+      </section>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__box">
-          <!-- <span class="footer__credit">
-            Photo by
-            <a
-              href="https://unsplash.com/@thirdworldhippy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-              target="_blank"
-              >mwangi gatheca</a
-            >
-            on
-            <a
-              href="https://unsplash.com/s/photos/toronto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-              target="_blank"
-              >Unsplash</a
-            >
-          </span> -->
-          <div class="footer__link"></div>
-          <p>
-            Designed and Developed by
-            <a href="https://www.linkedin.com/in/gichuljaun/" target="_blank"
-              >Gichul Jaun</a
-            >, 2022
-          </p>
+      <footer class="footer--right">
+        <div class="container">
+          <div class="footer__box">
+            <div class="footer__link--right"></div>
+            <p>
+              Designed and Developed by
+              <a href="https://www.linkedin.com/in/gichuljaun/" target="_blank"
+                >Gichul Jaun </a
+              ><span>, 2022</span>
+            </p>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

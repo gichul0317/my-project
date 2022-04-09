@@ -1,25 +1,28 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
-  const splide = new Splide('.splide', {
-    perPage: 1,
-    rewind: true,
-    drag: 'free',
-    autoplay: 'true',
-    interval: 2500,
-    pauseOnFocus: 'true',
-  });
-  splide.mount();
+  const check = document.querySelector('.splide');
+  if (check !== null) {
+    const splide = new Splide('.splide', {
+      perPage: 1,
+      rewind: true,
+      drag: 'free',
+      // autoplay: 'true',
+      // interval: 2500,
+      pauseOnFocus: 'true',
+    });
+    splide.mount();
+  }
 });
 
 console.log('loaded...');
 
-//   const toggleBtn = document.querySelector('.navbar__togglebtn');
-//   toggleBtn.addEventListener('click', () => {
-//     // console.log('click');
-//     const menu = document.querySelector('.navbar__menu');
-//     menu.classList.toggle('show');
-//   });
+const toggleBtn = document.querySelector('.navbar__togglebtn');
+toggleBtn.addEventListener('click', () => {
+  // console.log('click');
+  const menu = document.querySelector('.navbar__menu');
+  menu.classList.toggle('show');
+});
 
 //   const sectionId = ['#home', '#about', '#skills', '#work', '#contact'];
 //   const sections = sectionId.map((id) => document.querySelector(id));

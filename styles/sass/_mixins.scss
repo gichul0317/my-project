@@ -1,3 +1,9 @@
+@mixin land {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media (max-width: 478px) {
     @content;

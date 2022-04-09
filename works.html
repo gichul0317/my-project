@@ -14,6 +14,12 @@
       href="https://fonts.googleapis.com/css2?family=Archivo&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./splide/dist/css/splide.min.css" />
     <script defer src="./js/script.js"></script>
@@ -54,8 +60,9 @@
       </div>
     </nav>
 
-    <section id="work" class="work">
-      <div class="container">
+    <div class="wrapper">
+      <section id="work" class="work">
+        <!-- <div class="container"> -->
         <div class="work__box">
           <h1>My Works</h1>
           <div class="splide">
@@ -65,7 +72,7 @@
                   <div class="work__content">
                     <p class="work__text">
                       A full website design and build for a concept team
-                      collaboration platform. This website also includesa CMS
+                      collaboration platform. This website also includes a CMS
                       blog. Built with Webflow and Figma.
                     </p>
                     <a
@@ -84,6 +91,7 @@
                   <img
                     src="./assets/TeamApp-snap.png"
                     alt="snapshot for teamapp project"
+                    class="work__img"
                   />
                 </li>
                 <li class="splide__slide">
@@ -109,6 +117,7 @@
                   <img
                     src="./assets/chatApp-snap.png"
                     alt="snapshot for chatapp project"
+                    class="work__img"
                   />
                 </li>
                 <li class="splide__slide">
@@ -135,6 +144,7 @@
                   <img
                     src="./assets/puzzle-snap.png"
                     alt="snapshot for html puzzle project"
+                    class="work__img"
                   />
                 </li>
                 <li class="splide__slide">
@@ -162,6 +172,7 @@
                   <img
                     src="./assets/vid-monster-snap.png"
                     alt="snapshot for vid monster project"
+                    class="work__img"
                   />
                 </li>
                 <li class="splide__slide">
@@ -188,6 +199,7 @@
                   <img
                     src="./assets/shopper-mapper-snap.png"
                     alt="snapshot for shopper mapper project"
+                    class="work__img"
                   />
                 </li>
                 <li class="splide__slide">
@@ -214,6 +226,7 @@
                   <img
                     src="./assets/studio-ghibli-snap.png"
                     alt="snapshot for stduio ghibli project"
+                    class="work__img"
                   />
                 </li>
                 <li class="splide__slide">
@@ -239,27 +252,29 @@
                   <img
                     src="./assets/changing-font-snap.png"
                     alt="snapshot for changing font project"
+                    class="work__img"
                   />
                 </li>
               </ul>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+        <!-- </div> -->
+      </section>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__box">
-          <p>
-            Designed and Developed by
-            <a href="https://www.linkedin.com/in/gichuljaun/" target="_blank"
-              >Gichul Jaun</a
-            >, 2022
-            <div class="footer__link"></div>
-          </p>
+      <footer class="footer--right">
+        <div class="container">
+          <div class="footer__box">
+            <div class="footer__link--right"></div>
+            <p>
+              Designed and Developed by
+              <a href="https://www.linkedin.com/in/gichuljaun/" target="_blank"
+                >Gichul Jaun </a
+              ><span>, 2022</span>
+            </p>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>
