@@ -67,12 +67,6 @@ body {
     fixed;
   background-size: cover;
   position: relative;
-  @include landscape {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    // align-items: center;
-  }
 }
 
 .overlay {
@@ -102,13 +96,11 @@ body {
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
-  @include landscape {
-    min-height: auto;
-    // height: auto;
-  }
 }
 
 .navbar {
+  max-height: -webkit-fill-available;
+  min-height: 10vh;
   .container {
     position: relative;
     @include container;
