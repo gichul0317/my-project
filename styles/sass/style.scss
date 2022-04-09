@@ -69,6 +69,23 @@ body {
   position: relative;
 }
 
+.overlay {
+  max-height: -webkit-fill-available;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(120, 120, 120, 0.85);
+  z-index: 10;
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
+
 .wrapper {
   max-height: -webkit-fill-available;
   min-height: 80vh;
@@ -106,7 +123,7 @@ body {
       position: absolute;
       top: 76px;
       right: 20px;
-      z-index: 5;
+      z-index: 15;
     }
   }
   &__list {
@@ -116,7 +133,7 @@ body {
     }
   }
   &__active {
-    border-radius: 2px solid $blue;
+    border-bottom: 2px solid $blue;
   }
   &__togglebtn {
     background-color: transparent;
@@ -130,6 +147,7 @@ body {
     cursor: pointer;
     padding: 7px 12px;
     border-radius: 0;
+    z-index: 15;
     &:hover,
     &:focus {
       background-color: $black;
