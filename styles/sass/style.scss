@@ -64,8 +64,9 @@ button {
 }
 
 body {
-  max-height: -webkit-fill-available;
-  min-height: 100vh;
+  // max-height: -webkit-fill-available;
+  // min-height: 100vh;
+  height: 100vh;
   background: url('../../assets/toronto-hero-min.png') no-repeat center right
     fixed;
   background-size: cover;
@@ -125,7 +126,7 @@ body {
       width: 50%;
       background-color: $black;
       position: absolute;
-      top: 74px;
+      top: 76px;
       right: 30px;
       z-index: 15;
     }
