@@ -95,7 +95,7 @@ body {
 
 .wrapper {
   max-height: -webkit-fill-available;
-  min-height: 80vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -491,10 +491,10 @@ body {
 }
 
 .footer {
-  // max-height: -webkit-fill-available;
-  // min-height: 10vh;
-  // display: flex;
-  // align-items: center;
+  max-height: -webkit-fill-available;
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
@@ -506,8 +506,8 @@ body {
     padding: 0 10px;
   }
   &__wrapper {
-    position: absolute;
-    bottom: 50px;
+    // position: absolute;
+    // bottom: 0;
   }
   // &--right {
   //   max-height: -webkit-fill-available;
