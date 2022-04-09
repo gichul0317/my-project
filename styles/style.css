@@ -372,12 +372,14 @@ button:hover, button:focus {
 }
 
 body {
-  height: 100vh;
-  background: url("../../assets/toronto-hero-min.png") no-repeat center right fixed;
+  max-height: -webkit-fill-available;
+  min-height: 100vh;
+  background-image: url("../../assets/toronto-hero-min.png");
+  background-repeat: no-repeat;
+  background-position: center right;
   background-size: cover;
   position: relative;
 }
-
 .overlay {
   max-height: -webkit-fill-available;
   min-height: 100vh;
@@ -458,7 +460,7 @@ body {
     width: 50%;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    top: 76px;
+    top: 75px;
     right: 30px;
     z-index: 15;
   }
@@ -519,6 +521,7 @@ body {
 }
 
 .about {
+  width: 100%;
   padding: 20px 50px;
 }
 @media (max-width: 767px) {
@@ -527,6 +530,7 @@ body {
   }
 }
 .about__box {
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
 }
@@ -601,7 +605,7 @@ body {
   .about__img {
     width: 100%;
     padding: 0 15px;
-    height: auto;
+    height: 310px;
   }
 }
 @media (max-width: 767px) {
@@ -615,6 +619,7 @@ body {
   }
 }
 .skills {
+  width: 100%;
   padding: 20px 50px;
 }
 @media (max-width: 767px) {
@@ -623,6 +628,7 @@ body {
   }
 }
 .skills__box {
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
 }
@@ -757,6 +763,7 @@ body {
   }
 }
 .work__box {
+  width: 100%;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   height: auto;
@@ -855,6 +862,7 @@ body {
   }
 }
 .contact__box {
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   height: 425px;
   display: -webkit-box;
@@ -956,23 +964,20 @@ body {
 }
 
 .footer {
-  max-height: -webkit-fill-available;
-  min-height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
   padding: 0 50px;
+  position: relative;
 }
 @media (max-width: 767px) {
   .footer {
     padding: 0 10px;
   }
+}
+.footer__wrapper {
+  position: absolute;
+  bottom: 50px;
 }
 .footer__box {
   padding: 10px;
