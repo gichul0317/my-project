@@ -66,14 +66,16 @@ button {
 body {
   max-height: -webkit-fill-available;
   min-height: 100vh;
-  background-image: url('../../assets/toronto-hero-min.png');
+  height: 100vh;
+  background-image: url('../../assets/test.png');
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: top right;
   background-size: cover;
   position: relative;
-  @include landscape {
-    // padding-bottom: 10%;
-  }
+  // @include landscape {
+  //   // padding-bottom: 10%;
+  //   height: auto;
+  // }
 }
 
 .overlay {
@@ -94,8 +96,10 @@ body {
 }
 
 .wrapper {
-  max-height: -webkit-fill-available;
-  min-height: 70vh;
+  // max-height: -webkit-fill-available;
+  // min-height: 70vh;
+  // height: 70vh;
+  height: 750px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -106,8 +110,9 @@ body {
 }
 
 .navbar {
-  max-height: -webkit-fill-available;
-  min-height: 10vh;
+  // max-height: -webkit-fill-available;
+  // min-height: 10vh;
+  // height: 10%;
   .container {
     position: relative;
     @include container;
@@ -491,17 +496,19 @@ body {
 }
 
 .footer {
-  max-height: -webkit-fill-available;
-  min-height: 20vh;
-  display: flex;
-  align-items: center;
-  max-width: 1160px;
-  width: 100%;
-  margin: 0 auto;
+  // max-height: -webkit-fill-available;
+  // min-height: 10vh;
+  // height: 10%;
+  // display: flex;
+  // align-items: center;
+  // max-width: 1160px;
+  // width: 100%;
+  // margin: 0 auto;
   // position: absolute;
   // bottom: 150px;
+  margin-top: 70px;
   padding: 0 50px;
-  position: relative;
+  // position: relative;
   @include landscape {
     padding: 0 10px;
   }

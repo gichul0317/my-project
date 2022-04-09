@@ -374,12 +374,14 @@ button:hover, button:focus {
 body {
   max-height: -webkit-fill-available;
   min-height: 100vh;
-  background-image: url("../../assets/toronto-hero-min.png");
+  height: 100vh;
+  background-image: url("../../assets/test.png");
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: top right;
   background-size: cover;
   position: relative;
 }
+
 .overlay {
   max-height: -webkit-fill-available;
   min-height: 100vh;
@@ -398,8 +400,7 @@ body {
 }
 
 .wrapper {
-  max-height: -webkit-fill-available;
-  min-height: 70vh;
+  height: 750px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -418,10 +419,6 @@ body {
   margin: 0 auto;
 }
 
-.navbar {
-  max-height: -webkit-fill-available;
-  min-height: 10vh;
-}
 .navbar .container {
   position: relative;
   max-width: 1160px;
@@ -964,19 +961,8 @@ body {
 }
 
 .footer {
-  max-height: -webkit-fill-available;
-  min-height: 20vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: 1160px;
-  width: 100%;
-  margin: 0 auto;
+  margin-top: 70px;
   padding: 0 50px;
-  position: relative;
 }
 @media (max-width: 767px) {
   .footer {
