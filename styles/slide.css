@@ -1,19 +1,17 @@
 .splide__slide {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  list-style-type: none !important;
+  margin: 0;
+  position: relative;
 }
-.splide__slide:focus {
-  outline: 0;
-}
-.splide__slide:focus-visible {
-  /* IE does not support outline-offset */
-}
-@supports (outline-offset: -3px) {
-  .splide__slide:focus-visible {
-    outline: #0bf 3px solid;
-    outline-offset: -3px;
-  }
-}
-@media screen and (-ms-high-contrast: none) {
+.splide__slide img {
+  vertical-align: bottom;
+}high-contrast: none) {
   .splide__slide:focus-visible {
     border: #0bf 3px solid;
   }

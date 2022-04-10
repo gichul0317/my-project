@@ -22,6 +22,12 @@
   }
 }
 
+@mixin wide {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
 @mixin Extra {
   font-family: 'Roboto', sans-serif;
   font-size: 65px;

@@ -74,6 +74,9 @@ body {
   background-position: top right;
   background-size: cover;
   position: relative;
+  @include wide {
+    background-position: center 10%;
+  }
 }
 
 .overlay {
@@ -94,7 +97,7 @@ body {
 
 .container {
   @include container;
-  height: 70vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
