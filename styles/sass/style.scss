@@ -102,6 +102,9 @@ body {
   @include tablet {
     height: 50vmax;
   }
+  @include landscape {
+    height: 60vmax;
+  }
 }
 
 .navbar {

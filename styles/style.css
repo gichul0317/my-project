@@ -424,6 +424,11 @@ body {
     height: 50vmax;
   }
 }
+@media (max-width: 767px) {
+  .container {
+    height: 60vmax;
+  }
+}
 
 .navbar {
   padding: 40px 50px;
