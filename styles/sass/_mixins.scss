@@ -1,9 +1,3 @@
-@mixin land {
-  @media (orientation: landscape) {
-    @content;
-  }
-}
-
 @mixin mobile {
   @media (max-width: 478px) {
     @content;
@@ -17,7 +11,7 @@
 }
 
 @mixin tablet {
-  @media (max-width: 991px) {
+  @media (max-width: 991px) and (orientation: landscape) {
     @content;
   }
 }

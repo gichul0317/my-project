@@ -33,7 +33,7 @@
 
     <!-- navbar -->
     <nav id="navbar" class="navbar">
-      <div class="container">
+      <div class="navbar__container">
         <a href="index.html">
           <img
             src="./assets/portfolio-logo.png"
@@ -43,7 +43,7 @@
         </a>
         <ul class="navbar__menu">
           <li class="navbar__list" data-link="#home">
-            <a class="navbar__item" href="index.html">Home</a>
+            <a class="navbar__item navbar__active" href="index.html">Home</a>
           </li>
           <li class="navbar__list" data-link="#about">
             <a class="navbar__item" href="about.html">About</a>
@@ -67,8 +67,8 @@
     </nav>
 
     <!-- Home -->
-    <div class="wrapper">
-      <section id="home" class="home">
+    <section id="home" class="home">
+      <div class="container home__container">
         <div class="home__box">
           <h1>Hello<br />I am Gichul Jaun</h1>
           <h2 class="home__subtitle">A Web Developer in Toronto, Ontario</h2>
@@ -76,11 +76,12 @@
             <a href="contact.html">Contact Me</a>
           </button>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- footer -->
-      <footer class="footer">
-        <!-- <div class="footer__wrapper"> -->
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__container">
         <div class="footer__box">
           <div class="footer__link"></div>
           <p>
@@ -90,8 +91,7 @@
             ><span>, 2022</span>
           </p>
         </div>
-        <!-- </div> -->
-      </footer>
-    </div>
+      </div>
+    </footer>
   </body>
 </html>
