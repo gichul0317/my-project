@@ -8,6 +8,20 @@
 //   document.documentElement.style.setProperty('--vh', `${vh}px`);
 // });
 
+// const backgroundUrl = '../assets/hero-min.png';
+// let bgElement = document.querySelector('.bg');
+// console.log(bgElement);
+// let preloadingImg = document.createElement('img');
+// preloadingImg.src = backgroundUrl;
+
+// preloadingImg.addEventListener('load', () => {
+//   setTimeout(() => {
+//     bgElement.classList.add('none');
+//   }, 1000);
+
+//   preloadingImg = null;
+// });
+
 document.addEventListener('DOMContentLoaded', function () {
   const check = document.querySelector('.splide');
   if (check !== null) {

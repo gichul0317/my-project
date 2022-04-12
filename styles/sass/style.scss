@@ -32,6 +32,7 @@ h2 {
 
 a {
   color: $white;
+  text-decoration: none;
 }
 
 p {
@@ -46,7 +47,9 @@ p {
   }
 }
 
-button {
+.contactbtn {
+  align-self: flex-start;
+  display: inline-block;
   padding: 12px 20px;
   background-color: transparent;
   cursor: pointer;
@@ -488,6 +491,16 @@ body {
     align-self: flex-start;
     padding: 12px 45px;
     margin-top: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid $white;
+    border-radius: 5px;
+    color: $white;
+    transition: all 200ms ease-in;
+    &:hover,
+    &:focus {
+      background-color: $blue;
+    }
   }
 }
 
